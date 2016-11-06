@@ -6,7 +6,7 @@ gem 'puma'
 gem 'json'
 gem 'econfig'
 
-gem 'Time_Traveler', '0.1.48'
+gem 'Time_Traveler'
 
 group :develop, :test do
   gem 'pry-byebug'
@@ -18,7 +18,6 @@ group :test do
 
   gem 'rack-test'
   gem 'rake','<2.0'
-
   gem 'vcr'
   gem 'webmock'
 end
