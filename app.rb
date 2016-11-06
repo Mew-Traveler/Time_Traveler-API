@@ -8,10 +8,10 @@ class Time_TravelerAPI < Sinatra::Base
 	  	Econfig.root = settings.root
 	  	Google::GoogleApi
 	    	.config
-	    	.update(googlemap_id: config.GOOGLEMAP_ID)
+	    	.update(googlemap_id: config.googlemap_id)
 	  	Airbnb::AirbnbApi
 	  		.config
-	  		.update(airbnb_id: config.AIRBNB_CLIENT_ID)
+	  		.update(airbnb_id: config.airbnb_id)
 
 	  	API_VER = 'api/v0.1.48'
 
