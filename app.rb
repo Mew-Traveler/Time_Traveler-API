@@ -8,17 +8,17 @@ class Time_TravelerAPI < Sinatra::Base
 	  	Econfig.root = settings.root
 	  	Google::GoogleApi
 	    	.config
-	    	.update(googlemap_id: config.googlemap_id)
+	    	.update(googlemap_id: config.GOOGLE_API)
 	  	Airbnb::AirbnbApi
 	  		.config
-	  		.update(airbnb_id: config.airbnb_id)
+	  		.update(airbnb_id: config.AIRBNB_API)
 
 	  	API_VER = 'api/v0.1.48'
 
 		get '/?' do
 	    	"Time_Traveler latest version endpoints are at: /#{API_VER}/"
 	end
-	
+
 	get "/#{API_VER}/rent/:location/?" do
 			location = params[:location]
 			begin
