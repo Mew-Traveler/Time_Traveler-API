@@ -1,12 +1,7 @@
 # frozen_string_literal: true
-<<<<<<< HEAD
 ENV['RACK_ENV'] = 'test'
 require 'simplecov'
 SimpleCov.start
-=======
-#require 'simplecov'
-#SimpleCov.start
->>>>>>> 76c67876775a0a5e7794fc21b51d96eb421a06bc
 
 require 'minitest/autorun'
 require 'minitest/rg'
