@@ -1,1 +1,6 @@
 config/app.yml
+coverage/*
+spec/fixtures/*
+credentials.yml
+Gemfile.lock
+*.gem
