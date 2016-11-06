@@ -13,25 +13,12 @@ class Time_TravelerAPI < Sinatra::Base
 	  		.config
 	  		.update(airbnb_id: config.AIRBNB_CLIENT_ID)
 
-	  	API_VER = 'api/v0.1.47'
+	  	API_VER = 'api/v0.1.48'
 
 		get '/?' do
 	    	"Time_Traveler latest version endpoints are at: /#{API_VER}/"
 	end
-
-
-	# get "/#{API_VER}/group/:fb_group_id/?" do
-	# 	group_id = params[:fb_group_id]
-	# 	begin
-	#   		group = FaceGroup::Group.find(id: group_id)
-
-	#   		content_type 'application/json'
-	#   		{ group_id: group.id, name: group.name }.to_json
-	# 	rescue
-	# 		halt 404, "FB Group (id: #{group_id}) not found"
-	# 	end
-	# end
-
+	
 	get "/#{API_VER}/rent/:location/?" do
 			location = params[:location]
 			begin
@@ -54,7 +41,6 @@ class Time_TravelerAPI < Sinatra::Base
 				traffic = Google::TrafficInfo.find(origins: origins, destinations: destinations, mode: mode)
 				content_type 'application/json'
 				{
-					infos: traffic.infos,
 					origins: traffic.origins,
 					destinations: traffic.dest,
 					mode: traffic.mode,

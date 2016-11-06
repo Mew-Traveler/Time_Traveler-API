@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    Time_Traveler (0.1.47)
+    Time_Traveler (0.1.48)
       http (~> 2.0)
     addressable (2.5.0)
       public_suffix (~> 2.0, >= 2.0.2)
@@ -41,7 +41,7 @@ GEM
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
-    rake (11.3.0)
+    rake (0.9.6)
     safe_yaml (1.0.4)
     sinatra (1.4.7)
       rack (~> 1.5)
@@ -62,7 +62,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  Time_Traveler
+  Time_Traveler (= 0.1.48)
   econfig
   json
   minitest
@@ -70,7 +70,7 @@ DEPENDENCIES
   pry-byebug
   puma
   rack-test
-  rake
+  rake (< 2.0)
   sinatra
   vcr
   webmock

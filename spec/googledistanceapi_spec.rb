@@ -23,7 +23,6 @@ describe 'Load specifications' do
       destinations: "Hsinchu",
       mode: "Train"
     )
-
     distance =google_load.trafficAnaly
     distance.length.must_be :>,0
   end
