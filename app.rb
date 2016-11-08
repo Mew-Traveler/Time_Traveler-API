@@ -16,7 +16,7 @@ class Time_TravelerAPI < Sinatra::Base
       .config
       .update(skyscanner_id: config.SKYSCANNER_API)
 
-    API_VER = 'api/v0.1.50'
+    API_VER = 'api/v0.1.60'
 
     get '/?' do
       "Time_Traveler latest version endpoints are at: /#{API_VER}/"
@@ -53,15 +53,15 @@ class Time_TravelerAPI < Sinatra::Base
       end
     end
   
-    get "/#{API_VER}/flight/:market/:currency/:locale/:originPlace/:destinationPlace/:outBoundPartialDate?" do
+    get "/#{API_VER}/flight/:market/:currency/:locale/:originPlace/:destinationPlace/:outboundPartialDate?" do
       market = params[:market]
       currency = params[:currency]
       locale = params[:locale]
       originPlace = params[:originPlace]
       destinationPlace = params[:destinationPlace]
-      outBoundPartialDate = params[:outBoundPartialDate]
+      outboundPartialDate = params[:outboundPartialDate]
     begin
-      flight = Skyscanner::FlightInfo.find(market: market, currency: currency, locale: locale, originPlace: originPlace, destinationPlace: destinationPlace, outBoundPartialDate: outBoundPartialDate)
+      flight = Skyscanner::FlightInfo.find(market: market, currency: currency, locale: locale, originPlace: originPlace, destinationPlace: destinationPlace, outboundPartialDate: outboundPartialDate)
       content_type 'application/json'
       {
         flightsInfo: flight.flightInfo
