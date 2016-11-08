@@ -52,7 +52,7 @@ class Time_TravelerAPI < Sinatra::Base
         halt 404, "Cannot return traffic data"
       end
     end
-
+  
     get "/#{API_VER}/flight/:market/:currency/:locale/:originPlace/:destinationPlace/:outBoundPartialDate?" do
       market = params[:market]
       currency = params[:currency]
