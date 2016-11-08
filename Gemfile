@@ -6,7 +6,7 @@ gem 'puma'
 gem 'json'
 gem 'econfig'
 
-gem 'Time_Traveler'
+gem 'Time_Traveler', '0.1.50'
 
 group :develop, :test do
   gem 'pry-byebug'

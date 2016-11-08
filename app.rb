@@ -12,8 +12,11 @@ class Time_TravelerAPI < Sinatra::Base
 	  	Airbnb::AirbnbApi
 	  		.config
 	  		.update(airbnb_id: config.AIRBNB_API)
+	  	Skyscanner::SkyscannerApi
+	  		.config
+	  		.update(skyscanner_id: config.SKYSCANNER_API)
 
-	  	API_VER = 'api/v0.1.48'
+	  	API_VER = 'api/v0.1.50'
 
 		get '/?' do
 	    	"Time_Traveler latest version endpoints are at: /#{API_VER}/"
@@ -46,7 +49,25 @@ class Time_TravelerAPI < Sinatra::Base
 					mode: traffic.mode,
 				}.to_json
 			rescue
-				halt 404, "Cannot return data"
+				halt 404, "Cannot return traffic data"
 			end
 	end
+
+	# get "/#{API_VER}/flight/:market/:currency/:locale/:originPlace/:destinationPlace/:outBoundPartialDate?" do
+	# 		market = params[:market]
+	# 		currency = params[:currency]
+	# 		locale = params[:locale]
+	# 		originPlace = params[:originPlace]
+	# 		destinationPlace = params[:destinationPlace]
+	# 		outBoundPartialDate = params[:outBoundPartialDate]
+	# 		begin
+	# 			flight = Skyscanner::FlightInfo.find(market: market, currency: currency, locale: locale, originPlace: originPlace, destinationPlace: destinationPlace, outBoundPartialDate: outBoundPartialDate)
+	# 			content_type 'application/json'
+	# 			{
+	# 				flightsInfo: flight.flightInfo
+	# 			}.to_json
+	# 		rescue
+	# 			halt 404, "Cannot return flight data"
+	# 		end
+	# end
 end
