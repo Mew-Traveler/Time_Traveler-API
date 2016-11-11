@@ -8,6 +8,12 @@ gem 'econfig'
 
 gem 'Time_Traveler', '0.1.60'
 
+gem 'sequel'
+
+group :develop, :test do
+  gem 'sqlite3'
+end
+
 group :develop, :test do
   gem 'pry-byebug'
 end
