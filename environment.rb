@@ -2,7 +2,7 @@
 require 'sinatra'
 require 'sequel'
 
-configure :develop do
+configure :development do
   ENV['DATABASE_URL'] = 'sqlite://db/dev.db'
 end
 
