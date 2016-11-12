@@ -9,6 +9,7 @@ gem 'econfig'
 
 gem 'movlog', '0.2.12'
 gem 'sequel'
+gem 'Time_Traveler', '0.1.60'
 
 group :development, :test do
   gem 'sqlite3'
@@ -32,11 +33,8 @@ group :test do
   gem 'webmock'
 end
 
-group :development, :production do
+group :development do
   gem 'tux'
   gem 'hirb'
 end
 
-# group :production do
-#   gem 'pg'
-# end
