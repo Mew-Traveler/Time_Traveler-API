@@ -7,6 +7,7 @@ require 'minitest/rg'
 require 'yaml'
 require 'vcr'
 require 'webmock'
+require './init.rb'
 
 # require './lib/airbnb_api.rb'
 # require './lib/google_api.rb'
