@@ -6,9 +6,9 @@ Sequel.migration do
     create_table(:owners) do
       primary_key :id
       foreign_key :project
-      
+      foreign_key :group      
+
       String :owner
-      String :group
     end
   end
 end
