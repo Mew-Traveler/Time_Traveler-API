@@ -1,2 +1,4 @@
 # Time_Traveler-API
-test for heroku
+
+## EDG :
+![alt tag](https://raw.githubusercontent.com/wtlin1228/Mew-Traveler/Time_Traveler-API/database/image/EDG.png)
