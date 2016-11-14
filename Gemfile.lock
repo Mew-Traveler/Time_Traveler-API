@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    Time_Traveler (0.1.48)
+    Time_Traveler (0.1.60)
       http (~> 2.0)
     addressable (2.5.0)
       public_suffix (~> 2.0, >= 2.0.2)
@@ -62,7 +62,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  Time_Traveler
+  Time_Traveler (= 0.1.60)
   econfig
   json
   minitest
@@ -76,4 +76,4 @@ DEPENDENCIES
   webmock
 
 BUNDLED WITH
-   1.13.1
+   1.13.5
