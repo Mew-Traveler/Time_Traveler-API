@@ -3,7 +3,7 @@
 # MovlogAPI web service
 class TimeTravelerAPI < Sinatra::Base
   # find projectId of user
-  get "/#{API_VER}/myprojects/:userId?" do
+  get "/#{API_VER}/mypro?" do
     userId = params[:userId]
 
     begin

@@ -5,14 +5,14 @@ Sequel.migration do
   change do
     create_table(:houses) do
       primary_key :id
-	  String :bnb_id
-	  String :name
-	  String :price
+	  String :roomId
+	  String :roomName
+	  String :roomPrice
 	  String :address
 	  String :airbnb_link
-	  String :img_url
+	  String :roomImg
 	  String :bed
-	  String :rank
+	  String :roomRank
     end
   end
 end
