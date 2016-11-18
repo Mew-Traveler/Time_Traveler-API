@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    Time_Traveler (0.1.60)
+    Time_Traveler (0.1.70)
       http (~> 2.0)
     addressable (2.5.0)
       public_suffix (~> 2.0, >= 2.0.2)
@@ -13,7 +13,7 @@ GEM
       unf (>= 0.0.5, < 1.0.0)
     econfig (2.0.0)
     hashdiff (0.3.0)
-    http (2.0.3)
+    http (2.1.0)
       addressable (~> 2.3)
       http-cookie (~> 1.0)
       http-form_data (~> 1.0.1)
@@ -62,7 +62,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  Time_Traveler (= 0.1.60)
+  Time_Traveler (= 0.1.70)
   econfig
   json
   minitest

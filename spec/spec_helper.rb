@@ -7,12 +7,12 @@ require 'minitest/rg'
 require 'yaml'
 require 'vcr'
 require 'webmock'
+require_relative '../app'
 
-# require './lib/airbnb_api.rb'
-# require './lib/google_api.rb'
-# require './lib/rentinfo.rb'
-# require './lib/trafficinfo.rb'
-require_relative '../lib/Time_Traveler'
+
+def app
+  Time_TravelerAPI
+end
 
 FIXTURES_FOLDER = 'spec/fixtures'
 CASSETTES_FOLDER = "#{FIXTURES_FOLDER}/cassettes"

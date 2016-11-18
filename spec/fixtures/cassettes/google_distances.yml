@@ -1,0 +1,147 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/distancematrix/json?destinations=Hsinchu&key=&mode=Train&origins=Taipei
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/2.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 18 Nov 2016 02:06:20 GMT
+      Expires:
+      - Sat, 19 Nov 2016 02:06:20 GMT
+      Cache-Control:
+      - public, max-age=86400
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="36,35,34"
+      Accept-Ranges:
+      - none
+      Vary:
+      - Accept-Language,Accept-Encoding
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+           "destination_addresses" : [ "Hsinchu, East District, Hsinchu City, Taiwan" ],
+           "origin_addresses" : [ "Taipei City, Taiwan" ],
+           "rows" : [
+              {
+                 "elements" : [
+                    {
+                       "distance" : {
+                          "text" : "85.7 km",
+                          "value" : 85661
+                       },
+                       "duration" : {
+                          "text" : "1 hour 10 mins",
+                          "value" : 4170
+                       },
+                       "status" : "OK"
+                    }
+                 ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Fri, 18 Nov 2016 02:06:23 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/place/textsearch/json?key=AIzaSyADFcZbph8b9jvV5D9zgrlOm2oMQpv6krI&query=%E6%B8%85%E8%8F%AF%E5%A4%A7%E5%AD%B8%20%E4%BA%A4%E9%80%9A%E5%A4%A7%E5%AD%B8%20%E9%A4%90%E5%BB%B3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/2.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Fri, 18 Nov 2016 02:13:12 GMT
+      Expires:
+      - Fri, 18 Nov 2016 02:18:12 GMT
+      Cache-Control:
+      - public, max-age=300
+      Server:
+      - pablo
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="36,35,34"
+      Accept-Ranges:
+      - none
+      Vary:
+      - Accept-Language,Accept-Encoding
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+           "html_attributions" : [],
+           "results" : [
+              {
+                 "formatted_address" : "China, Beijing, Haidian, 清华西路",
+                 "geometry" : {
+                    "location" : {
+                       "lat" : 40.00093710000001,
+                       "lng" : 116.3225967
+                    }
+                 },
+                 "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/restaurant-71.png",
+                 "id" : "fac74baa148d04988fa107e9d30eb662da65cff9",
+                 "name" : "清華大學甲所餐廳",
+                 "photos" : [
+                    {
+                       "height" : 5312,
+                       "html_attributions" : [
+                          "\u003ca href=\"https://maps.google.com/maps/contrib/115426371038903778876/photos\"\u003eAlex Au\u003c/a\u003e"
+                       ],
+                       "photo_reference" : "CoQBdwAAADV6ediNP-oX7UjHuZgAfViro1-utbhpfZilhvkUB8pRHSQJv4NYA1N_KjSkjJbot1ETCS9-5KvdNRN7dQIQciawYa-xR_W6NoTCVEY81MU8PFKWWCYfM6sYEsUtEztGRUjRNeITI6Mk2BMncypmHFYdjPdQpQvaAfWu5vCwTuj-EhASGO5T-Otmcwt8ArkC8WMHGhTfWnSWEPYcj8zEZpAlZSjSRmQdmw",
+                       "width" : 2988
+                    }
+                 ],
+                 "place_id" : "ChIJHT953aBW8DURVF2m5YC3OKk",
+                 "rating" : 3.9,
+                 "reference" : "CmRSAAAAtSvhA6Pj-xJFIwoXjjpL4fbkvnUvJEH6Kp-3AM1f0J1QOijYP5F4krYmgyhDtcNi3pOKctakg9C6ht7yjQ8_7evft1uq2j_SbsdB9XHZhSQKn2cC87u_DoHwxJmwZu_tEhBTs-A_IkJHyGBtkLWN7GahGhTZR2I5CaNMKzI12gaAP8Ipi9A_ZQ",
+                 "types" : [ "restaurant", "food", "point_of_interest", "establishment" ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Fri, 18 Nov 2016 02:13:15 GMT
+recorded_with: VCR 3.0.3
