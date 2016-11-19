@@ -2,31 +2,25 @@
 
 # MovlogAPI web service
 class TimeTravelerAPI < Sinatra::Base
-  # find projectId of user
-  get "/#{API_VER}/myprojects/:userEmail?" do
+  # find user and his/hers projects
+  get "/#{API_VER}/me/:userEmail?" do
     userEmail = params[:userEmail]
     begin
-
       userInfo = User.find(userEmail:userEmail)
       userId = userInfo.id
-
-      content_type 'application/json'
       projectData= Project.map do |projectInfo|
         name = projectInfo.projectName if projectInfo.projectName
-      #  owner = projectInfo.userEmail if projectInfo.userEmail
-        start = projectInfo.dateStart if projectInfo.dateStart
-        ends = projectInfo.dateEnd if projectInfo.dateEnd
-        { id: projectInfo.id,  projectName: name, projectStart: start, projectEnd: ends}
+        { id: projectInfo.id,  projectName: name}
       end
-
-       projectData.to_json
+      content_type 'application/json'
+      projectData.to_json
     rescue
       content_type 'text/plain'
       halt 404, "Cannot find user (userId: #{userId}) data"
     end
   end
-
-  post "/#{API_VER}/myprojects/?" do
+  # create new user
+  post "/#{API_VER}/me/?" do
    begin
      body_params = JSON.parse request.body.read
      print body_params['userEmail']
