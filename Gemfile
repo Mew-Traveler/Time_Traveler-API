@@ -7,6 +7,8 @@ gem 'puma'
 gem 'json'
 gem 'econfig'
 
+gem 'rake'
+
 gem 'movlog', '0.2.12'
 gem 'sequel'
 gem 'Time_Traveler', '0.1.60'
@@ -27,8 +29,7 @@ group :test do
   gem 'minitest-rg'
 
   gem 'rack-test'
-  gem 'rake'
-
+  
   gem 'vcr'
   gem 'webmock'
 end
