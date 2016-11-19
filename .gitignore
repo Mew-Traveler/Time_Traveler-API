@@ -1,3 +1,4 @@
 config/app.yml
 db/dev.db
 db/test.db
+.bundle/
