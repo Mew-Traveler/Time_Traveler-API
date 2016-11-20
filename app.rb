@@ -16,7 +16,7 @@ class Time_TravelerAPI < Sinatra::Base
       .config
       .update(skyscanner_id: config.SKYSCANNER_API)
 
-    API_VER = 'api/v0.1.60'
+    API_VER = 'api/v0.1'
 
     get '/?' do
       "Time_Traveler latest version endpoints are at: /#{API_VER}/"
@@ -52,7 +52,7 @@ class Time_TravelerAPI < Sinatra::Base
         halt 404, "Cannot return traffic data"
       end
     end
-  
+
     get "/#{API_VER}/flight/:market/:currency/:locale/:originPlace/:destinationPlace/:outboundPartialDate?" do
       market = params[:market]
       currency = params[:currency]
