@@ -29,7 +29,7 @@ namespace :db do
 
   desc 'Reset migrations (full rollback and migration)'
   task :reset do
-    equire 'sequel'
+    require 'sequel'
     require_relative 'init'
     Sequel.extension :migration
     Sequel::Migrator.run(DB, 'db/migrations', target: 0)
@@ -39,7 +39,7 @@ end
 
 namespace :quality do
   CODE = 'app.rb'
-  
+
   desc 'run all quality checks'
   task all: [:rubocop, :flog, :flay]
 
