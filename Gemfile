@@ -12,6 +12,11 @@ gem 'rake'
 gem 'movlog', '0.2.12'
 gem 'sequel'
 gem 'Time_Traveler', '0.1.60'
+gem 'roar'
+gem 'multi_json'
+gem 'dry-monads'
+gem 'dry-container'
+gem 'dry-transaction'
 
 group :development, :test do
   gem 'sqlite3'
