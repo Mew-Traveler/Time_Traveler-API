@@ -1,7 +1,7 @@
 require 'roar/decorator'
 require 'roar/json'
 
-# Uaage : p1 = new Project.new(5, 1, 'Hello', 'wtlin1228')
+# Uaage : p1 = Project.new(5, 1, 'Hello', 'wtlin1228')
 #         project_in_json = ProjectRepresenter.new(p1).to_json
 
 class ProjectRepresenter < Roar::Decorator
