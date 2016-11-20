@@ -1,4 +1,3 @@
-
 # frozen_string_literal: true
 
 # Search query for itinerary by keywords
