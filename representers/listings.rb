@@ -5,5 +5,5 @@ require_relative 'listing'
 class ListingsRepresenter < Roar::Decorator
   include Roar::JSON
 
-  collection :listings, extend: ListingRepresenter, class: Listing
+  # collection :listings, extend: ListingRepresenter, class: Listing
 end

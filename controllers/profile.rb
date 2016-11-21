@@ -14,6 +14,7 @@ class TimeTravelerAPI < Sinatra::Base
           ErrorRepresenter.new(projectData.value).to_status_response
         end
       else
+        print userId_result.value
         ErrorRepresenter.new(userId_result.value).to_status_response
       end
   end

@@ -29,12 +29,12 @@ describe 'Routes Testing' do
     rooms = JSON.parse(last_response.body)
     rooms.length.must_be :>,0
   end
-  # it 'SAD: should not be able to get the data from User Table' do
-  #   get "/api/v0.1/me/123?"
-  #
-  #   last_response.status.must_equal 404
-  #   # last_response.body.must_include SAD_LOCATION
-  # end
+  it 'SAD: should not be able to get the data from User Table' do
+    get "/api/v0.1/me/123?"
+
+    last_response.status.must_equal 404
+    # last_response.body.must_include SAD_LOCATION
+  end
   #
   # it 'HAPPY: should be able to get data in Project Table' do
   #   get "/api/v0.1/myproject/#{Project.first.id}",

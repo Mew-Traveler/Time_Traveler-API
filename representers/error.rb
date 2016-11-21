@@ -16,4 +16,3 @@ class ErrorRepresenter < Roar::Decorator
     [ERROR[@represented.code], { errors: [@represented.message] }.to_json]
   end
 end
-Contact GitHub API Training Shop Blog About

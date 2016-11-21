@@ -6,6 +6,5 @@ class RoomsSearchResultsRepresenter < Roar::Decorator
   include Roar::JSON
 
   property :search_terms_used
-  collection :listings, extend: ListingRepresenter, class: Listing
+  #collection :listings, extend: ListingsRepresenter, class: Listing
 end
-
