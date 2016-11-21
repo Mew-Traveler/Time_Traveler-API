@@ -30,10 +30,6 @@ class TimeTravelerAPI < sinatra::Base
     end
 
     begin
-      flights = Flight.create()
-      flightInfo.feed.postings.each do |flight|
-         ...
-      end
     rescue
     end
   end
