@@ -22,11 +22,8 @@ class TimeTravelerAPI < sinatra::Base
 
   post "/#{API_VER}/flight/?" do
     begin
-      body_params = JSON.parse request.body.read
-      skyscanner_url = body_params['url']
-      skyscanner_html = HTTP.get(skyscanner_url).body.to_s
 
-      flightInfo = Skyscanner::FlightInfo.find(market: market, currency: currency, locale: locale, originPlace: originPlace, destinationPlace: destinationPlace, outboundPartialDate: outboundPartialDate)
+      flightInfo = Skyscanner::FlightInfo.find(market: 'TW', currency: 'TWD', locale: 'en-GB', originPlace: 'TW', destinationPlace: 'UK', outboundPartialDate: '2016-11-20')
     rescue
       content_type 'text/plain'
       halt 400, "Group (url: #{skyscanner_url}) could not be found"
