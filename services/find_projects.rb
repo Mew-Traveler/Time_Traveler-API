@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # Loads data from Facebook group to database
-class FineProjects
+class FindProjects
   extend Dry::Monads::Either::Mixin
 
   def self.call(userId)
@@ -14,7 +14,6 @@ class FineProjects
     if projects.nil?
       Left(Error.new(:not_found, "You have no projects"))
     else
-      # print "\n"+projects
       Right(projects)
     end
   end

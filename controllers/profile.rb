@@ -6,7 +6,7 @@ class TimeTravelerAPI < Sinatra::Base
   get "/#{API_VER}/me/:userEmail?" do
       userId_result = FindUserId.call(params)
       if userId_result.success?
-        projectData = FineProjects.call(userId_result.value)
+        projectData = FindProjects.call(userId_result.value)
         if projectData.success?
          content_type 'application/json'
          projectData.value.to_json
