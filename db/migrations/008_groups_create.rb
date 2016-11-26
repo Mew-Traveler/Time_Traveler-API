@@ -5,8 +5,8 @@ Sequel.migration do
   change do
     create_table(:groups) do
       primary_key :id
-	  String :group
-	  String :user
+	  String :groupName
+	  String :userId
     end
   end
 end

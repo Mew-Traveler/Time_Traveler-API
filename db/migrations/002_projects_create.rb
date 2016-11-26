@@ -9,6 +9,7 @@ Sequel.migration do
       String :projectName
       String :dateStart
       String :dateEnd
+      String :groupId
     end
   end
 end
