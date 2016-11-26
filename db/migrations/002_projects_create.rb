@@ -5,6 +5,7 @@ Sequel.migration do
   change do
     create_table(:projects) do
       primary_key :id
+
       String :userId
       String :projectName
       String :dateStart
