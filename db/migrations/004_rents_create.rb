@@ -5,6 +5,7 @@ Sequel.migration do
   change do
     create_table(:rents) do
       primary_key :id
+      foreign_key :dailyplan_id
       
       String :bnb_id_1
 	  String :bnb_id_2

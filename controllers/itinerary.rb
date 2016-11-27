@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# MovlogAPI web service
+# TimeTraveler web service
 class TimeTravelerAPI < Sinatra::Base
   # find project information by projectid
   get "/#{API_VER}/myproject/:projectId?" do
