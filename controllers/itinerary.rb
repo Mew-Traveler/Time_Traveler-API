@@ -28,16 +28,16 @@ class TimeTravelerAPI < Sinatra::Base
     newprojectStart = body_params['dateStart']
     newprojectEnd = body_params['dateEnd']
     newprojectUserId = body_params['userId']
-    newprojectId = body_params['projectId']
+    newprojectGroupId = body_params['groupId']
 
-    begin
-      if Project.find(id:newprojectId)
-        halt 422, "Project (projectId: #{newprojectId})already exists"
-      end
-    # rescue
-    #   content_type 'text/plain'
-    #   halt 404, "Cannot find Project (projectId: #{newprojectId}) data"
-    end
+    # begin
+    #   if Project.find(id:newprojectId)
+    #     halt 422, "Project (projectId: #{newprojectId})already exists"
+    #   end
+    # # rescue
+    # #   content_type 'text/plain'
+    # #   halt 404, "Cannot find Project (projectId: #{newprojectId}) data"
+    # end
 
     begin
       newprojct = Project.create(projectName: newprojectName, userId: newprojectId, dateEnd: newprojectEnd, dateStart: newprojectStart)
@@ -62,16 +62,16 @@ class TimeTravelerAPI < Sinatra::Base
     newdailylocateEnd = body_params['locateEnd']
     newdailytimeRemain = body_params['timeRemain']
 
-    begin
-      if Dailyplan.find(id:newdailyprojectId)
-        halt 422, "plan (dailyplan: #{newdailyprojectId})already exists"
-      end
+    # begin
+    #   if Dailyplan.find(project_id: newdailyprojectId)
+    #     halt 422, "plan (dailyplan: #{newdailyprojectId})already exists"
+    #   end
     # rescue
     #   content_type 'text/plain'
     #   halt 404, "Cannot find Project (projectId: #{newprojectId}) data"
-    end
+    # end
     begin
-      newDaily = Dailyplan.create(projectId: newdailyprojectId, roomId: newdailyroomId,
+      newDaily = Dailyplan.create(project_id: newdailyprojectId, roomId: newdailyroomId,
        nthday: newdailynthday, timeStart: newdailytimeStart, timeEnd: newdailytimeEnd,
       locateStart: newdailylocateStart, locateEnd: newdailylocateEnd, timeRemain: newdailytimeRemain)
 
@@ -88,7 +88,7 @@ class TimeTravelerAPI < Sinatra::Base
     day = params[:day]
     begin
       content_type 'application/json'
-      dailyplandata= Dailyplan.find(projectId:projectId, nthday:day)
+      dailyplandata= Dailyplan.find(project_id:projectId, nthday:day)
         timeRemain = dailyplandata.timeRemain if dailyplandata.timeRemain
         locateEnd = dailyplandata.locateEnd if dailyplandata.locateEnd
         locateStart = dailyplandata.locateStart if dailyplandata.locateStart
