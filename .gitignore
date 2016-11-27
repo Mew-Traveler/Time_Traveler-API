@@ -1,4 +1,6 @@
 config/app.yml
+coverage/*
 db/dev.db
 db/test.db
 .bundle/
+Gemfile.lock

@@ -43,7 +43,5 @@ class TimeTravelerAPI < Sinatra::Base
      content_type 'text/plain'
      halt 500, "Cannot create user (id: #{newuserEmail})"
    end
-
-
   end
 end

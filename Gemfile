@@ -6,15 +6,14 @@ gem 'sinatra'
 gem 'puma'
 gem 'json'
 gem 'econfig'
-
-gem 'rake'
-gem 'sequel'
-gem 'Time_Traveler', '0.1.70'
 gem 'roar'
 gem 'multi_json'
 gem 'dry-monads'
 gem 'dry-container'
 gem 'dry-transaction'
+gem 'Time_Traveler', '0.1.71'
+gem 'sequel'
+gem 'rake'
 
 group :development, :test do
   gem 'sqlite3'
