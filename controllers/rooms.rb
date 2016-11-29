@@ -27,7 +27,7 @@ class TimeTravelerAPI < Sinatra::Base
 
 
     rescue
-      halt 404, "Cannot find the location"
+      halt 404, "Cannot find the location~~~"
     end
   end
 end
