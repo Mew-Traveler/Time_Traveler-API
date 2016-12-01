@@ -6,7 +6,7 @@ gem 'sinatra'
 gem 'puma'
 gem 'json'
 gem 'econfig'
-gem 'Time_Traveler', '0.1.71'
+gem 'Time_Traveler', '0.1.72'
 gem 'sequel'
 gem 'rake'
 
