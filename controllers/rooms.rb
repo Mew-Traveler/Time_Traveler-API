@@ -1,10 +1,11 @@
 # frozen_string_literal: true
 
 # TimeTravelerAPI web service
-class TimeTravelerAPI < Sinatra::Base
-      location = params[:location]
-      begin
-        rent = Airbnb::RentInfo.find(location: location)
+class TimeTravelerAPI < Sinatra::Base   
+  get "/#{API_VER}/rent/:location/?" do
+    location = params[:location]
+    begin
+      rent = Airbnb::RentInfo.find(location: location)
 
       # Get each room's info
       rent.infos.each do |room|
@@ -21,16 +22,12 @@ class TimeTravelerAPI < Sinatra::Base
       content_type 'application/json'
       {
         location: rent.location,
-        infos: rent.infos
         infos: rooms_info
       }.to_json
 
-      rescue
-        halt 404, "Cannot find the location"
-      end
 
     rescue
-      halt 404, "Cannot find the location"
+      halt 404, "Cannot find the location~~~"
     end
   end
-end 
+end
