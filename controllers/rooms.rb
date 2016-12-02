@@ -9,20 +9,20 @@ class TimeTravelerAPI < Sinatra::Base
 
       # Get each room's info
       rent.infos.each do |room|
-        room_id = room.id
-        room_name = room.name
-        room_address = room.address
-        room_airbnb_link = room.airbnb_link
-        room_roomImg = room.roomImg
-        room_bed = room.bed
-        room_roomRank = room.roomRank
+        room_id = room[:id]
+        room_name = room[:name]
+        room_address = room[:address]
+        room_airbnb_link = room[:airbnb_link]
+        room_roomImg = room[:roomImg]
+        room_bed = room[:bed]
+        room_roomRank = room[:roomRank]
       end
 
       # Shown on the broswer
       content_type 'application/json'
       {
-        location: rent.location,
-        infos: rooms_info
+        location: location
+        # infos: rent.infos.first
       }.to_json
 
 
