@@ -68,6 +68,19 @@ class TimeTravelerAPI < Sinatra::Base
         bed: "3", 
         roomRank: "5"
         )
+
+      content_type 'application/json'
+      {
+        roomId: "1234", 
+        roomName: "This is room name test", 
+        roomPrice: "test price", 
+        address: "test address", 
+        airbnb_link: "test link", 
+        roomImg: "test roomImg", 
+        bed: "3", 
+        roomRank: "5"
+      }.to_json
+
     rescue
       content_type 'text/plain'
       halt 500, "Cannot create house for testing"
@@ -85,15 +98,15 @@ class TimeTravelerAPI < Sinatra::Base
   #    roomRank={NEW_RANK}
   post "/#{API_VER}/house/?" do
     begin
-      body_params = request.params
-      new_roomId = body_params['roomId'].to_s
-      new_roomName = body_params['roomName'].to_s
-      new_roomPrice = body_params['roomPrice'].to_s
-      new_address = body_params['address'].to_s
-      new_airbnb_link = body_params['airbnb_link'].to_s
-      new_roomImg = body_params['roomImg'].to_s
-      new_bed = body_params['bed'].to_s
-      new_roomRank = body_params['roomRank'].to_s
+      body_params = JSON.parse request.body.read
+      new_roomId = body_params[:roomId]
+      new_roomName = body_params[:roomName]
+      new_roomPrice = body_params[:roomPrice]
+      new_address = body_params[:address]
+      new_airbnb_link = body_params[:airbnb_link]
+      new_roomImg = body_params[:roomImg]
+      new_bed = body_params[:bed]
+      new_roomRank = body_params[:roomRank]
 
       House.create(
         roomId: new_roomId,
@@ -117,7 +130,7 @@ class TimeTravelerAPI < Sinatra::Base
         bed:  new_bed,
         roomRank: new_roomRank,
       }.to_json
-      
+
     rescue
       content_type 'text/plain'
       halt 500, "Cannot create house (roomId: #{new_roomId})"    
