@@ -26,7 +26,7 @@ CASSETTE_FILE_AIRBNB = 'airbnb_rooms'
 CASSETTE_FILE_SKYSCANNER = 'skyscanner_flights'
 CASSETTE_FILE_ROOM = 'room'
 
-CASSETTE_FILE_DAILYPLAN = 'dailyplan_cassette'
+CASSETTE_FILE_ADDTARGET = 'addtarget_cassette'
 
 
 VCR.configure do |c|
