@@ -1,7 +1,11 @@
 GEM
   remote: https://rubygems.org/
   specs:
+<<<<<<< HEAD
     Time_Traveler (0.1.71)
+=======
+    Time_Traveler (0.1.72)
+>>>>>>> e22b2ab4c8b12319cebaea52680a377aa0b890b5
       http (~> 2.0)
     addressable (2.5.0)
       public_suffix (~> 2.0, >= 2.0.2)
@@ -9,7 +13,7 @@ GEM
     concurrent-ruby (1.0.2)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
-    domain_name (0.5.20161021)
+    domain_name (0.5.20161129)
       unf (>= 0.0.5, < 1.0.0)
     dry-configurable (0.3.0)
       concurrent-ruby (~> 1.0)
@@ -116,10 +120,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+<<<<<<< HEAD
   Time_Traveler (= 0.1.71)
   dry-container
   dry-monads
   dry-transaction
+=======
+  Time_Traveler (= 0.1.72)
+>>>>>>> e22b2ab4c8b12319cebaea52680a377aa0b890b5
   econfig
   flay
   flog

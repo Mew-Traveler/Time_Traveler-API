@@ -4,3 +4,4 @@ db/dev.db
 db/test.db
 .bundle/
 Gemfile.lock
+models/.DS_Store

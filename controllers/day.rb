@@ -2,55 +2,8 @@
 
 # TimeTravelerAPI web service
 class TimeTravelerAPI < Sinatra::Base   
-  # get the data from airbnb api with the location
-  get "/#{API_VER}/rent/:location/?" do
-    location = params[:location]
-    begin
-      rent = Airbnb::RentInfo.find(location: location)
-
-      # Get each room's info
-      rent.infos.each do |room|
-<<<<<<< HEAD
-        room_id = room.id
-        room_name = room.name
-        room_address = room.address
-        room_airbnb_link = room.airbnb_link
-        room_roomImg = room.roomImg
-        room_bed = room.bed
-        room_roomRank = room.roomRank
-=======
-        room_id = room[:id]
-        room_name = room[:name]
-        room_address = room[:address]
-        room_airbnb_link = room[:airbnb_link]
-        room_roomImg = room[:roomImg]
-        room_bed = room[:bed]
-        room_roomRank = room[:roomRank]
->>>>>>> e22b2ab4c8b12319cebaea52680a377aa0b890b5
-      end
-
-      # Shown on the broswer
-      content_type 'application/json'
-      {
-<<<<<<< HEAD
-        location: rent.location,
-        infos: rooms_info
-=======
-        location: location,
-        infos: rent.infos
->>>>>>> e22b2ab4c8b12319cebaea52680a377aa0b890b5
-      }.to_json
-
-
-    rescue
-      halt 404, "Cannot find the location~~~"
-    end
-<<<<<<< HEAD
-=======
-  end
-
-  # get the house data from database
-  get "/#{API_VER}/house/:room_id/?" do
+  # get the day data from database
+  get "/#{API_VER}/day/:/?" do
     begin
       id = params[:room_id]
       house = House.find(roomId: id)
@@ -70,7 +23,6 @@ class TimeTravelerAPI < Sinatra::Base
       content_type 'text/plain'
       halt 404, "Cannot find house (roomId: #{id}"
     end
->>>>>>> e22b2ab4c8b12319cebaea52680a377aa0b890b5
   end
 
   # generate data for testing

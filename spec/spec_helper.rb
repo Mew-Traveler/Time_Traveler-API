@@ -24,6 +24,7 @@ CASSETTES_FOLDER = "#{FIXTURES_FOLDER}/cassettes"
 CASSETTE_FILE_GOOGLE = 'google_distances'
 CASSETTE_FILE_AIRBNB = 'airbnb_rooms'
 CASSETTE_FILE_SKYSCANNER = 'skyscanner_flights'
+CASSETTE_FILE_ROOM = 'room'
 
 VCR.configure do |c|
   c.cassette_library_dir = CASSETTES_FOLDER
