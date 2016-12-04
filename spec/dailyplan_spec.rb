@@ -3,7 +3,7 @@ require_relative 'spec_helper'
 describe 'Routes for airbnb' do
   SAD_LOCATION = 'ERROR'
   before do
-    VCR.insert_cassette CASSETTE_FILE_AIRBNB, record: :new_episodes
+    VCR.insert_cassette CASSETTE_FILE_DAILYPLAN, record: :new_episodes
   end
 
   it 'Happy: should be able to put data in Target Table' do

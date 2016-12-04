@@ -10,7 +10,7 @@ require 'rack/test'
 # require 'yaml'
 require 'vcr'
 require 'webmock'
-require './init.rb'
+require '../init.rb'
 
 # require_relative '../lib/Time_Traveler'
 include Rack::Test::Methods
@@ -24,6 +24,9 @@ CASSETTES_FOLDER = "#{FIXTURES_FOLDER}/cassettes"
 CASSETTE_FILE_GOOGLE = 'google_distances'
 CASSETTE_FILE_AIRBNB = 'airbnb_rooms'
 CASSETTE_FILE_SKYSCANNER = 'skyscanner_flights'
+
+CASSETTE_FILE_DAILYPLAN = 'dailyplan_cassette'
+
 
 VCR.configure do |c|
   c.cassette_library_dir = CASSETTES_FOLDER
@@ -40,13 +43,13 @@ SAD_MOVIE = 'sadmovie'
 SAD_LOCATION_ID = '0000'
 REMOVED_LOCATION_ID = '0000'
 
-# if File.file?('config/credentials.yml')
-#   credentials = YAML.load(File.read('config/credentials.yml'))
-#   ENV['AIRBNB_API'] = credentials[:airbnb_id]
-#   ENV['GOOGLE_API'] = credentials[:googlemap_id]
-#   ENV['SKYSCANNER_API'] = credentials[:skyscanner_id]
-# end
-#
+if File.file?('config/app.yml')
+  credentials = YAML.load(File.read('config/app.yml'))
+  ENV['AIRBNB_API'] = credentials['development']['AIRBNB_API']
+  ENV['GOOGLE_API'] = credentials['development']['GOOGLE_API']
+  ENV['SKYSCANNER_API'] = credentials['development']['SKYSCANNER_API']
+end
+
 # RESULT_FILE_AIRBNB = "#{FIXTURES_FOLDER}/airbnb_api_results.yml"
 # RESULT_FILE_GOOGLEMAP = "#{FIXTURES_FOLDER}/googlemap_api_results.yml"
 # RESULT_FILE_SKYSCANNER = "#{FIXTURES_FOLDER}/skyscanner_api_results.yml"
