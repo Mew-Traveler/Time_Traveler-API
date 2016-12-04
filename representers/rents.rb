@@ -5,5 +5,5 @@ require_relative 'rent'
 class RentsRepresenter < Roar::Decorator
   include Roar::JSON
 
-  collection :rents, extend: RentRepresenter, class: Rent
+  collection :results, extend: RentRepresenter, class: Rent
 end

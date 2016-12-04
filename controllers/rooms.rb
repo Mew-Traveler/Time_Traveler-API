@@ -1,52 +1,36 @@
 # frozen_string_literal: true
 
 # TimeTravelerAPI web service
-class TimeTravelerAPI < Sinatra::Base   
+class TimeTravelerAPI < Sinatra::Base
   # get the data from airbnb api with the location
   get "/#{API_VER}/rent/:location/?" do
     location = params[:location]
     begin
       rent = Airbnb::RentInfo.find(location: location)
-
-      # Get each room's info
-      rent.infos.each do |room|
-<<<<<<< HEAD
-        room_id = room.id
-        room_name = room.name
-        room_address = room.address
-        room_airbnb_link = room.airbnb_link
-        room_roomImg = room.roomImg
-        room_bed = room.bed
-        room_roomRank = room.roomRank
-=======
-        room_id = room[:id]
-        room_name = room[:name]
-        room_address = room[:address]
-        room_airbnb_link = room[:airbnb_link]
-        room_roomImg = room[:roomImg]
-        room_bed = room[:bed]
-        room_roomRank = room[:roomRank]
->>>>>>> e22b2ab4c8b12319cebaea52680a377aa0b890b5
-      end
+      results = {
+        results: rent.infos.map do |room|
+          result = {
+            id: room[:id],
+            name: room[:name],
+            address: room[:address],
+            airbnb_link: room[:airbnb_link],
+            roomImg: room[:roomImg],
+            bed: room[:bed],
+            roomRank: room[:roomRank]
+          }
+        end
+      }
 
       # Shown on the broswer
       content_type 'application/json'
-      {
-<<<<<<< HEAD
-        location: rent.location,
-        infos: rooms_info
-=======
-        location: location,
-        infos: rent.infos
->>>>>>> e22b2ab4c8b12319cebaea52680a377aa0b890b5
-      }.to_json
-
-
+      # {
+      #   location: location,
+      #   infos: rent.infos
+      # }.to_json
+      results.to_json
     rescue
-      halt 404, "Cannot find the location~~~"
+      halt 404, "Cannot find the location"
     end
-<<<<<<< HEAD
-=======
   end
 
   # get the house data from database
@@ -70,32 +54,31 @@ class TimeTravelerAPI < Sinatra::Base
       content_type 'text/plain'
       halt 404, "Cannot find house (roomId: #{id}"
     end
->>>>>>> e22b2ab4c8b12319cebaea52680a377aa0b890b5
   end
 
   # generate data for testing
   post "/#{API_VER}/house/generate/test/?" do
     begin
       House.create(
-        roomId: "1234", 
-        roomName: "This is room name test", 
-        roomPrice: "test price", 
-        address: "test address", 
-        airbnb_link: "test link", 
-        roomImg: "test roomImg", 
-        bed: "3", 
+        roomId: "1234",
+        roomName: "This is room name test",
+        roomPrice: "test price",
+        address: "test address",
+        airbnb_link: "test link",
+        roomImg: "test roomImg",
+        bed: "3",
         roomRank: "5"
         )
 
       content_type 'application/json'
       {
-        roomId: "1234", 
-        roomName: "This is room name test", 
-        roomPrice: "test price", 
-        address: "test address", 
-        airbnb_link: "test link", 
-        roomImg: "test roomImg", 
-        bed: "3", 
+        roomId: "1234",
+        roomName: "This is room name test",
+        roomPrice: "test price",
+        address: "test address",
+        airbnb_link: "test link",
+        roomImg: "test roomImg",
+        bed: "3",
         roomRank: "5"
       }.to_json
 
@@ -151,9 +134,7 @@ class TimeTravelerAPI < Sinatra::Base
 
     rescue
       content_type 'text/plain'
-      halt 500, "Cannot create house (roomId: #{new_roomId})"    
+      halt 500, "Cannot create house (roomId: #{new_roomId})"
     end
   end
-
-
 end
