@@ -37,13 +37,6 @@ VCR.configure do |c|
   c.filter_sensitive_data('<AIRBNB_CLIENT_ID>') { ENV['AIRBNB_CLIENT_ID'] }
 end
 
-HAPPY_MOVIE_URL = 'http://www.omdbapi.com?t=star+wars&y=&plot=short&r=json'
-SAD_MOVIE_URL = 'http://www.omdbapi.com?t=sadmovie&y=&plot=short&r=json'
-
-SAD_MOVIE = 'sadmovie'
-SAD_LOCATION_ID = '0000'
-REMOVED_LOCATION_ID = '0000'
-
 if File.file?('config/app.yml')
   credentials = YAML.load(File.read('config/app.yml'))
   ENV['AIRBNB_API'] = credentials['development']['AIRBNB_API']
