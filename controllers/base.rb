@@ -16,6 +16,6 @@ class TimeTravelerAPI < Sinatra::Base
   end
 
   get '/?' do
-    "TimeTraveleraPI latest version endpoints are at: /#{API_VER}/"
+    "TimeTravelerAPI latest version endpoints are at: /#{API_VER}/"
   end
 end

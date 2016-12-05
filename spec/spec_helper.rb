@@ -10,7 +10,7 @@ require 'rack/test'
 # require 'yaml'
 require 'vcr'
 require 'webmock'
-require '../init.rb'
+require './init.rb'
 
 # require_relative '../lib/Time_Traveler'
 include Rack::Test::Methods

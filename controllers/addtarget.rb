@@ -3,8 +3,10 @@
 # TimeTravelerAPI web service
 class TimeTravelerAPI < Sinatra::Base 
 
+
+
   #load the daily plan stored in db
-  get "/#{API_VER}/dailyplan/load/:project_id/:project_day" do
+  get "/#{API_VER}/addtarget/load/:project_id/:project_day" do
     project_id = params[:project_id]
     project_day = params[:project_day]
 
@@ -26,7 +28,7 @@ class TimeTravelerAPI < Sinatra::Base
   end
   
    #find near by sites
-  get "/#{API_VER}/dailyplan/findSite/:query/?" do
+  get "/#{API_VER}/addtarget/findSite/:query/?" do
     query = params[:query]
     begin
       queries = Google::GooglePlaceRating.find(query: query)
@@ -52,7 +54,7 @@ class TimeTravelerAPI < Sinatra::Base
   end
 
   #find near by resturants
-  get "/#{API_VER}/dailyplan/findResturant/:query/?" do
+  get "/#{API_VER}/addtarget/findResturant/:query/?" do
     query = params[:query]
     begin
       queries = Google::GooglePlaceRating.find(query: query)
@@ -78,7 +80,7 @@ class TimeTravelerAPI < Sinatra::Base
   end
 
   #find the two sites desinations -> done
-  get "/#{API_VER}/dailyplan/countDistance/:origins/:destinations/?" do
+  get "/#{API_VER}/addtarget/countDistance/:origins/:destinations/?" do
     origins = params[:origins]
     destinations = params[:destinations]
     params[:mode] = "driving"
@@ -93,7 +95,7 @@ class TimeTravelerAPI < Sinatra::Base
   end
 
   #find flight data -> done
-  get "/#{API_VER}/dailyplan/getFlightData/:project_day/:originPlace/:destinationPlace/?" do
+  get "/#{API_VER}/addtarget/getFlightData/:project_day/:originPlace/:destinationPlace/?" do
     params[:market] = "TW"
     params[:currency] = "TWD"
     params[:locale] = "en-GB"
@@ -136,19 +138,19 @@ class TimeTravelerAPI < Sinatra::Base
   end
 
   #add new sites into db
-  post "/#{API_VER}/dailyplan/addSite2db/" do #:project_id/:project_day/:site_name/:idx/:type/:start_time/:end_time
+  post "/#{API_VER}/addtarget/addSite2db/?" do #:project_id/:project_day/:site_name/:idx/:type/:start_time/:end_time
   	body_params = JSON.parse request.body.read
-    newSite_dailyplans_id = body_params[:dailyplans_id]
-    newSite_project_day = body_params[:project_day]
-    newSite_site_name = body_params[:site_name]
-    newSite_idx = body_params[:idx]
-    newSite_type = body_params[:type]
-    newSite_start_time = body_params[:start_time]
-    newSite_end_time = body_params[:end_time]
+    newSite_dailyplans_id = body_params['dailyplans_id']
+    newSite_project_day = body_params['project_day']
+    newSite_idx = body_params['idx']
+    newSite_site_name = body_params['site_name']
+    newSite_type = body_params['type']
+    newSite_start_time = body_params['start_time']
+    newSite_end_time = body_params['end_time']
 
     begin
-      if Project.find(id:newSite_dailyplans_id).empty?
-        halt 422, "plan (dailyplan: #{newSite_dailyplans_id})not found"
+      if (Project.count == 0)
+        halt 422, "plan (addtarget: #{newSite_dailyplans_id})not found"
       end
     end
 
@@ -159,6 +161,16 @@ class TimeTravelerAPI < Sinatra::Base
     rescue
       content_type 'text/plain'
       halt 500, "Cannot create site (id: #{newSite_site_name})"
+    end
+  end
+
+  post "#{API_VER}/addtarget/addfortest/" do
+    Project.create(userId: 'test', projectName: 'test', dateStart: '2016-12-30', dateEnd: '2017-1-5', groupId: 'NULL')
+    Dailyplan.create(project_id: Project.first.id, roomId: '1', nthday: '1', date: '2016-12-30', timeStart: '0800', timeEnd: '1700', locateStart: 'Taipei', locateEnd: 'Hsinchu', timeRemain: '9')
+    begin
+      if (Project.empty? == true)
+        halt 424, "fail to create new project"
+      end
     end
   end
 end
