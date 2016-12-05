@@ -155,7 +155,7 @@ class TimeTravelerAPI < Sinatra::Base
     end
 
     begin
-      newSite = Target.create(dailyplans_id: newSite_dailyplans_id, project_day: newSite_project_day, idx: newSite_idx, site_name: newSite_site_name, type: newSite_type, start_time: newSite_start_time, end_time: newSite_end_time)
+      newSite = Target.create(dailyplans_id: newSite_dailyplans_id, project_day: newSite_project_day, idx: newSite_idx, type: newSite_type, start_time: newSite_start_time, end_time: newSite_end_time)
       content_type 'application/json'
       newSite.to_json
     rescue
@@ -164,13 +164,16 @@ class TimeTravelerAPI < Sinatra::Base
     end
   end
 
-  post "#{API_VER}/addtarget/addfortest/" do
+  post "/#{API_VER}/addtarget/addfortest/?" do
+    puts Project.first.id.to_s
     Project.create(userId: 'test', projectName: 'test', dateStart: '2016-12-30', dateEnd: '2017-1-5', groupId: 'NULL')
-    Dailyplan.create(project_id: Project.first.id, roomId: '1', nthday: '1', date: '2016-12-30', timeStart: '0800', timeEnd: '1700', locateStart: 'Taipei', locateEnd: 'Hsinchu', timeRemain: '9')
+    Dailyplan.create(project_id: Project.first.id.to_s, roomId: '1', nthday: '1', date: '2016-12-30', timeStart: '0800', timeEnd: '1700', locateStart: 'Taipei', locateEnd: 'Hsinchu', timeRemain: '9')
     begin
       if (Project.empty? == true)
         halt 424, "fail to create new project"
       end
     end
+    content_type 'application/json'
+    {status: 'ok'}.to_json
   end
 end

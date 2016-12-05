@@ -12,9 +12,7 @@ describe 'addtarget for page5' do
 
   describe 'test for adding new target into dailyplan' do
     it 'Happy: should be able to post data in Project Table & Dailyplan Table' do
-      post '/api/v0.1/addtarget/addfortest',
-      {}.to_json,
-      'CONTENT_TYPE' => 'application/json'
+      post '/api/v0.1/addtarget/addfortest'
 
       last_response.status.must_equal 200
       last_response.content_type.must_equal 'application/json'
