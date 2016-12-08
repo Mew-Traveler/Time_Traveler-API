@@ -9,6 +9,11 @@ gem 'econfig'
 gem 'Time_Traveler', '0.1.72'
 gem 'sequel'
 gem 'rake'
+gem 'roar'
+gem 'multi_json'
+gem 'dry-monads'
+gem 'dry-container'
+gem 'dry-transaction'
 
 group :development, :test do
   gem 'sqlite3'

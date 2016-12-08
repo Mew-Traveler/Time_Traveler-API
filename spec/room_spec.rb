@@ -42,7 +42,7 @@ describe 'Routes for room' do
 
   describe 'Write house data to DB' do
     it 'HAPPY: should write the house successful with correct params' do
-      post "api/v0.1/house/?",
+      post "api/v0.1/addHouse",
       {
         roomId: 'new_roomId',
         roomName: 'new_roomName',

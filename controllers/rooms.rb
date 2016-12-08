@@ -138,10 +138,13 @@ class TimeTravelerAPI < Sinatra::Base
   end
 
   post "/#{API_VER}/addHouse/?" do
-    
-  rescue
-    content_type 'text/plain'
-    halt 500, "Cannot create house"    
+    result = CreateHouse.call(request.body.read)
+
+    if result.success?
+      HouseRepresenter.new(result.value).to_json
+    else
+      ErrorRepresenter.new(result.value).to_status_response
+    end
   end
 
 
