@@ -28,4 +28,31 @@ describe 'addtarget for page5' do
       last_response.content_type.must_equal 'application/json'
     end
   end
+
+  describe 'get data from skyscanner' do
+    it 'Happy: should be able to get data from skyscanner' do
+      get '/api/v0.1/addtarget/getFlightData/2016-12-30/UK/US/?'
+
+      last_response.status.must_equal 200
+      last_response.content_type.must_equal 'application/json'
+    end
+  end
+
+  describe 'get information from google' do
+    it 'Happy: should be able to get distance & duration from google' do
+      get '/api/v0.1/addtarget/countDistance/:Hsinchu/:Taipei/?'
+
+      last_response.status.must_equal 200
+      last_response.content_type.must_equal 'application/json'     
+    end
+  end
+
+  # describe 'get targets from specfic day of dailyplan' do
+  #   it 'Happy: should be able to get targets from db' do
+  #     get '/api/v0.1/addtarget/load/1/1/?'
+
+  #     last_response.status.must_equal 200
+  #     last_response.content_type.must_equal 'application/json' 
+  #   end     
+  # end
 end

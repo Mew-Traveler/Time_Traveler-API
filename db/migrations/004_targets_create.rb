@@ -5,11 +5,14 @@ Sequel.migration do
   change do
     create_table(:targets) do
       primary_key :id
+      foreign_key :project_id
       foreign_key :dailyplans_id
 
-  	  String :project_day
 	    String :idx
 	    String :type
+      String :rating
+      String :site_name
+      String :address
       String :start_time
       String :end_time
     end

@@ -6,20 +6,20 @@ class TimeTravelerAPI < Sinatra::Base
 
 
   #load the daily plan stored in db
-  get "/#{API_VER}/addtarget/load/:project_id/:project_day" do
+  get "/#{API_VER}/addtarget/load/:project_id/:dailyplans_id/?" do
     project_id = params[:project_id]
-    project_day = params[:project_day]
+    dailyplans_id = params[:dailyplans_id]
 
-    loads = Target.find(project_id: project_id)
+    loads = Target.find(project_id: project_id, dailyplans_id: dailyplans_id)
     sites = {
       sites: rating_queries.map do |q|
         site[:rating] = q.rating
-        site[:lat] = q.lat
-        site[:lng] = q.lng
-        site[:placeid] = q.placeid
-        site[:types] = place.types
-        site[:address] = place.address
-        site[:placename] = place.placename
+        site[:type] = q.type
+        site[:rating] = q.rating
+        site[:site_name] = q.site_name
+        site[:address] = q.address
+        site[:start_time] = q.start_time
+        site[:end_time] = q.end_time
         {site: site}
       end
     }
@@ -28,56 +28,56 @@ class TimeTravelerAPI < Sinatra::Base
   end
   
    #find near by sites
-  get "/#{API_VER}/addtarget/findSite/:query/?" do
-    query = params[:query]
-    begin
-      queries = Google::GooglePlaceRating.find(query: query)
-      rating_queries = queries.return_rating
+  # get "/#{API_VER}/addtarget/findSite/:query/?" do
+  #   query = params[:query]
+  #   begin
+  #     queries = Google::GooglePlaceRating.find(query: query)
+  #     rating_queries = queries.return_rating
 
-      sites = {
-        sites: rating_queries.map do |q|
-          site[:rating] = q.rating
-          site[:lat] = q.lat
-          site[:lng] = q.lng
-          site[:placeid] = q.placeid
-          site[:types] = place.types
-          site[:address] = place.address
-          site[:placename] = place.placename
-          {site: site}
-        end
-      }
-      content_type 'application/json'
-      sites.to_json
-    rescue
-      halt 404, "Cannot get site data"
-    end
-  end
+  #     sites = {
+  #       sites: rating_queries.map do |q|
+  #         site[:rating] = q.rating
+  #         site[:lat] = q.lat
+  #         site[:lng] = q.lng
+  #         site[:placeid] = q.placeid
+  #         site[:types] = place.types
+  #         site[:address] = place.address
+  #         site[:placename] = place.placename
+  #         {site: site}
+  #       end
+  #     }
+  #     content_type 'application/json'
+  #     sites.to_json
+  #   rescue
+  #     halt 404, "Cannot get site data"
+  #   end
+  # end
 
-  #find near by resturants
-  get "/#{API_VER}/addtarget/findResturant/:query/?" do
-    query = params[:query]
-    begin
-      queries = Google::GooglePlaceRating.find(query: query)
-      rating_queries = queries.return_rating
+  # #find near by resturants
+  # get "/#{API_VER}/addtarget/findResturant/:query/?" do
+  #   query = params[:query]
+  #   begin
+  #     queries = Google::GooglePlaceRating.find(query: query)
+  #     rating_queries = queries.return_rating
 
-      sites = {
-        sites: rating_queries.map do |q|
-          site[:rating] = q.rating
-          site[:lat] = q.lat
-          site[:lng] = q.lng
-          site[:placeid] = q.placeid
-          site[:types] = place.types
-          site[:address] = place.address
-          site[:placename] = place.placename
-          {site: site}
-        end
-      }
-      content_type 'application/json'
-      sites.to_json
-    rescue
-      halt 404, "Cannot get site data"
-    end
-  end
+  #     sites = {
+  #       sites: rating_queries.map do |q|
+  #         site[:rating] = q.rating
+  #         site[:lat] = q.lat
+  #         site[:lng] = q.lng
+  #         site[:placeid] = q.placeid
+  #         site[:types] = place.types
+  #         site[:address] = place.address
+  #         site[:placename] = place.placename
+  #         {site: site}
+  #       end
+  #     }
+  #     content_type 'application/json'
+  #     sites.to_json
+  #   rescue
+  #     halt 404, "Cannot get site data"
+  #   end
+  # end
 
   #find the two sites desinations -> done
   get "/#{API_VER}/addtarget/countDistance/:origins/:destinations/?" do
