@@ -147,8 +147,18 @@ class TimeTravelerAPI < Sinatra::Base
     end
   end
 
-  get "#{API_VER}/getHouses/:location/?" do
-    
+  get "/#{API_VER}/getHouses/:location/?" do
+    result = GetHouses.call(params)
+
+    if result.success?
+      data = []
+      result.value.each do |room|
+        data.push(HouseRepresenter.new(room).to_json)
+      end
+      data.to_json
+    else
+      ErrorRepresenter.new(result.value).to_status_response  
+    end
   end
 
 

@@ -28,5 +28,6 @@ class GetHouses
       room_collection.push(house_representation.from_json(room.to_json))
     end  
 
+    Right(room_collection)
   }
 end
