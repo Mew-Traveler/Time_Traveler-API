@@ -5,7 +5,7 @@ class FindUserId
   extend Dry::Monads::Either::Mixin
 
   def self.call(params)
-    keyword = params[:userEmail].gsub(/\+/, ' ')
+    keyword = params[:userEmail]
     if (userId = User.find(userEmail: keyword)).nil?
       Left(Error.new(:not_found, "User #{keyword} could not be found"))
     else

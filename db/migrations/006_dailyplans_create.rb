@@ -5,8 +5,8 @@ Sequel.migration do
   change do
     create_table(:dailyplans) do
       primary_key :id
-      foreign_key :project_id
-      
+      foreign_key :projectId
+
       String :roomId
       String :nthday
       String :date
@@ -15,6 +15,7 @@ Sequel.migration do
       String :locateStart
       String :locateEnd
       String :timeRemain
+      String :projectId
     end
   end
 end

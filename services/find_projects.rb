@@ -6,9 +6,10 @@ class FindProjects
 
   def self.call(userId)
     #keyword = params[:userId].gsub(/\+/, ' ')
-    projects = Project.where(userId: userId).all
+    projects = Project.where(userEmail: userId).all
     projects = projects.map do |projectInfo|
       name = projectInfo.projectName if projectInfo.projectName
+      print name
       { id: projectInfo.id,  projectName: name}
     end
     if projects.nil?
