@@ -12,7 +12,7 @@ describe 'Routes for room' do
   describe 'Get house data from DB' do
     before do
       DB[:houses].delete
-      post "api/v0.1/house/generate/test/?"
+      post "api/v0.1/house1/generate/test/?"
     end
 
     it 'HAPPY: should get house from db by correct room id' do
@@ -53,7 +53,7 @@ describe 'Routes for room' do
         bed:  'new_bed',
         roomRank: 'new_roomRank'
       }.to_json,
-      'content_type'=>'application/json'
+      'CONTENT_TYPE'=>'application/json'
 
       last_response.status.must_equal 200
       last_response.content_type.must_equal 'application/json'

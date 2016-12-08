@@ -28,7 +28,7 @@ class TimeTravelerAPI < Sinatra::Base
 
 
     rescue
-      halt 404, "Cannot find the location~~~"
+      halt 404, "Cannot find the location"
     end
   end
 
@@ -56,7 +56,7 @@ class TimeTravelerAPI < Sinatra::Base
   end
 
   # generate data for testing
-  post "/#{API_VER}/house/generate/test/?" do
+  post "/#{API_VER}/house1/generate/test/?" do
     begin
       House.create(
         roomId: "1234", 
@@ -98,14 +98,14 @@ class TimeTravelerAPI < Sinatra::Base
   #    roomRank={NEW_RANK}
   post "/#{API_VER}/house/?" do
     begin
-      body_params = JSON.parse request.body.read
-      new_roomId = body_params[:roomId],
-      new_roomName = body_params[:roomName],
-      new_roomPrice = body_params[:roomPrice],
-      new_address = body_params[:address],
-      new_airbnb_link = body_params[:airbnb_link],
-      new_roomImg = body_params[:roomImg],
-      new_bed = body_params[:bed],
+      body_params = JSON.parse(request.body.read)
+      new_roomId = body_params[:roomId]
+      new_roomName = body_params[:roomName]
+      new_roomPrice = body_params[:roomPrice]
+      new_address = body_params[:address]
+      new_airbnb_link = body_params[:airbnb_link]
+      new_roomImg = body_params[:roomImg]
+      new_bed = body_params[:bed]
       new_roomRank = body_params[:roomRank]
 
       House.create(
@@ -135,6 +135,13 @@ class TimeTravelerAPI < Sinatra::Base
       content_type 'text/plain'
       halt 500, "Cannot create house (roomId: #{new_roomId})"    
     end
+  end
+
+  post "/#{API_VER}/addHouse/?" do
+    
+  rescue
+    content_type 'text/plain'
+    halt 500, "Cannot create house"    
   end
 
 
