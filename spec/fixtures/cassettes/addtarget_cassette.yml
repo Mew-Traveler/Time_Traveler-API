@@ -1,0 +1,446 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://partners.api.skyscanner.net/apiservices/browseroutes/v1.0/TW/TWD/en-GB/UK/US/2016-12-30?apiKey=prtl6749387986743898559646983194
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - partners.api.skyscanner.net
+      User-Agent:
+      - http.rb/2.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Vary:
+      - Accept
+      Cache-Control:
+      - public,max-age=3600
+      Content-Type:
+      - application/json
+      Date:
+      - Thu, 08 Dec 2016 06:05:18 GMT
+      Connection:
+      - close
+      Content-Length:
+      - '68996'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"Routes":[{"OriginId":1803,"DestinationId":47175},{"OriginId":1803,"DestinationId":68528},{"OriginId":1803,"DestinationId":40053},{"OriginId":1803,"DestinationId":40057},{"OriginId":1803,"DestinationId":40065},{"OriginId":1803,"DestinationId":40066},{"OriginId":1803,"DestinationId":40073},{"OriginId":1803,"DestinationId":40116},{"OriginId":1803,"DestinationId":40118},{"OriginId":1803,"DestinationId":40216},{"OriginId":1803,"DestinationId":40307},{"OriginId":1803,"DestinationId":40530},{"OriginId":1803,"DestinationId":40543},{"OriginId":1803,"DestinationId":40577},{"OriginId":1803,"DestinationId":40627,"QuoteIds":[1],"Price":62068.0,"QuoteDateTime":"2016-12-03T18:04:45"},{"OriginId":1803,"DestinationId":40734},{"OriginId":1803,"DestinationId":40836},{"OriginId":1803,"DestinationId":40869},{"OriginId":1803,"DestinationId":40924,"QuoteIds":[2,3],"Price":46376.0,"QuoteDateTime":"2016-11-23T23:57:17"},{"OriginId":1803,"DestinationId":40935},{"OriginId":1803,"DestinationId":40979},{"OriginId":1803,"DestinationId":41020},{"OriginId":1803,"DestinationId":41024},{"OriginId":1803,"DestinationId":41215},{"OriginId":1803,"DestinationId":42460},{"OriginId":1803,"DestinationId":42556},{"OriginId":1803,"DestinationId":42605},{"OriginId":1803,"DestinationId":42610},{"OriginId":1803,"DestinationId":42653},{"OriginId":1803,"DestinationId":42700},{"OriginId":1803,"DestinationId":42707},{"OriginId":1803,"DestinationId":42745},{"OriginId":1803,"DestinationId":42889},{"OriginId":1803,"DestinationId":42929},{"OriginId":1803,"DestinationId":42985},{"OriginId":1803,"DestinationId":42995,"QuoteIds":[4,5],"Price":13646.0,"QuoteDateTime":"2016-11-23T10:21:24"},{"OriginId":1803,"DestinationId":43044},{"OriginId":1803,"DestinationId":43083},{"OriginId":1803,"DestinationId":43124},{"OriginId":1803,"DestinationId":43135},{"OriginId":1803,"DestinationId":43229},{"OriginId":1803,"DestinationId":43234},{"OriginId":1803,"DestinationId":43238},{"OriginId":1803,"DestinationId":43270},{"OriginId":1803,"DestinationId":43282},{"OriginId":1803,"DestinationId":43369,"QuoteIds":[6,7],"Price":20317.0,"QuoteDateTime":"2016-12-03T23:31:51"},{"OriginId":1803,"DestinationId":43518},{"OriginId":1803,"DestinationId":44613},{"OriginId":1803,"DestinationId":44619},{"OriginId":1803,"DestinationId":44755},{"OriginId":1803,"DestinationId":44945},{"OriginId":1803,"DestinationId":44959},{"OriginId":1803,"DestinationId":44963},{"OriginId":1803,"DestinationId":44996},{"OriginId":1803,"DestinationId":45013},{"OriginId":1803,"DestinationId":45141},{"OriginId":1803,"DestinationId":45148},{"OriginId":1803,"DestinationId":45156},{"OriginId":1803,"DestinationId":45192},{"OriginId":1803,"DestinationId":45193},{"OriginId":1803,"DestinationId":45208},{"OriginId":1803,"DestinationId":45284},{"OriginId":1803,"DestinationId":45299},{"OriginId":1803,"DestinationId":45301},{"OriginId":1803,"DestinationId":45346},{"OriginId":1803,"DestinationId":45440},{"OriginId":1803,"DestinationId":45447},{"OriginId":1803,"DestinationId":45479},{"OriginId":1803,"DestinationId":45623},{"OriginId":1803,"DestinationId":45665},{"OriginId":1803,"DestinationId":46914},{"OriginId":1803,"DestinationId":46924},{"OriginId":1803,"DestinationId":46937},{"OriginId":1803,"DestinationId":46977},{"OriginId":1803,"DestinationId":47009,"QuoteIds":[8],"Price":45576.0,"QuoteDateTime":"2016-12-03T23:31:54"},{"OriginId":1803,"DestinationId":47118,"QuoteIds":[9,10],"Price":19592.0,"QuoteDateTime":"2016-12-07T05:10:28"},{"OriginId":1803,"DestinationId":47262},{"OriginId":1803,"DestinationId":47448},{"OriginId":1803,"DestinationId":47743},{"OriginId":1803,"DestinationId":47789},{"OriginId":1803,"DestinationId":47847,"QuoteIds":[11],"Price":31765.0,"QuoteDateTime":"2016-12-03T12:27:54"},{"OriginId":1803,"DestinationId":47882},{"OriginId":1803,"DestinationId":49237},{"OriginId":1803,"DestinationId":49328},{"OriginId":1803,"DestinationId":49509},{"OriginId":1803,"DestinationId":49711},{"OriginId":1803,"DestinationId":49757},{"OriginId":1803,"DestinationId":49760},{"OriginId":1803,"DestinationId":50041},{"OriginId":1803,"DestinationId":50083},{"OriginId":1803,"DestinationId":50183},{"OriginId":1803,"DestinationId":50246},{"OriginId":1803,"DestinationId":50286},{"OriginId":1803,"DestinationId":50290,"QuoteIds":[12],"Price":12026.0,"QuoteDateTime":"2016-11-29T04:13:06"},{"OriginId":1803,"DestinationId":50391},{"OriginId":1803,"DestinationId":51529},{"OriginId":1803,"DestinationId":51538},{"OriginId":1803,"DestinationId":51540},{"OriginId":1803,"DestinationId":51545},{"OriginId":1803,"DestinationId":51617},{"OriginId":1803,"DestinationId":52055},{"OriginId":1803,"DestinationId":52060,"QuoteIds":[13],"Price":11960.0,"QuoteDateTime":"2016-12-08T03:38:41"},{"OriginId":1803,"DestinationId":52063},{"OriginId":1803,"DestinationId":52164},{"OriginId":1803,"DestinationId":52388},{"OriginId":1803,"DestinationId":52397},{"OriginId":1803,"DestinationId":52577},{"OriginId":1803,"DestinationId":53923},{"OriginId":1803,"DestinationId":53931},{"OriginId":1803,"DestinationId":54023},{"OriginId":1803,"DestinationId":54075},{"OriginId":1803,"DestinationId":54119},{"OriginId":1803,"DestinationId":54276},{"OriginId":1803,"DestinationId":54470},{"OriginId":1803,"DestinationId":54564},{"OriginId":1803,"DestinationId":54642},{"OriginId":1803,"DestinationId":54649},{"OriginId":1803,"DestinationId":54651},{"OriginId":1803,"DestinationId":54658},{"OriginId":1803,"DestinationId":54703},{"OriginId":1803,"DestinationId":54704},{"OriginId":1803,"DestinationId":54742},{"OriginId":1803,"DestinationId":54754},{"OriginId":1803,"DestinationId":54787},{"OriginId":1803,"DestinationId":56286},{"OriginId":1803,"DestinationId":56472},{"OriginId":1803,"DestinationId":56514},{"OriginId":1803,"DestinationId":56670},{"OriginId":1803,"DestinationId":56764},{"OriginId":1803,"DestinationId":56802},{"OriginId":1803,"DestinationId":56821},{"OriginId":1803,"DestinationId":56862},{"OriginId":1803,"DestinationId":56956},{"OriginId":1803,"DestinationId":57014},{"OriginId":1803,"DestinationId":57059},{"OriginId":1803,"DestinationId":57150},{"OriginId":1803,"DestinationId":58436,"QuoteIds":[14,15],"Price":23483.0,"QuoteDateTime":"2016-12-03T23:31:51"},{"OriginId":1803,"DestinationId":58440},{"OriginId":1803,"DestinationId":58548},{"OriginId":1803,"DestinationId":58577},{"OriginId":1803,"DestinationId":58973},{"OriginId":1803,"DestinationId":59028},{"OriginId":1803,"DestinationId":59060},{"OriginId":1803,"DestinationId":59068},{"OriginId":1803,"DestinationId":59172},{"OriginId":1803,"DestinationId":59310},{"OriginId":1803,"DestinationId":59312},{"OriginId":1803,"DestinationId":59352},{"OriginId":1803,"DestinationId":59359},{"OriginId":1803,"DestinationId":60739},{"OriginId":1803,"DestinationId":60750},{"OriginId":1803,"DestinationId":60760},{"OriginId":1803,"DestinationId":60987,"QuoteIds":[16,17],"Price":18842.0,"QuoteDateTime":"2016-11-24T03:00:57"},{"OriginId":1803,"DestinationId":61278},{"OriginId":1803,"DestinationId":63713},{"OriginId":1803,"DestinationId":65358},{"OriginId":1803,"DestinationId":65363,"QuoteIds":[18,19],"Price":30475.0,"QuoteDateTime":"2016-12-02T23:40:17"},{"OriginId":1803,"DestinationId":65367},{"OriginId":1803,"DestinationId":65368,"QuoteIds":[20,21],"Price":19773.0,"QuoteDateTime":"2016-12-04T07:02:30"},{"OriginId":1803,"DestinationId":65394},{"OriginId":1803,"DestinationId":65448},{"OriginId":1803,"DestinationId":65560},{"OriginId":1803,"DestinationId":65604},{"OriginId":1803,"DestinationId":65633,"QuoteIds":[22],"Price":22414.0,"QuoteDateTime":"2016-12-07T15:50:09"},{"OriginId":1803,"DestinationId":65634},{"OriginId":1803,"DestinationId":65736},{"OriginId":1803,"DestinationId":65748},{"OriginId":1803,"DestinationId":65979},{"OriginId":1803,"DestinationId":66164},{"OriginId":1803,"DestinationId":66213},{"OriginId":1803,"DestinationId":66419},{"OriginId":1803,"DestinationId":66504},{"OriginId":1803,"DestinationId":67654},{"OriginId":1803,"DestinationId":67715},{"OriginId":1803,"DestinationId":67753},{"OriginId":1803,"DestinationId":67759},{"OriginId":1803,"DestinationId":67812},{"OriginId":1803,"DestinationId":67815,"QuoteIds":[23],"Price":116794.0,"QuoteDateTime":"2016-12-07T07:32:07"},{"OriginId":1803,"DestinationId":67849},{"OriginId":1803,"DestinationId":67853},{"OriginId":1803,"DestinationId":67893},{"OriginId":1803,"DestinationId":67906},{"OriginId":1803,"DestinationId":67949},{"OriginId":1803,"DestinationId":67995},{"OriginId":1803,"DestinationId":68004},{"OriginId":1803,"DestinationId":68033,"QuoteIds":[24],"Price":8568.0,"QuoteDateTime":"2016-12-04T01:50:46"},{"OriginId":1803,"DestinationId":68133},{"OriginId":1803,"DestinationId":68135},{"OriginId":1803,"DestinationId":68178},{"OriginId":1803,"DestinationId":68185},{"OriginId":1803,"DestinationId":68197},{"OriginId":1803,"DestinationId":68232},{"OriginId":1803,"DestinationId":68322},{"OriginId":1803,"DestinationId":68340},{"OriginId":1803,"DestinationId":68436},{"OriginId":1803,"DestinationId":68489},{"OriginId":1803,"DestinationId":68526},{"OriginId":1803,"DestinationId":68527},{"OriginId":1803,"DestinationId":68537},{"OriginId":1803,"DestinationId":68570},{"OriginId":1803,"DestinationId":68818},{"OriginId":1803,"DestinationId":72266},{"OriginId":1803,"DestinationId":72267,"QuoteIds":[25],"Price":48408.0,"QuoteDateTime":"2016-12-05T23:41:30"},{"OriginId":1803,"DestinationId":72551},{"OriginId":1803,"DestinationId":72739},{"OriginId":1803,"DestinationId":72833},{"OriginId":1803,"DestinationId":72900},{"OriginId":1803,"DestinationId":73076,"QuoteIds":[26,27],"Price":26445.0,"QuoteDateTime":"2016-12-07T07:32:05"},{"OriginId":1803,"DestinationId":73078},{"OriginId":1803,"DestinationId":74568},{"OriginId":1803,"DestinationId":74617},{"OriginId":1803,"DestinationId":74728},{"OriginId":1803,"DestinationId":74870},{"OriginId":1803,"DestinationId":74902},{"OriginId":1803,"DestinationId":74908},{"OriginId":1803,"DestinationId":74920},{"OriginId":1803,"DestinationId":74945},{"OriginId":1803,"DestinationId":74946},{"OriginId":1803,"DestinationId":74952},{"OriginId":1803,"DestinationId":74964},{"OriginId":1803,"DestinationId":75102},{"OriginId":1803,"DestinationId":75203},{"OriginId":1803,"DestinationId":75379},{"OriginId":1803,"DestinationId":75427},{"OriginId":1803,"DestinationId":75440},{"OriginId":1803,"DestinationId":75572},{"OriginId":1803,"DestinationId":75629},{"OriginId":1803,"DestinationId":79184},{"OriginId":1803,"DestinationId":79316},{"OriginId":1803,"DestinationId":79325},{"OriginId":1803,"DestinationId":79333},{"OriginId":1803,"DestinationId":79513},{"OriginId":1803,"DestinationId":79555},{"OriginId":1803,"DestinationId":79807},{"OriginId":1803,"DestinationId":79841},{"OriginId":1803,"DestinationId":79843},{"OriginId":1803,"DestinationId":79863},{"OriginId":1803,"DestinationId":80052},{"OriginId":1803,"DestinationId":80055},{"OriginId":1803,"DestinationId":81478},{"OriginId":1803,"DestinationId":81486},{"OriginId":1803,"DestinationId":81492},{"OriginId":1803,"DestinationId":81494},{"OriginId":1803,"DestinationId":81521},{"OriginId":1803,"DestinationId":81534},{"OriginId":1803,"DestinationId":81536},{"OriginId":1803,"DestinationId":81545},{"OriginId":1803,"DestinationId":81573},{"OriginId":1803,"DestinationId":81622},{"OriginId":1803,"DestinationId":81665},{"OriginId":1803,"DestinationId":81727,"QuoteIds":[28,29],"Price":19226.0,"QuoteDateTime":"2016-12-05T23:42:18"},{"OriginId":1803,"DestinationId":81766},{"OriginId":1803,"DestinationId":81781},{"OriginId":1803,"DestinationId":81830},{"OriginId":1803,"DestinationId":81907},{"OriginId":1803,"DestinationId":81924},{"OriginId":1803,"DestinationId":82003},{"OriginId":1803,"DestinationId":82054},{"OriginId":1803,"DestinationId":82097},{"OriginId":1803,"DestinationId":82201},{"OriginId":1803,"DestinationId":82211},{"OriginId":1803,"DestinationId":82305},{"OriginId":1803,"DestinationId":82396},{"OriginId":1803,"DestinationId":82403},{"OriginId":1803,"DestinationId":82446},{"OriginId":1803,"DestinationId":82456},{"OriginId":1803,"DestinationId":82534},{"OriginId":1803,"DestinationId":82543},{"OriginId":1803,"DestinationId":82642},{"OriginId":1803,"DestinationId":84312},{"OriginId":1803,"DestinationId":84460},{"OriginId":1803,"DestinationId":84497},{"OriginId":1803,"DestinationId":84601},{"OriginId":1803,"DestinationId":84748},{"OriginId":1803,"DestinationId":84755},{"OriginId":1803,"DestinationId":84787},{"OriginId":1803,"DestinationId":84838},{"OriginId":1803,"DestinationId":84891},{"OriginId":1803,"DestinationId":84946},{"OriginId":1803,"DestinationId":84947},{"OriginId":1803,"DestinationId":88916},{"OriginId":1803,"DestinationId":89123},{"OriginId":1803,"DestinationId":93617},{"OriginId":1803,"DestinationId":96269},{"OriginId":1803,"DestinationId":44905},{"OriginId":1803,"DestinationId":59259},{"OriginId":1803,"DestinationId":68705},{"OriginId":1803,"DestinationId":73314},{"OriginId":1803,"DestinationId":83838},{"OriginId":1803,"DestinationId":86478}],"Quotes":[{"QuoteId":1,"MinPrice":62068.0,"Direct":false,"OutboundLeg":{"CarrierIds":[],"OriginId":65698,"DestinationId":40627,"DepartureDate":"2016-12-30T00:00:00"},"QuoteDateTime":"2016-12-03T18:04:45"},{"QuoteId":2,"MinPrice":56465.0,"Direct":true,"OutboundLeg":{"CarrierIds":[1324],"OriginId":65698,"DestinationId":40924,"DepartureDate":"2016-12-30T00:00:00"},"QuoteDateTime":"2016-11-23T23:57:17"},{"QuoteId":3,"MinPrice":46376.0,"Direct":false,"OutboundLeg":{"CarrierIds":[1324],"OriginId":65698,"DestinationId":40924,"DepartureDate":"2016-12-30T00:00:00"},"QuoteDateTime":"2016-11-23T23:57:17"},{"QuoteId":4,"MinPrice":17378.0,"Direct":true,"OutboundLeg":{"CarrierIds":[1001],"OriginId":65655,"DestinationId":42995,"DepartureDate":"2016-12-30T00:00:00"},"QuoteDateTime":"2016-12-07T03:31:03"},{"QuoteId":5,"MinPrice":13646.0,"Direct":false,"OutboundLeg":{"CarrierIds":[1929],"OriginId":65655,"DestinationId":42995,"DepartureDate":"2016-12-30T00:00:00"},"QuoteDateTime":"2016-11-23T10:21:24"},{"QuoteId":6,"MinPrice":53404.0,"Direct":true,"OutboundLeg":{"CarrierIds":[857],"OriginId":65698,"DestinationId":43369,"DepartureDate":"2016-12-30T00:00:00"},"QuoteDateTime":"2016-12-03T23:31:54"},{"QuoteId":7,"MinPrice":20317.0,"Direct":false,"OutboundLeg":{"CarrierIds":[1929],"OriginId":65655,"DestinationId":43369,"DepartureDate":"2016-12-30T00:00:00"},"QuoteDateTime":"2016-12-03T23:31:51"},{"QuoteId":8,"MinPrice":45576.0,"Direct":false,"OutboundLeg":{"CarrierIds":[858],"OriginId":65698,"DestinationId":47009,"DepartureDate":"2016-12-30T00:00:00"},"QuoteDateTime":"2016-12-03T23:31:54"},{"QuoteId":9,"MinPrice":59124.0,"Direct":true,"OutboundLeg":{"CarrierIds":[881],"OriginId":65698,"DestinationId":47118,"DepartureDate":"2016-12-30T00:00:00"},"QuoteDateTime":"2016-12-07T05:10:28"},{"QuoteId":10,"MinPrice":19592.0,"Direct":false,"OutboundLeg":{"CarrierIds":[845],"OriginId":65698,"DestinationId":47118,"DepartureDate":"2016-12-30T00:00:00"},"QuoteDateTime":"2016-12-07T05:10:28"},{"QuoteId":11,"MinPrice":31765.0,"Direct":false,"OutboundLeg":{"CarrierIds":[],"OriginId":65655,"DestinationId":47847,"DepartureDate":"2016-12-30T00:00:00"},"QuoteDateTime":"2016-12-03T12:27:54"},{"QuoteId":12,"MinPrice":12026.0,"Direct":true,"OutboundLeg":{"CarrierIds":[1379],"OriginId":67662,"DestinationId":50290,"DepartureDate":"2016-12-30T00:00:00"},"QuoteDateTime":"2016-11-29T04:13:06"},{"QuoteId":13,"MinPrice":11960.0,"Direct":true,"OutboundLeg":{"CarrierIds":[1001],"OriginId":65655,"DestinationId":52060,"DepartureDate":"2016-12-30T00:00:00"},"QuoteDateTime":"2016-12-08T03:38:41"},{"QuoteId":14,"MinPrice":23483.0,"Direct":false,"OutboundLeg":{"CarrierIds":[1033],"OriginId":65655,"DestinationId":58436,"DepartureDate":"2016-12-30T00:00:00"},"QuoteDateTime":"2016-12-03T23:31:51"},{"QuoteId":15,"MinPrice":48092.0,"Direct":true,"OutboundLeg":{"CarrierIds":[1368],"OriginId":65698,"DestinationId":58436,"DepartureDate":"2016-12-30T00:00:00"},"QuoteDateTime":"2016-12-03T23:31:54"},{"QuoteId":16,"MinPrice":21859.0,"Direct":true,"OutboundLeg":{"CarrierIds":[1001],"OriginId":65655,"DestinationId":60987,"DepartureDate":"2016-12-30T00:00:00"},"QuoteDateTime":"2016-12-07T15:50:09"},{"QuoteId":17,"MinPrice":18842.0,"Direct":false,"OutboundLeg":{"CarrierIds":[1081],"OriginId":65655,"DestinationId":60987,"DepartureDate":"2016-12-30T00:00:00"},"QuoteDateTime":"2016-11-24T03:00:57"},{"QuoteId":18,"MinPrice":68326.0,"Direct":true,"OutboundLeg":{"CarrierIds":[857],"OriginId":65698,"DestinationId":65363,"DepartureDate":"2016-12-30T00:00:00"},"QuoteDateTime":"2016-12-02T23:40:17"},{"QuoteId":19,"MinPrice":30475.0,"Direct":false,"OutboundLeg":{"CarrierIds":[1907],"OriginId":65655,"DestinationId":65363,"DepartureDate":"2016-12-30T00:00:00"},"QuoteDateTime":"2016-12-02T23:40:17"},{"QuoteId":20,"MinPrice":25240.0,"Direct":true,"OutboundLeg":{"CarrierIds":[1001],"OriginId":65655,"DestinationId":65368,"DepartureDate":"2016-12-30T00:00:00"},"QuoteDateTime":"2016-12-07T14:24:23"},{"QuoteId":21,"MinPrice":19773.0,"Direct":false,"OutboundLeg":{"CarrierIds":[845],"OriginId":65698,"DestinationId":65368,"DepartureDate":"2016-12-30T00:00:00"},"QuoteDateTime":"2016-12-04T07:02:30"},{"QuoteId":22,"MinPrice":22414.0,"Direct":false,"OutboundLeg":{"CarrierIds":[1907],"OriginId":65655,"DestinationId":65633,"DepartureDate":"2016-12-30T00:00:00"},"QuoteDateTime":"2016-12-07T15:50:09"},{"QuoteId":23,"MinPrice":116794.0,"Direct":false,"OutboundLeg":{"CarrierIds":[1324],"OriginId":65698,"DestinationId":67815,"DepartureDate":"2016-12-30T00:00:00"},"QuoteDateTime":"2016-12-07T07:32:07"},{"QuoteId":24,"MinPrice":8568.0,"Direct":true,"OutboundLeg":{"CarrierIds":[105],"OriginId":67662,"DestinationId":68033,"DepartureDate":"2016-12-30T00:00:00"},"QuoteDateTime":"2016-12-04T01:50:46"},{"QuoteId":25,"MinPrice":48408.0,"Direct":false,"OutboundLeg":{"CarrierIds":[1324],"OriginId":65698,"DestinationId":72267,"DepartureDate":"2016-12-30T00:00:00"},"QuoteDateTime":"2016-12-05T23:41:30"},{"QuoteId":26,"MinPrice":103808.0,"Direct":true,"OutboundLeg":{"CarrierIds":[1523],"OriginId":65698,"DestinationId":73076,"DepartureDate":"2016-12-30T00:00:00"},"QuoteDateTime":"2016-12-07T07:32:08"},{"QuoteId":27,"MinPrice":26445.0,"Direct":false,"OutboundLeg":{"CarrierIds":[1033],"OriginId":65655,"DestinationId":73076,"DepartureDate":"2016-12-30T00:00:00"},"QuoteDateTime":"2016-12-07T07:32:05"},{"QuoteId":28,"MinPrice":19226.0,"Direct":false,"OutboundLeg":{"CarrierIds":[845],"OriginId":65698,"DestinationId":81727,"DepartureDate":"2016-12-30T00:00:00"},"QuoteDateTime":"2016-12-05T23:42:18"},{"QuoteId":29,"MinPrice":55202.0,"Direct":true,"OutboundLeg":{"CarrierIds":[1523],"OriginId":65698,"DestinationId":81727,"DepartureDate":"2016-12-30T00:00:00"},"QuoteDateTime":"2016-12-05T23:42:18"}],"Places":[{"PlaceId":1803,"Name":"United
+        Kingdom","Type":"Country","SkyscannerCode":"UK"},{"PlaceId":40053,"IataCode":"ABE","Name":"Allentown","Type":"Station","SkyscannerCode":"ABE","CityName":"Allentown","CityId":"ABEA","CountryName":"United
+        States"},{"PlaceId":40057,"IataCode":"ABI","Name":"Abilene Municipal","Type":"Station","SkyscannerCode":"ABI","CityName":"Abilene","CityId":"ABIA","CountryName":"United
+        States"},{"PlaceId":40065,"IataCode":"ABQ","Name":"Albuquerque","Type":"Station","SkyscannerCode":"ABQ","CityName":"Albuquerque","CityId":"ABQA","CountryName":"United
+        States"},{"PlaceId":40066,"IataCode":"ABR","Name":"Aberdeen","Type":"Station","SkyscannerCode":"ABR","CityName":"Aberdeen","CityId":"ABRA","CountryName":"United
+        States"},{"PlaceId":40073,"IataCode":"ABY","Name":"Albany Dougherty County","Type":"Station","SkyscannerCode":"ABY","CityName":"Albany","CityId":"ABYA","CountryName":"United
+        States"},{"PlaceId":40116,"IataCode":"ACT","Name":"Waco Municipal","Type":"Station","SkyscannerCode":"ACT","CityName":"Waco","CityId":"ACTA","CountryName":"United
+        States"},{"PlaceId":40118,"IataCode":"ACV","Name":"Arcata","Type":"Station","SkyscannerCode":"ACV","CityName":"Arcata","CityId":"ACVA","CountryName":"United
+        States"},{"PlaceId":40216,"IataCode":"AEX","Name":"Alexandria Internation","Type":"Station","SkyscannerCode":"AEX","CityName":"Alexandria","CityId":"AEXA","CountryName":"United
+        States"},{"PlaceId":40307,"IataCode":"AGS","Name":"Augusta Bush Field","Type":"Station","SkyscannerCode":"AGS","CityName":"Augusta","CityId":"AGSA","CountryName":"United
+        States"},{"PlaceId":40530,"IataCode":"ALB","Name":"Albany","Type":"Station","SkyscannerCode":"ALB","CityName":"Albany","CityId":"ALBA","CountryName":"United
+        States"},{"PlaceId":40543,"IataCode":"ALO","Name":"Waterloo","Type":"Station","SkyscannerCode":"ALO","CityName":"Waterloo","CityId":"ALOA","CountryName":"United
+        States"},{"PlaceId":40577,"IataCode":"AMA","Name":"Amarillo International","Type":"Station","SkyscannerCode":"AMA","CityName":"Amarillo","CityId":"AMAA","CountryName":"United
+        States"},{"PlaceId":40627,"IataCode":"ANC","Name":"Anchorage International","Type":"Station","SkyscannerCode":"ANC","CityName":"Anchorage","CityId":"ANCA","CountryName":"United
+        States"},{"PlaceId":40734,"IataCode":"APN","Name":"Alpena","Type":"Station","SkyscannerCode":"APN","CityName":"Alpena","CityId":"APNA","CountryName":"United
+        States"},{"PlaceId":40836,"IataCode":"ART","Name":"Watertown","Type":"Station","SkyscannerCode":"ART","CityName":"Watertown","CityId":"ARTA","CountryName":"United
+        States"},{"PlaceId":40869,"IataCode":"ASE","Name":"Aspen","Type":"Station","SkyscannerCode":"ASE","CityName":"Aspen","CityId":"ASEA","CountryName":"United
+        States"},{"PlaceId":40924,"IataCode":"ATL","Name":"Atlanta Hartsfield-Jackson","Type":"Station","SkyscannerCode":"ATL","CityName":"Atlanta","CityId":"ATLA","CountryName":"United
+        States"},{"PlaceId":40935,"IataCode":"ATW","Name":"Appleton","Type":"Station","SkyscannerCode":"ATW","CityName":"Appleton","CityId":"ATWA","CountryName":"United
+        States"},{"PlaceId":40979,"IataCode":"AUS","Name":"Austin-Bergstrom","Type":"Station","SkyscannerCode":"AUS","CityName":"Austin","CityId":"AUSA","CountryName":"United
+        States"},{"PlaceId":41020,"IataCode":"AVL","Name":"Asheville","Type":"Station","SkyscannerCode":"AVL","CityName":"Asheville","CityId":"AVLA","CountryName":"United
+        States"},{"PlaceId":41024,"IataCode":"AVP","Name":"Wilkes-Barre International","Type":"Station","SkyscannerCode":"AVP","CityName":"Wilkes-Barre","CityId":"AVPA","CountryName":"United
+        States"},{"PlaceId":41215,"IataCode":"AZO","Name":"Kalamazoo","Type":"Station","SkyscannerCode":"AZO","CityName":"Kalamazoo","CityId":"AZOA","CountryName":"United
+        States"},{"PlaceId":42460,"IataCode":"BDL","Name":"Hartford Bradley International","Type":"Station","SkyscannerCode":"BDL","CityName":"Hartford","CityId":"HFDA","CountryName":"United
+        States"},{"PlaceId":42556,"IataCode":"BFL","Name":"Bakersfield","Type":"Station","SkyscannerCode":"BFL","CityName":"Bakersfield","CityId":"BFLA","CountryName":"United
+        States"},{"PlaceId":42605,"IataCode":"BGM","Name":"Binghamton","Type":"Station","SkyscannerCode":"BGM","CityName":"Binghamton","CityId":"BGMA","CountryName":"United
+        States"},{"PlaceId":42610,"IataCode":"BGR","Name":"Bangor","Type":"Station","SkyscannerCode":"BGR","CityName":"Bangor","CityId":"BGRA","CountryName":"United
+        States"},{"PlaceId":42653,"IataCode":"BHM","Name":"Birmingham","Type":"Station","SkyscannerCode":"BHM","CityName":"Birmingham","CityId":"BHMA","CountryName":"United
+        States"},{"PlaceId":42700,"IataCode":"BIL","Name":"Billings","Type":"Station","SkyscannerCode":"BIL","CityName":"Billings","CityId":"BILA","CountryName":"United
+        States"},{"PlaceId":42707,"IataCode":"BIS","Name":"Bismarck","Type":"Station","SkyscannerCode":"BIS","CityName":"Bismarck","CityId":"BISA","CountryName":"United
+        States"},{"PlaceId":42745,"IataCode":"BJI","Name":"Bemidji","Type":"Station","SkyscannerCode":"BJI","CityName":"Bemidji","CityId":"BJIA","CountryName":"United
+        States"},{"PlaceId":42889,"IataCode":"BMI","Name":"Bloomington-Normal","Type":"Station","SkyscannerCode":"BMI","CityName":"Bloomington-Normal","CityId":"BMIA","CountryName":"United
+        States"},{"PlaceId":42929,"IataCode":"BNA","Name":"Nashville","Type":"Station","SkyscannerCode":"BNA","CityName":"Nashville","CityId":"BNAA","CountryName":"United
+        States"},{"PlaceId":42985,"IataCode":"BOI","Name":"Boise","Type":"Station","SkyscannerCode":"BOI","CityName":"Boise","CityId":"BOIA","CountryName":"United
+        States"},{"PlaceId":42995,"IataCode":"BOS","Name":"Boston Logan International","Type":"Station","SkyscannerCode":"BOS","CityName":"Boston","CityId":"BOSA","CountryName":"United
+        States"},{"PlaceId":43044,"IataCode":"BPT","Name":"Beaumont Jefferson County","Type":"Station","SkyscannerCode":"BPT","CityName":"Beaumont","CityId":"BPTA","CountryName":"United
+        States"},{"PlaceId":43083,"IataCode":"BQK","Name":"Brunswick Glynco Jetport","Type":"Station","SkyscannerCode":"BQK","CityName":"Brunswick","CityId":"SSIA","CountryName":"United
+        States"},{"PlaceId":43124,"IataCode":"BRD","Name":"Brainerd","Type":"Station","SkyscannerCode":"BRD","CityName":"Brainerd","CityId":"BRDA","CountryName":"United
+        States"},{"PlaceId":43135,"IataCode":"BRO","Name":"Brownsville","Type":"Station","SkyscannerCode":"BRO","CityName":"Brownsville","CityId":"BROA","CountryName":"United
+        States"},{"PlaceId":43229,"IataCode":"BTM","Name":"Butte","Type":"Station","SkyscannerCode":"BTM","CityName":"Butte","CityId":"BTMA","CountryName":"United
+        States"},{"PlaceId":43234,"IataCode":"BTR","Name":"Baton Rouge Ryan","Type":"Station","SkyscannerCode":"BTR","CityName":"Baton
+        Rouge","CityId":"BTRA","CountryName":"United States"},{"PlaceId":43238,"IataCode":"BTV","Name":"Burlington","Type":"Station","SkyscannerCode":"BTV","CityName":"Burlington","CityId":"BTVA","CountryName":"United
+        States"},{"PlaceId":43270,"IataCode":"BUF","Name":"Buffalo Niagara","Type":"Station","SkyscannerCode":"BUF","CityName":"Buffalo","CityId":"BUFA","CountryName":"United
+        States"},{"PlaceId":43282,"IataCode":"BUR","Name":"Burbank","Type":"Station","SkyscannerCode":"BUR","CityName":"Burbank","CityId":"BURA","CountryName":"United
+        States"},{"PlaceId":43369,"IataCode":"BWI","Name":"Baltimore Washington International","Type":"Station","SkyscannerCode":"BWI","CityName":"Washington","CityId":"WASA","CountryName":"United
+        States"},{"PlaceId":43518,"IataCode":"BZN","Name":"Bozeman","Type":"Station","SkyscannerCode":"BZN","CityName":"Bozeman","CityId":"BZNA","CountryName":"United
+        States"},{"PlaceId":44613,"IataCode":"CAE","Name":"Columbia Metropolitan","Type":"Station","SkyscannerCode":"CAE","CityName":"Columbia","CityId":"CAEA","CountryName":"United
+        States"},{"PlaceId":44619,"IataCode":"CAK","Name":"Akron / Canton Regional","Type":"Station","SkyscannerCode":"CAK","CityName":"Akron","CityId":"AKRB","CountryName":"United
+        States"},{"PlaceId":44755,"IataCode":"CDC","Name":"Cedar City","Type":"Station","SkyscannerCode":"CDC","CityName":"Cedar
+        City","CityId":"CDCA","CountryName":"United States"},{"PlaceId":44905,"IataCode":"CGI","Name":"Cape
+        Girardeau","Type":"Station","SkyscannerCode":"CGI","CityName":"Cape Girardeau","CityId":"CGIA","CountryName":"United
+        States"},{"PlaceId":44945,"IataCode":"CHA","Name":"Chattanooga","Type":"Station","SkyscannerCode":"CHA","CityName":"Chattanooga","CityId":"CHAA","CountryName":"United
+        States"},{"PlaceId":44959,"IataCode":"CHO","Name":"Charlottesville","Type":"Station","SkyscannerCode":"CHO","CityName":"Charlottesville","CityId":"CHOA","CountryName":"United
+        States"},{"PlaceId":44963,"IataCode":"CHS","Name":"Charleston","Type":"Station","SkyscannerCode":"CHS","CityName":"Charleston","CityId":"CHSA","CountryName":"United
+        States"},{"PlaceId":44996,"IataCode":"CID","Name":"Cedar Rapids","Type":"Station","SkyscannerCode":"CID","CityName":"Cedar
+        Rapids","CityId":"CIDA","CountryName":"United States"},{"PlaceId":45013,"IataCode":"CIU","Name":"Sault
+        Ste Marie Chippewa County","Type":"Station","SkyscannerCode":"CIU","CityName":"Sault
+        Ste Marie","CityId":"SSMA","CountryName":"United States"},{"PlaceId":45141,"IataCode":"CLE","Name":"Cleveland
+        Hopkins International","Type":"Station","SkyscannerCode":"CLE","CityName":"Cleveland","CityId":"CLEA","CountryName":"United
+        States"},{"PlaceId":45148,"IataCode":"CLL","Name":"College Station","Type":"Station","SkyscannerCode":"CLL","CityName":"College
+        Station","CityId":"CLLA","CountryName":"United States"},{"PlaceId":45156,"IataCode":"CLT","Name":"Charlotte
+        Douglas","Type":"Station","SkyscannerCode":"CLT","CityName":"Charlotte","CityId":"CLTA","CountryName":"United
+        States"},{"PlaceId":45192,"IataCode":"CMH","Name":"Port Columbus","Type":"Station","SkyscannerCode":"CMH","CityName":"Columbus","CityId":"CMHA","CountryName":"United
+        States"},{"PlaceId":45193,"IataCode":"CMI","Name":"Champaign","Type":"Station","SkyscannerCode":"CMI","CityName":"Champaign","CityId":"CMIA","CountryName":"United
+        States"},{"PlaceId":45208,"IataCode":"CMX","Name":"Hancock","Type":"Station","SkyscannerCode":"CMX","CityName":"Hancock","CityId":"CMXA","CountryName":"United
+        States"},{"PlaceId":45284,"IataCode":"COD","Name":"Cody / Yellowstone","Type":"Station","SkyscannerCode":"COD","CityName":"Cody
+        / Yellowstone","CityId":"CODA","CountryName":"United States"},{"PlaceId":45299,"IataCode":"COS","Name":"Colorado
+        Springs Peterson Field","Type":"Station","SkyscannerCode":"COS","CityName":"Colorado
+        Springs","CityId":"COSA","CountryName":"United States"},{"PlaceId":45301,"IataCode":"COU","Name":"Columbia","Type":"Station","SkyscannerCode":"COU","CityName":"Columbia","CityId":"COUA","CountryName":"United
+        States"},{"PlaceId":45346,"IataCode":"CPR","Name":"Casper","Type":"Station","SkyscannerCode":"CPR","CityName":"Casper","CityId":"CPRA","CountryName":"United
+        States"},{"PlaceId":45440,"IataCode":"CRP","Name":"Corpus Christi International","Type":"Station","SkyscannerCode":"CRP","CityName":"Corpus
+        Christi","CityId":"CRPA","CountryName":"United States"},{"PlaceId":45447,"IataCode":"CRW","Name":"Charleston","Type":"Station","SkyscannerCode":"CRW","CityName":"Charleston","CityId":"CRWA","CountryName":"United
+        States"},{"PlaceId":45479,"IataCode":"CSG","Name":"Columbus Metropolitain","Type":"Station","SkyscannerCode":"CSG","CityName":"Columbus","CityId":"CSGA","CountryName":"United
+        States"},{"PlaceId":45623,"IataCode":"CVG","Name":"Cincinnati Northern Kentucky","Type":"Station","SkyscannerCode":"CVG","CityName":"Cincinnati","CityId":"CVGA","CountryName":"United
+        States"},{"PlaceId":45665,"IataCode":"CWA","Name":"Wausau Central Wisconsin","Type":"Station","SkyscannerCode":"CWA","CityName":"Wausau","CityId":"AUWA","CountryName":"United
+        States"},{"PlaceId":46914,"IataCode":"DAB","Name":"Daytona Beach","Type":"Station","SkyscannerCode":"DAB","CityName":"Daytona
+        Beach","CityId":"DABA","CountryName":"United States"},{"PlaceId":46924,"IataCode":"DAL","Name":"Dallas
+        Love Field","Type":"Station","SkyscannerCode":"DAL","CityName":"Dallas","CityId":"DFWA","CountryName":"United
+        States"},{"PlaceId":46937,"IataCode":"DAY","Name":"Dayton International","Type":"Station","SkyscannerCode":"DAY","CityName":"Dayton","CityId":"DAYA","CountryName":"United
+        States"},{"PlaceId":46977,"IataCode":"DBQ","Name":"Dubuque","Type":"Station","SkyscannerCode":"DBQ","CityName":"Dubuque","CityId":"DBQA","CountryName":"United
+        States"},{"PlaceId":47009,"IataCode":"DCA","Name":"Washington Ronald Reagan","Type":"Station","SkyscannerCode":"DCA","CityName":"Washington","CityId":"WASA","CountryName":"United
+        States"},{"PlaceId":47118,"IataCode":"DEN","Name":"Denver International","Type":"Station","SkyscannerCode":"DEN","CityName":"Denver","CityId":"DENA","CountryName":"United
+        States"},{"PlaceId":47175,"IataCode":"DFW","Name":"Dallas Fort Worth International","Type":"Station","SkyscannerCode":"DFW","CityName":"Dallas","CityId":"DFWA","CountryName":"United
+        States"},{"PlaceId":47262,"IataCode":"DHN","Name":"Dothan","Type":"Station","SkyscannerCode":"DHN","CityName":"Dothan","CityId":"DHNA","CountryName":"United
+        States"},{"PlaceId":47448,"IataCode":"DLH","Name":"Duluth International","Type":"Station","SkyscannerCode":"DLH","CityName":"Duluth","CityId":"DLHA","CountryName":"United
+        States"},{"PlaceId":47743,"IataCode":"DRO","Name":"Durango La Plata","Type":"Station","SkyscannerCode":"DRO","CityName":"Durango","CityId":"DROA","CountryName":"United
+        States"},{"PlaceId":47789,"IataCode":"DSM","Name":"Des Moines","Type":"Station","SkyscannerCode":"DSM","CityName":"Des
+        Moines","CityId":"DSMA","CountryName":"United States"},{"PlaceId":47847,"IataCode":"DTW","Name":"Detroit
+        Wayne County","Type":"Station","SkyscannerCode":"DTW","CityName":"Detroit","CityId":"DTTA","CountryName":"United
+        States"},{"PlaceId":47882,"IataCode":"DUJ","Name":"Dubois","Type":"Station","SkyscannerCode":"DUJ","CityName":"Dubois","CityId":"DUJA","CountryName":"United
+        States"},{"PlaceId":49237,"IataCode":"EAU","Name":"Eau Claire","Type":"Station","SkyscannerCode":"EAU","CityName":"Eau
+        Claire","CityId":"EAUA","CountryName":"United States"},{"PlaceId":49328,"IataCode":"ECP","Name":"Northwest
+        Florida Beaches International","Type":"Station","SkyscannerCode":"ECP","CityName":"Panama
+        City","CityId":"PFNA","CountryName":"United States"},{"PlaceId":49509,"IataCode":"EGE","Name":"Vail
+        Eagle County","Type":"Station","SkyscannerCode":"EGE","CityName":"Vail","CityId":"EGEA","CountryName":"United
+        States"},{"PlaceId":49711,"IataCode":"EKO","Name":"Elko","Type":"Station","SkyscannerCode":"EKO","CityName":"Elko","CityId":"EKOA","CountryName":"United
+        States"},{"PlaceId":49757,"IataCode":"ELM","Name":"Elmira","Type":"Station","SkyscannerCode":"ELM","CityName":"Elmira","CityId":"ELMA","CountryName":"United
+        States"},{"PlaceId":49760,"IataCode":"ELP","Name":"El Paso International","Type":"Station","SkyscannerCode":"ELP","CityName":"El
+        Paso","CityId":"ELPA","CountryName":"United States"},{"PlaceId":50041,"IataCode":"ERI","Name":"Erie","Type":"Station","SkyscannerCode":"ERI","CityName":"Erie","CityId":"ERIA","CountryName":"United
+        States"},{"PlaceId":50083,"IataCode":"ESC","Name":"Escanaba","Type":"Station","SkyscannerCode":"ESC","CityName":"Escanaba","CityId":"ESCA","CountryName":"United
+        States"},{"PlaceId":50183,"IataCode":"EUG","Name":"Eugene","Type":"Station","SkyscannerCode":"EUG","CityName":"Eugene","CityId":"EUGA","CountryName":"United
+        States"},{"PlaceId":50246,"IataCode":"EVV","Name":"Evansville","Type":"Station","SkyscannerCode":"EVV","CityName":"Evansville","CityId":"EVVA","CountryName":"United
+        States"},{"PlaceId":50286,"IataCode":"EWN","Name":"New Bern","Type":"Station","SkyscannerCode":"EWN","CityName":"New
+        Bern","CityId":"EWNA","CountryName":"United States"},{"PlaceId":50290,"IataCode":"EWR","Name":"New
+        York Newark","Type":"Station","SkyscannerCode":"EWR","CityName":"New York","CityId":"NYCA","CountryName":"United
+        States"},{"PlaceId":50391,"IataCode":"EYW","Name":"Key West International","Type":"Station","SkyscannerCode":"EYW","CityName":"Key
+        West","CityId":"EYWA","CountryName":"United States"},{"PlaceId":51529,"IataCode":"FAI","Name":"Fairbanks
+        International","Type":"Station","SkyscannerCode":"FAI","CityName":"Fairbanks","CityId":"FAIA","CountryName":"United
+        States"},{"PlaceId":51538,"IataCode":"FAR","Name":"Fargo","Type":"Station","SkyscannerCode":"FAR","CityName":"Fargo","CityId":"FARA","CountryName":"United
+        States"},{"PlaceId":51540,"IataCode":"FAT","Name":"Fresno Yosemite","Type":"Station","SkyscannerCode":"FAT","CityName":"Fresno","CityId":"FATA","CountryName":"United
+        States"},{"PlaceId":51545,"IataCode":"FAY","Name":"Fayetteville Municipal","Type":"Station","SkyscannerCode":"FAY","CityName":"Fayetteville","CityId":"FAYA","CountryName":"United
+        States"},{"PlaceId":51617,"IataCode":"FCA","Name":"Kalispell","Type":"Station","SkyscannerCode":"FCA","CityName":"Kalispell","CityId":"FCAA","CountryName":"United
+        States"},{"PlaceId":52055,"IataCode":"FLG","Name":"Grand Canyon Pulliam Field","Type":"Station","SkyscannerCode":"FLG","CityName":"Grand
+        Canyon","CityId":"GCNA","CountryName":"United States"},{"PlaceId":52060,"IataCode":"FLL","Name":"Fort
+        Lauderdale International","Type":"Station","SkyscannerCode":"FLL","CityName":"Miami","CityId":"MIAA","CountryName":"United
+        States"},{"PlaceId":52063,"IataCode":"FLO","Name":"Florence","Type":"Station","SkyscannerCode":"FLO","CityName":"Florence","CityId":"FLOA","CountryName":"United
+        States"},{"PlaceId":52164,"IataCode":"FNT","Name":"Flint","Type":"Station","SkyscannerCode":"FNT","CityName":"Flint","CityId":"FNTA","CountryName":"United
+        States"},{"PlaceId":52388,"IataCode":"FSD","Name":"Sioux Falls","Type":"Station","SkyscannerCode":"FSD","CityName":"Sioux
+        Falls","CityId":"FSDA","CountryName":"United States"},{"PlaceId":52397,"IataCode":"FSM","Name":"Fort
+        Smith","Type":"Station","SkyscannerCode":"FSM","CityName":"Fort Smith","CityId":"FSMA","CountryName":"United
+        States"},{"PlaceId":52577,"IataCode":"FWA","Name":"Fort Wayne","Type":"Station","SkyscannerCode":"FWA","CityName":"Fort
+        Wayne","CityId":"FWAA","CountryName":"United States"},{"PlaceId":53923,"IataCode":"GCC","Name":"Gillette","Type":"Station","SkyscannerCode":"GCC","CityName":"Gillette","CityId":"GCCA","CountryName":"United
+        States"},{"PlaceId":53931,"IataCode":"GCK","Name":"Garden City","Type":"Station","SkyscannerCode":"GCK","CityName":"Garden
+        City","CityId":"GCKA","CountryName":"United States"},{"PlaceId":54023,"IataCode":"GEG","Name":"Spokane
+        International","Type":"Station","SkyscannerCode":"GEG","CityName":"Spokane","CityId":"GEGA","CountryName":"United
+        States"},{"PlaceId":54075,"IataCode":"GFK","Name":"Grand Forks","Type":"Station","SkyscannerCode":"GFK","CityName":"Grand
+        Forks","CityId":"GFKA","CountryName":"United States"},{"PlaceId":54119,"IataCode":"GGG","Name":"Gladewater","Type":"Station","SkyscannerCode":"GGG","CityName":"Gladewater","CityId":"GGGA","CountryName":"United
+        States"},{"PlaceId":54276,"IataCode":"GJT","Name":"Grand Junction","Type":"Station","SkyscannerCode":"GJT","CityName":"Grand
+        Junction","CityId":"GJTA","CountryName":"United States"},{"PlaceId":54470,"IataCode":"GNV","Name":"Gainesville","Type":"Station","SkyscannerCode":"GNV","CityName":"Gainesville","CityId":"GNVA","CountryName":"United
+        States"},{"PlaceId":54564,"IataCode":"GPT","Name":"Gulfport","Type":"Station","SkyscannerCode":"GPT","CityName":"Gulfport","CityId":"GPTA","CountryName":"United
+        States"},{"PlaceId":54642,"IataCode":"GRB","Name":"Green Bay","Type":"Station","SkyscannerCode":"GRB","CityName":"Green
+        Bay","CityId":"GRBA","CountryName":"United States"},{"PlaceId":54649,"IataCode":"GRI","Name":"Grand
+        Island","Type":"Station","SkyscannerCode":"GRI","CityName":"Grand Island","CityId":"GRIA","CountryName":"United
+        States"},{"PlaceId":54651,"IataCode":"GRK","Name":"Killeen Gray AAF","Type":"Station","SkyscannerCode":"GRK","CityName":"Killeen","CityId":"ILEA","CountryName":"United
+        States"},{"PlaceId":54658,"IataCode":"GRR","Name":"Grand Rapids","Type":"Station","SkyscannerCode":"GRR","CityName":"Grand
+        Rapids","CityId":"GRRA","CountryName":"United States"},{"PlaceId":54703,"IataCode":"GSO","Name":"Greensboro
+        / High Point","Type":"Station","SkyscannerCode":"GSO","CityName":"Greensboro
+        / High Point","CityId":"GSOA","CountryName":"United States"},{"PlaceId":54704,"IataCode":"GSP","Name":"Greenville-Spartanburg","Type":"Station","SkyscannerCode":"GSP","CityName":"Greenville","CityId":"GSPA","CountryName":"United
+        States"},{"PlaceId":54742,"IataCode":"GTF","Name":"Great Falls International","Type":"Station","SkyscannerCode":"GTF","CityName":"Great
+        Falls","CityId":"GTFA","CountryName":"United States"},{"PlaceId":54754,"IataCode":"GTR","Name":"Columbus
+        Golden Triangle Reg.","Type":"Station","SkyscannerCode":"GTR","CityName":"Columbus","CityId":"UBSA","CountryName":"United
+        States"},{"PlaceId":54787,"IataCode":"GUC","Name":"Gunnison","Type":"Station","SkyscannerCode":"GUC","CityName":"Gunnison","CityId":"GUCA","CountryName":"United
+        States"},{"PlaceId":56286,"IataCode":"HDN","Name":"Hayden","Type":"Station","SkyscannerCode":"HDN","CityName":"Hayden","CityId":"HDNA","CountryName":"United
+        States"},{"PlaceId":56472,"IataCode":"HHH","Name":"Hilton Head","Type":"Station","SkyscannerCode":"HHH","CityName":"Hilton
+        Head","CityId":"HHHA","CountryName":"United States"},{"PlaceId":56514,"IataCode":"HIB","Name":"Hibbing","Type":"Station","SkyscannerCode":"HIB","CityName":"Hibbing","CityId":"HIBA","CountryName":"United
+        States"},{"PlaceId":56670,"IataCode":"HLN","Name":"Helena","Type":"Station","SkyscannerCode":"HLN","CityName":"Helena","CityId":"HLNA","CountryName":"United
+        States"},{"PlaceId":56764,"IataCode":"HNL","Name":"Honolulu International","Type":"Station","SkyscannerCode":"HNL","CityName":"Honolulu","CityId":"HNLA","CountryName":"United
+        States"},{"PlaceId":56802,"IataCode":"HOB","Name":"Hobbs Lea County","Type":"Station","SkyscannerCode":"HOB","CityName":"Hobbs","CityId":"HOBA","CountryName":"United
+        States"},{"PlaceId":56821,"IataCode":"HOU","Name":"Houston Hobby","Type":"Station","SkyscannerCode":"HOU","CityName":"Houston","CityId":"HOUA","CountryName":"United
+        States"},{"PlaceId":56862,"IataCode":"HPN","Name":"Westchester County","Type":"Station","SkyscannerCode":"HPN","CityName":"Westchester
+        County","CityId":"HPNA","CountryName":"United States"},{"PlaceId":56956,"IataCode":"HRL","Name":"Harlingen","Type":"Station","SkyscannerCode":"HRL","CityName":"Harlingen","CityId":"HRLA","CountryName":"United
+        States"},{"PlaceId":57014,"IataCode":"HSV","Name":"Huntsville International","Type":"Station","SkyscannerCode":"HSV","CityName":"Huntsville","CityId":"HSVA","CountryName":"United
+        States"},{"PlaceId":57059,"IataCode":"HTS","Name":"Ashland","Type":"Station","SkyscannerCode":"HTS","CityName":"Ashland","CityId":"HTSA","CountryName":"United
+        States"},{"PlaceId":57150,"IataCode":"HVN","Name":"New Haven","Type":"Station","SkyscannerCode":"HVN","CityName":"New
+        Haven","CityId":"HVNA","CountryName":"United States"},{"PlaceId":58436,"IataCode":"IAD","Name":"Washington
+        Dulles","Type":"Station","SkyscannerCode":"IAD","CityName":"Washington","CityId":"WASA","CountryName":"United
+        States"},{"PlaceId":58440,"IataCode":"IAH","Name":"Houston George Bush Intercntl.","Type":"Station","SkyscannerCode":"IAH","CityName":"Houston","CityId":"HOUA","CountryName":"United
+        States"},{"PlaceId":58548,"IataCode":"ICT","Name":"Wichita Mid-Continent","Type":"Station","SkyscannerCode":"ICT","CityName":"Wichita","CityId":"ICTA","CountryName":"United
+        States"},{"PlaceId":58577,"IataCode":"IDA","Name":"Idaho Falls","Type":"Station","SkyscannerCode":"IDA","CityName":"Idaho
+        Falls","CityId":"IDAA","CountryName":"United States"},{"PlaceId":58973,"IataCode":"ILM","Name":"Wilmington","Type":"Station","SkyscannerCode":"ILM","CityName":"Wilmington","CityId":"ILMA","CountryName":"United
+        States"},{"PlaceId":59028,"IataCode":"IMT","Name":"Iron Mountain","Type":"Station","SkyscannerCode":"IMT","CityName":"Iron
+        Mountain","CityId":"IMTA","CountryName":"United States"},{"PlaceId":59060,"IataCode":"IND","Name":"Indianapolis","Type":"Station","SkyscannerCode":"IND","CityName":"Indianapolis","CityId":"INDA","CountryName":"United
+        States"},{"PlaceId":59068,"IataCode":"INL","Name":"International Falls","Type":"Station","SkyscannerCode":"INL","CityName":"International
+        Falls","CityId":"INLA","CountryName":"United States"},{"PlaceId":59172,"IataCode":"IPT","Name":"Williamsport","Type":"Station","SkyscannerCode":"IPT","CityName":"Williamsport","CityId":"IPTA","CountryName":"United
+        States"},{"PlaceId":59259,"IataCode":"IRK","Name":"Kirksville","Type":"Station","SkyscannerCode":"IRK","CityName":"Kirksville","CityId":"IRKA","CountryName":"United
+        States"},{"PlaceId":59310,"IataCode":"ISN","Name":"Williston","Type":"Station","SkyscannerCode":"ISN","CityName":"Williston","CityId":"ISNA","CountryName":"United
+        States"},{"PlaceId":59312,"IataCode":"ISP","Name":"Islip","Type":"Station","SkyscannerCode":"ISP","CityName":"Islip","CityId":"ISPA","CountryName":"United
+        States"},{"PlaceId":59352,"IataCode":"ITH","Name":"Ithaca","Type":"Station","SkyscannerCode":"ITH","CityName":"Ithaca","CityId":"ITHA","CountryName":"United
+        States"},{"PlaceId":59359,"IataCode":"ITO","Name":"Hilo","Type":"Station","SkyscannerCode":"ITO","CityName":"Hilo","CityId":"ITOA","CountryName":"United
+        States"},{"PlaceId":60739,"IataCode":"JAC","Name":"Jackson Hole","Type":"Station","SkyscannerCode":"JAC","CityName":"Jackson","CityId":"JACA","CountryName":"United
+        States"},{"PlaceId":60750,"IataCode":"JAN","Name":"Jackson-Evers International","Type":"Station","SkyscannerCode":"JAN","CityName":"Jackson","CityId":"JANA","CountryName":"United
+        States"},{"PlaceId":60760,"IataCode":"JAX","Name":"Jacksonville International","Type":"Station","SkyscannerCode":"JAX","CityName":"Jacksonville","CityId":"JAXA","CountryName":"United
+        States"},{"PlaceId":60987,"IataCode":"JFK","Name":"New York John F. Kennedy","Type":"Station","SkyscannerCode":"JFK","CityName":"New
+        York","CityId":"NYCA","CountryName":"United States"},{"PlaceId":61278,"IataCode":"JLN","Name":"Joplin","Type":"Station","SkyscannerCode":"JLN","CityName":"Joplin","CityId":"JLNA","CountryName":"United
+        States"},{"PlaceId":63713,"IataCode":"KOA","Name":"Kona","Type":"Station","SkyscannerCode":"KOA","CityName":"Kona","CityId":"KOAA","CountryName":"United
+        States"},{"PlaceId":65358,"IataCode":"LAN","Name":"Lansing","Type":"Station","SkyscannerCode":"LAN","CityName":"Lansing","CityId":"LANA","CountryName":"United
+        States"},{"PlaceId":65363,"IataCode":"LAS","Name":"Las Vegas Mccarran","Type":"Station","SkyscannerCode":"LAS","CityName":"Las
+        Vegas","CityId":"LASA","CountryName":"United States"},{"PlaceId":65367,"IataCode":"LAW","Name":"Lawton","Type":"Station","SkyscannerCode":"LAW","CityName":"Lawton","CityId":"LAWA","CountryName":"United
+        States"},{"PlaceId":65368,"IataCode":"LAX","Name":"Los Angeles International","Type":"Station","SkyscannerCode":"LAX","CityName":"Los
+        Angeles","CityId":"LAXA","CountryName":"United States"},{"PlaceId":65394,"IataCode":"LBB","Name":"Lubbock
+        International","Type":"Station","SkyscannerCode":"LBB","CityName":"Lubbock","CityId":"LBBA","CountryName":"United
+        States"},{"PlaceId":65448,"IataCode":"LCH","Name":"Lake Charles","Type":"Station","SkyscannerCode":"LCH","CityName":"Lake
+        Charles","CityId":"LCHA","CountryName":"United States"},{"PlaceId":65560,"IataCode":"LEX","Name":"Lexington
+        Blue Grass","Type":"Station","SkyscannerCode":"LEX","CityName":"Lexington","CityId":"LEXA","CountryName":"United
+        States"},{"PlaceId":65604,"IataCode":"LFT","Name":"Lafayette","Type":"Station","SkyscannerCode":"LFT","CityName":"Lafayette","CityId":"LFTA","CountryName":"United
+        States"},{"PlaceId":65633,"IataCode":"LGA","Name":"New York La Guardia","Type":"Station","SkyscannerCode":"LGA","CityName":"New
+        York","CityId":"NYCA","CountryName":"United States"},{"PlaceId":65634,"IataCode":"LGB","Name":"Long
+        Beach Municipal","Type":"Station","SkyscannerCode":"LGB","CityName":"Long
+        Beach","CityId":"LGBA","CountryName":"United States"},{"PlaceId":65655,"IataCode":"LGW","Name":"London
+        Gatwick","Type":"Station","SkyscannerCode":"LGW","CityName":"London","CityId":"LOND","CountryName":"United
+        Kingdom"},{"PlaceId":65698,"IataCode":"LHR","Name":"London Heathrow","Type":"Station","SkyscannerCode":"LHR","CityName":"London","CityId":"LOND","CountryName":"United
+        Kingdom"},{"PlaceId":65736,"IataCode":"LIH","Name":"Kauai Island Lihue","Type":"Station","SkyscannerCode":"LIH","CityName":"Kauai
+        Island","CityId":"LIHA","CountryName":"United States"},{"PlaceId":65748,"IataCode":"LIT","Name":"Little
+        Rock","Type":"Station","SkyscannerCode":"LIT","CityName":"Little Rock","CityId":"LITA","CountryName":"United
+        States"},{"PlaceId":65979,"IataCode":"LNK","Name":"Lincoln","Type":"Station","SkyscannerCode":"LNK","CityName":"Lincoln","CityId":"LNKA","CountryName":"United
+        States"},{"PlaceId":66164,"IataCode":"LRD","Name":"Laredo","Type":"Station","SkyscannerCode":"LRD","CityName":"Laredo","CityId":"LRDA","CountryName":"United
+        States"},{"PlaceId":66213,"IataCode":"LSE","Name":"La Crosse","Type":"Station","SkyscannerCode":"LSE","CityName":"La
+        Crosse","CityId":"LSEA","CountryName":"United States"},{"PlaceId":66419,"IataCode":"LWS","Name":"Lewiston-Nez
+        Perce County","Type":"Station","SkyscannerCode":"LWS","CityName":"Lewiston","CityId":"LWSA","CountryName":"United
+        States"},{"PlaceId":66504,"IataCode":"LYH","Name":"Lynchburg","Type":"Station","SkyscannerCode":"LYH","CityName":"Lynchburg","CityId":"LYHA","CountryName":"United
+        States"},{"PlaceId":67654,"IataCode":"MAF","Name":"Midland Odessa Regional","Type":"Station","SkyscannerCode":"MAF","CityName":"Midland","CityId":"MAFA","CountryName":"United
+        States"},{"PlaceId":67662,"IataCode":"MAN","Name":"Manchester","Type":"Station","SkyscannerCode":"MAN","CityName":"Manchester","CityId":"MANC","CountryName":"United
+        Kingdom"},{"PlaceId":67715,"IataCode":"MBS","Name":"Midland","Type":"Station","SkyscannerCode":"MBS","CityName":"Midland","CityId":"MBSA","CountryName":"United
+        States"},{"PlaceId":67753,"IataCode":"MCI","Name":"Kansas City International","Type":"Station","SkyscannerCode":"MCI","CityName":"Kansas
+        City","CityId":"MKCA","CountryName":"United States"},{"PlaceId":67759,"IataCode":"MCO","Name":"Orlando
+        International","Type":"Station","SkyscannerCode":"MCO","CityName":"Orlando","CityId":"ORLB","CountryName":"United
+        States"},{"PlaceId":67812,"IataCode":"MDT","Name":"Harrisburg International","Type":"Station","SkyscannerCode":"MDT","CityName":"Harrisburg","CityId":"HARA","CountryName":"United
+        States"},{"PlaceId":67815,"IataCode":"MDW","Name":"Chicago Midway","Type":"Station","SkyscannerCode":"MDW","CityName":"Chicago","CityId":"CHIA","CountryName":"United
+        States"},{"PlaceId":67849,"IataCode":"MEI","Name":"Meridian","Type":"Station","SkyscannerCode":"MEI","CityName":"Meridian","CityId":"MEIA","CountryName":"United
+        States"},{"PlaceId":67853,"IataCode":"MEM","Name":"Memphis International","Type":"Station","SkyscannerCode":"MEM","CityName":"Memphis","CityId":"MEMA","CountryName":"United
+        States"},{"PlaceId":67893,"IataCode":"MFE","Name":"Mcallen","Type":"Station","SkyscannerCode":"MFE","CityName":"Mcallen","CityId":"MFEA","CountryName":"United
+        States"},{"PlaceId":67906,"IataCode":"MFR","Name":"Medford","Type":"Station","SkyscannerCode":"MFR","CityName":"Medford","CityId":"MFRA","CountryName":"United
+        States"},{"PlaceId":67949,"IataCode":"MGM","Name":"Montgomery Dannelly Fld","Type":"Station","SkyscannerCode":"MGM","CityName":"Montgomery","CityId":"MGMA","CountryName":"United
+        States"},{"PlaceId":67995,"IataCode":"MHK","Name":"Manhattan","Type":"Station","SkyscannerCode":"MHK","CityName":"Manhattan","CityId":"MHKA","CountryName":"United
+        States"},{"PlaceId":68004,"IataCode":"MHT","Name":"Manchester","Type":"Station","SkyscannerCode":"MHT","CityName":"Manchester","CityId":"MHTA","CountryName":"United
+        States"},{"PlaceId":68033,"IataCode":"MIA","Name":"Miami International","Type":"Station","SkyscannerCode":"MIA","CityName":"Miami","CityId":"MIAA","CountryName":"United
+        States"},{"PlaceId":68133,"IataCode":"MKE","Name":"Milwaukee General Mitchell","Type":"Station","SkyscannerCode":"MKE","CityName":"Milwaukee","CityId":"MKEA","CountryName":"United
+        States"},{"PlaceId":68135,"IataCode":"MKG","Name":"Muskegon","Type":"Station","SkyscannerCode":"MKG","CityName":"Muskegon","CityId":"MKGA","CountryName":"United
+        States"},{"PlaceId":68178,"IataCode":"MLB","Name":"Melbourne","Type":"Station","SkyscannerCode":"MLB","CityName":"Melbourne","CityId":"MLBA","CountryName":"United
+        States"},{"PlaceId":68185,"IataCode":"MLI","Name":"Moline","Type":"Station","SkyscannerCode":"MLI","CityName":"Moline","CityId":"MLIA","CountryName":"United
+        States"},{"PlaceId":68197,"IataCode":"MLU","Name":"Monroe","Type":"Station","SkyscannerCode":"MLU","CityName":"Monroe","CityId":"MLUA","CountryName":"United
+        States"},{"PlaceId":68232,"IataCode":"MMH","Name":"Mammoth Lakes","Type":"Station","SkyscannerCode":"MMH","CityName":"Mammoth
+        Lakes","CityId":"MMHA","CountryName":"United States"},{"PlaceId":68322,"IataCode":"MOB","Name":"Mobile
+        Municipal Arpt","Type":"Station","SkyscannerCode":"MOB","CityName":"Mobile","CityId":"MOBA","CountryName":"United
+        States"},{"PlaceId":68340,"IataCode":"MOT","Name":"Minot International","Type":"Station","SkyscannerCode":"MOT","CityName":"Minot","CityId":"MOTA","CountryName":"United
+        States"},{"PlaceId":68436,"IataCode":"MQT","Name":"Marquette","Type":"Station","SkyscannerCode":"MQT","CityName":"Marquette","CityId":"MQTA","CountryName":"United
+        States"},{"PlaceId":68489,"IataCode":"MRY","Name":"Carmel Monterey Peninsula","Type":"Station","SkyscannerCode":"MRY","CityName":"Carmel","CityId":"MRYA","CountryName":"United
+        States"},{"PlaceId":68526,"IataCode":"MSN","Name":"Madison","Type":"Station","SkyscannerCode":"MSN","CityName":"Madison","CityId":"MSNA","CountryName":"United
+        States"},{"PlaceId":68527,"IataCode":"MSO","Name":"Missoula","Type":"Station","SkyscannerCode":"MSO","CityName":"Missoula","CityId":"MSOA","CountryName":"United
+        States"},{"PlaceId":68528,"IataCode":"MSP","Name":"Minneapolis St Paul","Type":"Station","SkyscannerCode":"MSP","CityName":"Minneapolis","CityId":"MSPA","CountryName":"United
+        States"},{"PlaceId":68537,"IataCode":"MSY","Name":"New Orleans Louis Armstrong","Type":"Station","SkyscannerCode":"MSY","CityName":"New
+        Orleans","CityId":"MSYA","CountryName":"United States"},{"PlaceId":68570,"IataCode":"MTJ","Name":"Montrose","Type":"Station","SkyscannerCode":"MTJ","CityName":"Montrose","CityId":"MTJA","CountryName":"United
+        States"},{"PlaceId":68705,"IataCode":"MWA","Name":"Marion","Type":"Station","SkyscannerCode":"MWA","CityName":"Marion","CityId":"MWAA","CountryName":"United
+        States"},{"PlaceId":68818,"IataCode":"MYR","Name":"Myrtle Beach AFB","Type":"Station","SkyscannerCode":"MYR","CityName":"Myrtle
+        Beach","CityId":"MYRA","CountryName":"United States"},{"PlaceId":72266,"IataCode":"OAJ","Name":"Jacksonville","Type":"Station","SkyscannerCode":"OAJ","CityName":"Jacksonville","CityId":"OAJA","CountryName":"United
+        States"},{"PlaceId":72267,"IataCode":"OAK","Name":"Oakland Metropolitan Oak","Type":"Station","SkyscannerCode":"OAK","CityName":"Oakland","CityId":"OAKA","CountryName":"United
+        States"},{"PlaceId":72551,"IataCode":"OGG","Name":"Maui Kahului","Type":"Station","SkyscannerCode":"OGG","CityName":"Kahului","CityId":"OGGA","CountryName":"United
+        States"},{"PlaceId":72739,"IataCode":"OKC","Name":"Oklahoma City Will Rogers
+        World","Type":"Station","SkyscannerCode":"OKC","CityName":"Oklahoma City","CityId":"OKCA","CountryName":"United
+        States"},{"PlaceId":72833,"IataCode":"OMA","Name":"Omaha Eppley Airfield","Type":"Station","SkyscannerCode":"OMA","CityName":"Omaha","CityId":"OMAA","CountryName":"United
+        States"},{"PlaceId":72900,"IataCode":"ONT","Name":"Ontario International","Type":"Station","SkyscannerCode":"ONT","CityName":"Ontario","CityId":"ONTA","CountryName":"United
+        States"},{"PlaceId":73076,"IataCode":"ORD","Name":"Chicago O''Hare International","Type":"Station","SkyscannerCode":"ORD","CityName":"Chicago","CityId":"CHIA","CountryName":"United
+        States"},{"PlaceId":73078,"IataCode":"ORF","Name":"Norfolk International","Type":"Station","SkyscannerCode":"ORF","CityName":"Norfolk","CityId":"ORFA","CountryName":"United
+        States"},{"PlaceId":73314,"IataCode":"OWB","Name":"Owensboro","Type":"Station","SkyscannerCode":"OWB","CityName":"Owensboro","CityId":"OWBA","CountryName":"United
+        States"},{"PlaceId":74568,"IataCode":"PAH","Name":"Paducah","Type":"Station","SkyscannerCode":"PAH","CityName":"Paducah","CityId":"PAHA","CountryName":"United
+        States"},{"PlaceId":74617,"IataCode":"PBI","Name":"West Palm Beach International","Type":"Station","SkyscannerCode":"PBI","CityName":"West
+        Palm Beach","CityId":"PBIA","CountryName":"United States"},{"PlaceId":74728,"IataCode":"PDX","Name":"Portland","Type":"Station","SkyscannerCode":"PDX","CityName":"Portland","CityId":"PDXA","CountryName":"United
+        States"},{"PlaceId":74870,"IataCode":"PGV","Name":"Pitt-Greenville","Type":"Station","SkyscannerCode":"PGV","CityName":"Greenville","CityId":"PGVA","CountryName":"United
+        States"},{"PlaceId":74902,"IataCode":"PHF","Name":"Newport News / Williamsb","Type":"Station","SkyscannerCode":"PHF","CityName":"Newport
+        News","CityId":"PHFA","CountryName":"United States"},{"PlaceId":74908,"IataCode":"PHL","Name":"Philadelphia
+        International","Type":"Station","SkyscannerCode":"PHL","CityName":"Philadelphia","CityId":"PHLA","CountryName":"United
+        States"},{"PlaceId":74920,"IataCode":"PHX","Name":"Phoenix Sky Harbor","Type":"Station","SkyscannerCode":"PHX","CityName":"Phoenix","CityId":"PHXA","CountryName":"United
+        States"},{"PlaceId":74945,"IataCode":"PIA","Name":"Greater Peoria","Type":"Station","SkyscannerCode":"PIA","CityName":"Peoria","CityId":"PIAA","CountryName":"United
+        States"},{"PlaceId":74946,"IataCode":"PIB","Name":"Hattiesburg-Laurel","Type":"Station","SkyscannerCode":"PIB","CityName":"Laurel","CityId":"LULA","CountryName":"United
+        States"},{"PlaceId":74952,"IataCode":"PIH","Name":"Pocatello","Type":"Station","SkyscannerCode":"PIH","CityName":"Pocatello","CityId":"PIHA","CountryName":"United
+        States"},{"PlaceId":74964,"IataCode":"PIT","Name":"Pittsburgh Int''l Apt.","Type":"Station","SkyscannerCode":"PIT","CityName":"Pittsburgh","CityId":"PITA","CountryName":"United
+        States"},{"PlaceId":75102,"IataCode":"PLN","Name":"Pellston","Type":"Station","SkyscannerCode":"PLN","CityName":"Pellston","CityId":"PLNA","CountryName":"United
+        States"},{"PlaceId":75203,"IataCode":"PNS","Name":"Pensacola","Type":"Station","SkyscannerCode":"PNS","CityName":"Pensacola","CityId":"PNSA","CountryName":"United
+        States"},{"PlaceId":75379,"IataCode":"PRC","Name":"Prescott","Type":"Station","SkyscannerCode":"PRC","CityName":"Prescott","CityId":"PRCA","CountryName":"United
+        States"},{"PlaceId":75427,"IataCode":"PSC","Name":"Pasco","Type":"Station","SkyscannerCode":"PSC","CityName":"Pasco","CityId":"PSCA","CountryName":"United
+        States"},{"PlaceId":75440,"IataCode":"PSP","Name":"Palm Springs International","Type":"Station","SkyscannerCode":"PSP","CityName":"Palm
+        Springs","CityId":"PSPA","CountryName":"United States"},{"PlaceId":75572,"IataCode":"PVD","Name":"Providence","Type":"Station","SkyscannerCode":"PVD","CityName":"Providence","CityId":"PVDA","CountryName":"United
+        States"},{"PlaceId":75629,"IataCode":"PWM","Name":"Portland","Type":"Station","SkyscannerCode":"PWM","CityName":"Portland","CityId":"PWMA","CountryName":"United
+        States"},{"PlaceId":79184,"IataCode":"RAP","Name":"Rapid City Regional","Type":"Station","SkyscannerCode":"RAP","CityName":"Rapid
+        City","CityId":"RAPA","CountryName":"United States"},{"PlaceId":79316,"IataCode":"RDD","Name":"Redding","Type":"Station","SkyscannerCode":"RDD","CityName":"Redding","CityId":"RDDA","CountryName":"United
+        States"},{"PlaceId":79325,"IataCode":"RDM","Name":"Redmond","Type":"Station","SkyscannerCode":"RDM","CityName":"Redmond","CityId":"RDMA","CountryName":"United
+        States"},{"PlaceId":79333,"IataCode":"RDU","Name":"Raleigh / Durham","Type":"Station","SkyscannerCode":"RDU","CityName":"Durham","CityId":"RDUA","CountryName":"United
+        States"},{"PlaceId":79513,"IataCode":"RHI","Name":"Rhinelander","Type":"Station","SkyscannerCode":"RHI","CityName":"Rhinelander","CityId":"RHIA","CountryName":"United
+        States"},{"PlaceId":79555,"IataCode":"RIC","Name":"Richmond","Type":"Station","SkyscannerCode":"RIC","CityName":"Richmond","CityId":"RICA","CountryName":"United
+        States"},{"PlaceId":79807,"IataCode":"RNO","Name":"Reno / Tahoe","Type":"Station","SkyscannerCode":"RNO","CityName":"Reno","CityId":"RNOA","CountryName":"United
+        States"},{"PlaceId":79841,"IataCode":"ROA","Name":"Roanoke","Type":"Station","SkyscannerCode":"ROA","CityName":"Roanoke","CityId":"ROAA","CountryName":"United
+        States"},{"PlaceId":79843,"IataCode":"ROC","Name":"Rochester","Type":"Station","SkyscannerCode":"ROC","CityName":"Rochester","CityId":"ROCA","CountryName":"United
+        States"},{"PlaceId":79863,"IataCode":"ROW","Name":"Roswell","Type":"Station","SkyscannerCode":"ROW","CityName":"Roswell","CityId":"ROWA","CountryName":"United
+        States"},{"PlaceId":80052,"IataCode":"RST","Name":"Rochester Municipal","Type":"Station","SkyscannerCode":"RST","CityName":"Rochester","CityId":"RSTA","CountryName":"United
+        States"},{"PlaceId":80055,"IataCode":"RSW","Name":"Fort Myers Southwest Florida
+        Reg","Type":"Station","SkyscannerCode":"RSW","CityName":"Fort Myers","CityId":"FMYA","CountryName":"United
+        States"},{"PlaceId":81478,"IataCode":"SAF","Name":"Santa Fe","Type":"Station","SkyscannerCode":"SAF","CityName":"Santa
+        Fe","CityId":"ZSHA","CountryName":"United States"},{"PlaceId":81486,"IataCode":"SAN","Name":"San
+        Diego International","Type":"Station","SkyscannerCode":"SAN","CityName":"San
+        Diego","CityId":"SANA","CountryName":"United States"},{"PlaceId":81492,"IataCode":"SAT","Name":"San
+        Antonio International","Type":"Station","SkyscannerCode":"SAT","CityName":"San
+        Antonio","CityId":"SATA","CountryName":"United States"},{"PlaceId":81494,"IataCode":"SAV","Name":"Savannah
+        / Hilton Head","Type":"Station","SkyscannerCode":"SAV","CityName":"Savannah","CityId":"SAVA","CountryName":"United
+        States"},{"PlaceId":81521,"IataCode":"SBA","Name":"Santa Barbara Municipal","Type":"Station","SkyscannerCode":"SBA","CityName":"Santa
+        Barbara","CityId":"SBAA","CountryName":"United States"},{"PlaceId":81534,"IataCode":"SBN","Name":"South
+        Bend","Type":"Station","SkyscannerCode":"SBN","CityName":"South Bend","CityId":"SBNA","CountryName":"United
+        States"},{"PlaceId":81536,"IataCode":"SBP","Name":"San Luis Obispo County","Type":"Station","SkyscannerCode":"SBP","CityName":"San
+        Luis Obispo","CityId":"CSLA","CountryName":"United States"},{"PlaceId":81545,"IataCode":"SBY","Name":"Salisbury-Ocean
+        City","Type":"Station","SkyscannerCode":"SBY","CityName":"Salisbury-Ocean
+        City","CityId":"SBYA","CountryName":"United States"},{"PlaceId":81573,"IataCode":"SCE","Name":"State
+        College","Type":"Station","SkyscannerCode":"SCE","CityName":"State College","CityId":"SCEA","CountryName":"United
+        States"},{"PlaceId":81622,"IataCode":"SDF","Name":"Louisville Standiford Field","Type":"Station","SkyscannerCode":"SDF","CityName":"Louisville","CityId":"SDFA","CountryName":"United
+        States"},{"PlaceId":81665,"IataCode":"SEA","Name":"Seattle / Tacoma International","Type":"Station","SkyscannerCode":"SEA","CityName":"Seattle","CityId":"SEAA","CountryName":"United
+        States"},{"PlaceId":81727,"IataCode":"SFO","Name":"San Francisco International","Type":"Station","SkyscannerCode":"SFO","CityName":"San
+        Francisco","CityId":"SFOA","CountryName":"United States"},{"PlaceId":81766,"IataCode":"SGF","Name":"Springfield-Branson
+        Rg","Type":"Station","SkyscannerCode":"SGF","CityName":"Springfield","CityId":"SGFA","CountryName":"United
+        States"},{"PlaceId":81781,"IataCode":"SGU","Name":"Saint George","Type":"Station","SkyscannerCode":"SGU","CityName":"Saint
+        George","CityId":"SGUA","CountryName":"United States"},{"PlaceId":81830,"IataCode":"SHV","Name":"Shreveport
+        Regional","Type":"Station","SkyscannerCode":"SHV","CityName":"Shreveport","CityId":"SHVA","CountryName":"United
+        States"},{"PlaceId":81907,"IataCode":"SJC","Name":"San Jose International","Type":"Station","SkyscannerCode":"SJC","CityName":"San
+        Jose","CityId":"SJCA","CountryName":"United States"},{"PlaceId":81924,"IataCode":"SJT","Name":"San
+        Angelo Mathis Fld","Type":"Station","SkyscannerCode":"SJT","CityName":"San
+        Angelo","CityId":"SJTA","CountryName":"United States"},{"PlaceId":82003,"IataCode":"SLC","Name":"Salt
+        Lake City","Type":"Station","SkyscannerCode":"SLC","CityName":"Salt Lake City","CityId":"SLCA","CountryName":"United
+        States"},{"PlaceId":82054,"IataCode":"SMF","Name":"Sacramento International","Type":"Station","SkyscannerCode":"SMF","CityName":"Sacramento","CityId":"SACA","CountryName":"United
+        States"},{"PlaceId":82097,"IataCode":"SNA","Name":"Santa Ana John Wayne","Type":"Station","SkyscannerCode":"SNA","CityName":"Santa
+        Ana","CityId":"SNAA","CountryName":"United States"},{"PlaceId":82201,"IataCode":"SPI","Name":"Springfield","Type":"Station","SkyscannerCode":"SPI","CityName":"Springfield","CityId":"SPIA","CountryName":"United
+        States"},{"PlaceId":82211,"IataCode":"SPS","Name":"Wichita Falls Sheppard
+        AFB","Type":"Station","SkyscannerCode":"SPS","CityName":"Wichita Falls","CityId":"SPSA","CountryName":"United
+        States"},{"PlaceId":82305,"IataCode":"SRQ","Name":"Sarasota","Type":"Station","SkyscannerCode":"SRQ","CityName":"Sarasota","CityId":"SRQA","CountryName":"United
+        States"},{"PlaceId":82396,"IataCode":"STL","Name":"St Louis","Type":"Station","SkyscannerCode":"STL","CityName":"St
+        Louis","CityId":"STLA","CountryName":"United States"},{"PlaceId":82403,"IataCode":"STS","Name":"Santa
+        Rosa","Type":"Station","SkyscannerCode":"STS","CityName":"Santa Rosa","CityId":"STSA","CountryName":"United
+        States"},{"PlaceId":82446,"IataCode":"SUN","Name":"Hailey","Type":"Station","SkyscannerCode":"SUN","CityName":"Hailey","CityId":"SUNA","CountryName":"United
+        States"},{"PlaceId":82456,"IataCode":"SUX","Name":"Sioux City","Type":"Station","SkyscannerCode":"SUX","CityName":"Sioux
+        City","CityId":"SUXA","CountryName":"United States"},{"PlaceId":82534,"IataCode":"SWF","Name":"Newburgh","Type":"Station","SkyscannerCode":"SWF","CityName":"Newburgh","CityId":"SWFA","CountryName":"United
+        States"},{"PlaceId":82543,"IataCode":"SWO","Name":"Stillwater","Type":"Station","SkyscannerCode":"SWO","CityName":"Stillwater","CityId":"SWOA","CountryName":"United
+        States"},{"PlaceId":82642,"IataCode":"SYR","Name":"Syracuse","Type":"Station","SkyscannerCode":"SYR","CityName":"Syracuse","CityId":"SYRA","CountryName":"United
+        States"},{"PlaceId":83838,"IataCode":"TBN","Name":"Fort Leonard Wood","Type":"Station","SkyscannerCode":"TBN","CityName":"Fort
+        Leonard Wood","CityId":"TBNA","CountryName":"United States"},{"PlaceId":84312,"IataCode":"TLH","Name":"Tallahassee","Type":"Station","SkyscannerCode":"TLH","CityName":"Tallahassee","CityId":"TLHA","CountryName":"United
+        States"},{"PlaceId":84460,"IataCode":"TOL","Name":"Toledo Express","Type":"Station","SkyscannerCode":"TOL","CityName":"Toledo","CityId":"TOLA","CountryName":"United
+        States"},{"PlaceId":84497,"IataCode":"TPA","Name":"Tampa International","Type":"Station","SkyscannerCode":"TPA","CityName":"Tampa","CityId":"TPAA","CountryName":"United
+        States"},{"PlaceId":84601,"IataCode":"TRI","Name":"Tri-Cities","Type":"Station","SkyscannerCode":"TRI","CityName":"Kingsport","CityId":"TRIA","CountryName":"United
+        States"},{"PlaceId":84748,"IataCode":"TUL","Name":"Tulsa International","Type":"Station","SkyscannerCode":"TUL","CityName":"Tulsa","CityId":"TULB","CountryName":"United
+        States"},{"PlaceId":84755,"IataCode":"TUS","Name":"Tucson International","Type":"Station","SkyscannerCode":"TUS","CityName":"Tucson","CityId":"TUSA","CountryName":"United
+        States"},{"PlaceId":84787,"IataCode":"TVC","Name":"Traverse City","Type":"Station","SkyscannerCode":"TVC","CityName":"Traverse
+        City","CityId":"TVCA","CountryName":"United States"},{"PlaceId":84838,"IataCode":"TWF","Name":"Twin
+        Falls","Type":"Station","SkyscannerCode":"TWF","CityName":"Twin Falls","CityId":"TWFA","CountryName":"United
+        States"},{"PlaceId":84891,"IataCode":"TXK","Name":"Texarkana","Type":"Station","SkyscannerCode":"TXK","CityName":"Texarkana","CityId":"TXKA","CountryName":"United
+        States"},{"PlaceId":84946,"IataCode":"TYR","Name":"Tyler","Type":"Station","SkyscannerCode":"TYR","CityName":"Tyler","CityId":"TYRA","CountryName":"United
+        States"},{"PlaceId":84947,"IataCode":"TYS","Name":"Knoxville","Type":"Station","SkyscannerCode":"TYS","CityName":"Knoxville","CityId":"TYSA","CountryName":"United
+        States"},{"PlaceId":86478,"IataCode":"UIN","Name":"Quincy","Type":"Station","SkyscannerCode":"UIN","CityName":"Quincy","CityId":"UINA","CountryName":"United
+        States"},{"PlaceId":88916,"IataCode":"VLD","Name":"Valdosta Regional","Type":"Station","SkyscannerCode":"VLD","CityName":"Valdosta","CityId":"VLDA","CountryName":"United
+        States"},{"PlaceId":89123,"IataCode":"VPS","Name":"Valparaiso Ft. Walton Beach","Type":"Station","SkyscannerCode":"VPS","CityName":"Valparaiso","CityId":"VPSA","CountryName":"United
+        States"},{"PlaceId":93617,"IataCode":"XNA","Name":"Fayetteville Northwest
+        Arkansas Rgn","Type":"Station","SkyscannerCode":"XNA","CityName":"Fayetteville","CityId":"FYVA","CountryName":"United
+        States"},{"PlaceId":96269,"IataCode":"YUM","Name":"Yuma International","Type":"Station","SkyscannerCode":"YUM","CityName":"Yuma","CityId":"YUMA","CountryName":"United
+        States"}],"Carriers":[{"CarrierId":105,"Name":"Thomas Cook Airlines"},{"CarrierId":845,"Name":"Aeromexico"},{"CarrierId":857,"Name":"Finnair"},{"CarrierId":858,"Name":"Alitalia"},{"CarrierId":881,"Name":"British
+        Airways"},{"CarrierId":1001,"Name":"Norwegian"},{"CarrierId":1033,"Name":"Aer
+        Lingus"},{"CarrierId":1081,"Name":"Icelandair"},{"CarrierId":1324,"Name":"KLM"},{"CarrierId":1368,"Name":"Lufthansa"},{"CarrierId":1379,"Name":"Jet2"},{"CarrierId":1523,"Name":"Austrian
+        Airlines"},{"CarrierId":1907,"Name":"WestJet"},{"CarrierId":1929,"Name":"WOW
+        air"}],"Currencies":[{"Code":"TWD","Symbol":"NT$","ThousandsSeparator":",","DecimalSeparator":".","SymbolOnLeft":true,"SpaceBetweenAmountAndSymbol":false,"RoundingCoefficient":0,"DecimalDigits":2}]}'
+    http_version: 
+  recorded_at: Thu, 08 Dec 2016 06:05:19 GMT
+- request:
+    method: get
+    uri: https://maps.googleapis.com/maps/api/distancematrix/json?destinations=:Taipei&key=&mode=driving&origins=:Hsinchu
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Connection:
+      - close
+      Host:
+      - maps.googleapis.com
+      User-Agent:
+      - http.rb/2.1.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Date:
+      - Thu, 08 Dec 2016 06:25:46 GMT
+      Expires:
+      - Fri, 09 Dec 2016 06:25:46 GMT
+      Cache-Control:
+      - public, max-age=86400
+      Server:
+      - mafe
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - SAMEORIGIN
+      Alt-Svc:
+      - quic=":443"; ma=2592000; v="35,34"
+      Accept-Ranges:
+      - none
+      Vary:
+      - Accept-Language,Accept-Encoding
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: |
+        {
+           "destination_addresses" : [ "Taipei City, Taiwan" ],
+           "origin_addresses" : [ "Hsinchu, East District, Hsinchu City, Taiwan" ],
+           "rows" : [
+              {
+                 "elements" : [
+                    {
+                       "distance" : {
+                          "text" : "85.8 km",
+                          "value" : 85760
+                       },
+                       "duration" : {
+                          "text" : "1 hour 11 mins",
+                          "value" : 4231
+                       },
+                       "status" : "OK"
+                    }
+                 ]
+              }
+           ],
+           "status" : "OK"
+        }
+    http_version: 
+  recorded_at: Thu, 08 Dec 2016 06:25:46 GMT
+recorded_with: VCR 3.0.3

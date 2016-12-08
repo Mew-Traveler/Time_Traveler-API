@@ -26,7 +26,7 @@ CASSETTE_FILE_AIRBNB = 'airbnb_rooms'
 CASSETTE_FILE_SKYSCANNER = 'skyscanner_flights'
 CASSETTE_FILE_ROOM = 'room'
 
-CASSETTE_FILE_DAILYPLAN = 'dailyplan_cassette'
+CASSETTE_FILE_ADDTARGET = 'addtarget_cassette'
 
 
 VCR.configure do |c|
@@ -36,13 +36,6 @@ VCR.configure do |c|
   c.filter_sensitive_data('<SKY_API_KEY>')  { ENV['SKY_API_KEY'] }
   c.filter_sensitive_data('<AIRBNB_CLIENT_ID>') { ENV['AIRBNB_CLIENT_ID'] }
 end
-
-HAPPY_MOVIE_URL = 'http://www.omdbapi.com?t=star+wars&y=&plot=short&r=json'
-SAD_MOVIE_URL = 'http://www.omdbapi.com?t=sadmovie&y=&plot=short&r=json'
-
-SAD_MOVIE = 'sadmovie'
-SAD_LOCATION_ID = '0000'
-REMOVED_LOCATION_ID = '0000'
 
 if File.file?('config/app.yml')
   credentials = YAML.load(File.read('config/app.yml'))
