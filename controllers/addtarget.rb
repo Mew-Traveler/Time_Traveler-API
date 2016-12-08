@@ -26,6 +26,8 @@ class TimeTravelerAPI < Sinatra::Base
     content_type 'application/json'
     sites.to_json
   end
+
+  ###########################################################################################
   
    #find near by sites
   # get "/#{API_VER}/addtarget/findSite/:query/?" do
@@ -79,20 +81,38 @@ class TimeTravelerAPI < Sinatra::Base
   #   end
   # end
 
+  ###########################################################################################
+
+  #find the two sites desinations -> done
+  # get "/#{API_VER}/addtarget/countDistance/:origins/:destinations/?" do
+  #   origins = params[:origins]
+  #   destinations = params[:destinations]
+  #   params[:mode] = "driving"
+  #   mode = params[:mode]
+  #   result = Google::TrafficInfo.find(origins: origins, destinations: destinations, mode: mode)
+
+  #   content_type 'application/json'
+  #   {
+  #   	anaDistance: result.anaDistance,
+  #   	anaDuration: result.anaDuration
+  #   }.to_json
+  # end
+
   #find the two sites desinations -> done
   get "/#{API_VER}/addtarget/countDistance/:origins/:destinations/?" do
     origins = params[:origins]
     destinations = params[:destinations]
     params[:mode] = "driving"
     mode = params[:mode]
-    result = Google::TrafficInfo.find(origins: origins, destinations: destinations, mode: mode)
 
-    content_type 'application/json'
-    {
-    	anaDistance: result.anaDistance,
-    	anaDuration: result.anaDuration
-    }.to_json
+    result = CountDistance.call(params)
+    if result.success?
+      DistanceRepresenter.new(result.value).to_json
+    else
+      DistanceRepresenter.new(result.value).to_status_response
+    end
   end
+
 
   #find flight data -> done
   get "/#{API_VER}/addtarget/getFlightData/:project_day/:originPlace/:destinationPlace/?" do
