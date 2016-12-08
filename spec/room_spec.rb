@@ -43,10 +43,9 @@ describe 'Routes for room' do
   describe 'Write house data to DB' do
     it 'HAPPY: should write the house successful with correct params' do
       post "api/v0.1/addHouse",
-      {
-        roomId: 'new_roomId',
-        roomName: 'new_roomName',
-        roomPrice: 'new_roomPrice',
+      { id: 'new_roomId',
+        name: 'new_roomName',
+        price: 'new_roomPrice',
         address: 'new_address',
         airbnb_link: 'new_airbnb_link',
         roomImg: 'new_roomImg',
@@ -58,9 +57,9 @@ describe 'Routes for room' do
       last_response.status.must_equal 200
       last_response.content_type.must_equal 'application/json'
       house = JSON.parse(last_response.body)
-      house['roomId'].must_be :>,0
-      house['roomName'].must_be :>,0
-      house['roomPrice'].must_be :>,0
+      house['id'].must_be :>,0
+      house['name'].must_be :>,0
+      house['price'].must_be :>,0
       house['address'].must_be :>,0
       house['airbnb_link'].must_be :>,0
       house['roomImg'].must_be :>,0

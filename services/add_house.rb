@@ -23,9 +23,9 @@ class CreateHouse
 
   register :write_to_house_table, lambda { |data|
   	room = House.create(
-             roomId: data[:roomId],
-             roomName: data[:roomName],
-             roomPrice: data[:roomPrice],
+             roomId: data[:id],
+             roomName: data[:name],
+             roomPrice: data[:price],
              address: data[:address],
              airbnb_link: data[:airbnb_link],
              roomImg: data[:roomImg],

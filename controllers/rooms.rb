@@ -147,5 +147,9 @@ class TimeTravelerAPI < Sinatra::Base
     end
   end
 
+  get "#{API_VER}/getHouses/:location/?" do
+    
+  end
+
 
 end

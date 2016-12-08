@@ -4,9 +4,9 @@
 class HouseRepresenter < Roar::Decorator
   include Roar::JSON
 
-  property :roomId
-  property :roomName
-  property :roomPrice
+  property :id
+  property :name
+  property :price
   property :address
   property :airbnb_link
   property :roomImg
