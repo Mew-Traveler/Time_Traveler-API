@@ -24,6 +24,8 @@ CASSETTE_FILE_AIRBNB = 'airbnb_rooms'
 CASSETTE_FILE_SKYSCANNER = 'skyscanner_flights'
 CASSETTE_FILE_USER = 'userdata'
 CASSETTE_FILE_PROJECT = 'projectdata'
+CASSETTE_FILE_ROOM = 'roomdata'
+CASSETTE_FILE_Target = 'targetdata'
 
 VCR.configure do |c|
   c.cassette_library_dir = CASSETTES_FOLDER

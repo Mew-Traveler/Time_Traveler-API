@@ -46,21 +46,4 @@ class TimeTravelerAPI < Sinatra::Base
       ErrorRepresenter.new(result.value).to_status_response
     end
   end
-  #   projectId = params[:projectId]
-  #   day = params[:day]
-  #   begin
-  #     content_type 'application/json'
-  #     dailyplandata= Dailyplan.find(projectId:projectId, nthday:day)
-  #       timeRemain = dailyplandata.timeRemain if dailyplandata.timeRemain
-  #       locateEnd = dailyplandata.locateEnd if dailyplandata.locateEnd
-  #       locateStart = dailyplandata.locateStart if dailyplandata.locateStart
-  #       timeEnd = dailyplandata.timeEnd if dailyplandata.timeEnd
-  #       timeStart = dailyplandata.timeStart if dailyplandata.timeStart
-  #       date = dailyplandata.date if dailyplandata.date
-  #       dailyplandata.to_json
-  #   rescue
-  #     content_type 'text/plain'
-  #     halt 404, "Cannot find project (projectId: #{projectId}) data"
-  #   end
-  # end
 end
