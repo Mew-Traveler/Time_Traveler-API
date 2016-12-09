@@ -4,6 +4,6 @@
 class DistanceRepresenter < Roar::Decorator
   include Roar::JSON
 
-  property :distance
-  property :duration
+  property :anaDistance
+  property :anaDuration
 end

@@ -13,19 +13,26 @@ class CountDistance
   end
 
   register :validate_request_json, lambda { |request_body|
+
     result = Google::TrafficInfo.find(
       origins: request_body[:origins], 
       destinations: request_body[:destinations], 
       mode: request_body[:mode])
-    if result
-  	  Right(result)
+
+    value = {
+      anaDistance: result.trafficAnaly['distance']['value'],
+      anaDuration: result.trafficAnaly['duration']['text']
+    }.to_json
+
+    if value
+  	  Right(value)
   	else
   	  Left(Error.new(:bad_request, 'Wrong input data for counting distance'))
   	end
   }
 
   register :show_distance_info, lambda { |data|
-    representation = DistanceRepresenter.new()
-    Right(result)
+    representation = DistanceRepresenter.new(Dis.new)
+    Right(representation.from_json(data))
   }
 end

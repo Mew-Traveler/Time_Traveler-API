@@ -91,10 +91,12 @@ class TimeTravelerAPI < Sinatra::Base
   #   mode = params[:mode]
   #   result = Google::TrafficInfo.find(origins: origins, destinations: destinations, mode: mode)
 
+  #   puts result.trafficAnaly['distance']['value']
+
   #   content_type 'application/json'
   #   {
-  #   	anaDistance: result.anaDistance,
-  #   	anaDuration: result.anaDuration
+  #   	anaDistance: result.trafficAnaly['distance']['value'],
+  #   	anaDuration: result.trafficAnaly['duration']['text']
   #   }.to_json
   # end
 
