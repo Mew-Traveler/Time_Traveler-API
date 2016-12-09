@@ -117,6 +117,48 @@ class TimeTravelerAPI < Sinatra::Base
 
 
   #find flight data -> done
+  # get "/#{API_VER}/addtarget/getFlightData/:project_day/:originPlace/:destinationPlace/?" do
+  #   params[:market] = "TW"
+  #   params[:currency] = "TWD"
+  #   params[:locale] = "en-GB"
+  #   params[:outboundPartialDate] = params[:project_day]
+
+  #   market = params[:market]
+  #   currency = params[:currency]
+  #   locale = params[:locale]
+  #   originPlace = params[:originPlace]
+  #   destinationPlace = params[:destinationPlace]
+  #   outboundPartialDate = params[:outboundPartialDate]
+
+  #   result = Skyscanner::FlightInfo.find(market: market, currency: currency, locale: locale, 
+  #     originPlace: originPlace, destinationPlace: destinationPlace, 
+  #     outboundPartialDate: outboundPartialDate)
+    
+  #   begin
+  #   infos = result.flightInfo
+  #   infos.map do |info|
+  #     if info["OutboundLeg"]["CarrierIds"].empty?
+  #       infos.delete(info)
+  #     end
+  #   end
+  #   flights = {
+  #     flights: infos.map do |info|
+  #       flight = {}
+  #       flight[:carrier] = info["OutboundLeg"]["CarrierIds"][0] if info["OutboundLeg"]["CarrierIds"][0]
+  #       flight[:originPlace] = info["OutboundLeg"]["OriginId"] if info["OutboundLeg"]["OriginId"]
+  #       flight[:destinationPlace] = info["OutboundLeg"]["DestinationId"] if info["OutboundLeg"]["DestinationId"]
+  #       {flight: flight}
+  #     end
+  #   }
+
+  #   content_type 'application/json'
+  #   flights.to_json
+  #   rescue
+  #     content_type 'text/plain'
+  #     halt 500, "No flight data with #{originPlace} and #{destinationPlace}"
+  #   end
+  # end
+
   get "/#{API_VER}/addtarget/getFlightData/:project_day/:originPlace/:destinationPlace/?" do
     params[:market] = "TW"
     params[:currency] = "TWD"
@@ -130,32 +172,15 @@ class TimeTravelerAPI < Sinatra::Base
     destinationPlace = params[:destinationPlace]
     outboundPartialDate = params[:outboundPartialDate]
 
-    result = Skyscanner::FlightInfo.find(market: market, currency: currency, locale: locale, 
-      originPlace: originPlace, destinationPlace: destinationPlace, 
-      outboundPartialDate: outboundPartialDate)
-    
-    begin
-    infos = result.flightInfo
-    infos.map do |info|
-      if info["OutboundLeg"]["CarrierIds"].empty?
-        infos.delete(info)
+    result = GetFlight.call(params)
+    if result.success?
+      flights = []
+      result.value.each do |flight|
+        flights.push(FlightRepresenter.new(flight).to_json)
       end
-    end
-    flights = {
-      flights: infos.map do |info|
-        flight = {}
-        flight[:carrier] = info["OutboundLeg"]["CarrierIds"][0] if info["OutboundLeg"]["CarrierIds"][0]
-        flight[:originPlace] = info["OutboundLeg"]["OriginId"] if info["OutboundLeg"]["OriginId"]
-        flight[:destinationPlace] = info["OutboundLeg"]["DestinationId"] if info["OutboundLeg"]["DestinationId"]
-        {flight: flight}
-      end
-    }
-
-    content_type 'application/json'
-    flights.to_json
-    rescue
-      content_type 'text/plain'
-      halt 500, "No flight data with #{originPlace} and #{destinationPlace}"
+      flights.to_json
+    else
+      ErrorRepresenter.new(result.value).to_status_response  
     end
   end
 

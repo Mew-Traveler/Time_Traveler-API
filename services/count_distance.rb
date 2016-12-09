@@ -32,7 +32,7 @@ class CountDistance
   }
 
   register :show_distance_info, lambda { |data|
-    representation = DistanceRepresenter.new(Dis.new)
+    representation = FlightRepresenter.new(Dis.new)
     Right(representation.from_json(data))
   }
 end
