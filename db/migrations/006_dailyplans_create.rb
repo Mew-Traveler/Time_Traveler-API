@@ -5,7 +5,7 @@ Sequel.migration do
   change do
     create_table(:dailyplans) do
       primary_key :id
-      foreign_key :projectId
+      # foreign_key :projectId
 
       String :roomId
       String :nthday
