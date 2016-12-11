@@ -38,16 +38,18 @@ class GetFlight
   
   # problem, the reference will cause the repeated results
   register :extract_flight, lambda { |infos|
-    representation = FlightRepresenter.new(Flight.new)
+    flight = Array.new(infos.length)
     flight_collection = []
+    i = 0
     flights = {
       flights: infos.map do |info|
-        flight = Hash.new
-        flight[:carrier] = info["OutboundLeg"]["CarrierIds"][0] if info["OutboundLeg"]["CarrierIds"][0]
-        flight[:originPlace] = info["OutboundLeg"]["OriginId"] if info["OutboundLeg"]["OriginId"]
-        flight[:destinationPlace] = info["OutboundLeg"]["DestinationId"] if info["OutboundLeg"]["DestinationId"]
-        flight_collection.push(representation.from_json(flight.to_json))
-        {flight: flight}
+        representation = FlightRepresenter.new(Flight.new)
+        flight[i] = Hash.new
+        flight[i][:carrier] = info["OutboundLeg"]["CarrierIds"][0] if info["OutboundLeg"]["CarrierIds"][0]
+        flight[i][:originPlace] = info["OutboundLeg"]["OriginId"] if info["OutboundLeg"]["OriginId"]
+        flight[i][:destinationPlace] = info["OutboundLeg"]["DestinationId"] if info["OutboundLeg"]["DestinationId"]
+        flight_collection.push(representation.from_json(flight[i].to_json))
+        i+=1
       end
     }
     flights.each do |flight|
