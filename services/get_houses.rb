@@ -22,12 +22,19 @@ class GetHouses
   }
 
   register :format_the_house_data, lambda { |data|
-  	house_representation = HouseRepresenter.new(Room.new)
-    room_collection = []
-    data.infos.each do |room|
-      room_collection.push(house_representation.from_json(room.to_json))
-    end  
-
-    Right(room_collection)
+  	results = {
+      results: data.infos.map do |room|
+        result = {
+          id: room[:id],
+          name: room[:name],
+          address: room[:address],
+          airbnb_link: room[:airbnb_link],
+          roomImg: room[:roomImg],
+          bed: room[:bed],
+          roomRank: room[:roomRank]
+        }
+      end
+    }
+    Right(results)
   }
 end

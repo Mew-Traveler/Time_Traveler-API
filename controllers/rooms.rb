@@ -151,11 +151,8 @@ class TimeTravelerAPI < Sinatra::Base
     result = GetHouses.call(params)
 
     if result.success?
-      data = []
-      result.value.each do |room|
-        data.push(HouseRepresenter.new(room).to_json)
-      end
-      data.to_json
+      content_type 'application/json'
+      result.value.to_json
     else
       ErrorRepresenter.new(result.value).to_status_response  
     end
