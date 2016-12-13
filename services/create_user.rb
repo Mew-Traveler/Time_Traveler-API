@@ -6,7 +6,8 @@ class CreateUsers
   extend Dry::Container::Mixin
 
   register :checkUser, lambda { |params|
-    user = User.find(userEmail: params['userEmail'])
+    user = User.find(userEmail: params)
+    puts user
     if user
       Left(Error.new(:conflict, 'User exists'))
     else

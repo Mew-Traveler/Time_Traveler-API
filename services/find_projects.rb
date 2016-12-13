@@ -5,8 +5,7 @@ class FindProjects
   extend Dry::Monads::Either::Mixin
 
   def self.call(userId)
-    #keyword = params[:userId].gsub(/\+/, ' ')
-    projects = Project.where(userEmail: userId).all
+    projects = Project.where(userEmail: userId[:userEmail])
     projects = projects.map do |projectInfo|
       name = projectInfo.projectName if projectInfo.projectName
       print name

@@ -145,29 +145,5 @@ class TimeTravelerAPI < Sinatra::Base
     else
       ErrorRepresenter.new(result.value).to_status_response
     end
-  #   puts
-  #   body_params = JSON.parse request.body.read
-  #   newSite_dailyplans_id = body_params[:dailyplan_id]
-  #   newSite_project_day = body_params[:project_day]
-  #   newSite_site_name = body_params[:site_name]
-  #   newSite_idx = body_params[:idx]
-  #   newSite_type = body_params[:type]
-  #   newSite_start_time = body_params[:start_time]
-  #   newSite_end_time = body_params[:end_time]
-  #
-  #   begin
-  #     if Dailyplan.find(id:newSite_dailyplans_id).nil?
-  #       halt 422, "plan (dailyplan: #{newSite_dailyplans_id})not found"
-  #     end
-  #   end
-  #
-  #   begin
-  #     newSite = Target.create(dailyplans_id: newSite_dailyplans_id, project_day: newSite_project_day, idx: newSite_idx, site_name: newSite_site_name, type: newSite_type, start_time: newSite_start_time, end_time: newSite_end_time)
-  #     content_type 'application/json'
-  #     newSite.to_json
-  #   rescue
-  #     content_type 'text/plain'
-  #     halt 500, "Cannot create site (id: #{newSite_site_name})"
-  #   end
    end
 end
