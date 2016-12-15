@@ -10,15 +10,15 @@ Rake::TestTask.new(:spec) do |t|
   t.warning = false
 end
 
-Rake::TestTask.new(:testcase) do |t|
-  t.pattern = 'test/testcase.rb'
-  t.warning = false
-end
+# Rake::TestTask.new(:testcase) do |t|
+#   t.pattern = 'test/testcase.rb'
+#   t.warning = false
+# end
 
-Rake::TestTask.new(:clear) do |t|
-  t.pattern = 'test/earse.rb'
-  t.warning = false
-end
+# Rake::TestTask.new(:clear) do |t|
+#   t.pattern = 'test/earse.rb'
+#   t.warning = false
+# end
 
 desc 'delete cassette fixtures'
 task :wipe do
@@ -63,5 +63,23 @@ namespace :quality do
 
   task :rubocop do
     sh 'rubocop'
+  end
+end
+
+namespace :test do
+
+  desc 'run all process for testing'
+  task all: [:clear, :genUser, :genProject]
+
+  task :clear do
+    sh "ruby test/earse.rb"
+  end
+
+  task :genUser do
+    sh "ruby test/gen_user.rb"
+  end
+
+  task :genProject do
+    sh "ruby test/gen_project.rb"
   end
 end
