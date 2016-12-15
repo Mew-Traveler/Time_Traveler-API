@@ -10,6 +10,16 @@ Rake::TestTask.new(:spec) do |t|
   t.warning = false
 end
 
+Rake::TestTask.new(:testcase) do |t|
+  t.pattern = 'test/testcase.rb'
+  t.warning = false
+end
+
+Rake::TestTask.new(:clear) do |t|
+  t.pattern = 'test/earse.rb'
+  t.warning = false
+end
+
 desc 'delete cassette fixtures'
 task :wipe do
   sh 'rm spec/fixtures/cassettes/*.yml' do |ok, _|
