@@ -3,25 +3,12 @@
 # TimeTravelerAPI web service
 class TimeTravelerAPI < Sinatra::Base   
   # get the day data from database
-  get "/#{API_VER}/day/:/?" do
+  get "/#{API_VER}/days/:userId/:projectName?" do
     begin
-      id = params[:room_id]
-      house = House.find(roomId: id)
-      content_type 'application/json'
-      {
-        roomId: house.roomId,
-        roomName: house.roomName,
-        roomPrice: house.roomPrice,
-        address: house.address,
-        airbnb_link: house.airbnb_link,
-        roomImg: house.roomImg,
-        bed: house.bed,
-        roomRank: house.roomRank
-      }.to_json
-
+      
     rescue
       content_type 'text/plain'
-      halt 404, "Cannot find house (roomId: #{id}"
+      halt 404, "Cannot find project (userId: #{userId}, projectName: #{projectName} )"
     end
   end
 
