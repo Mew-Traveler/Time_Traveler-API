@@ -29,31 +29,32 @@ class TimeTravelerAPI < Sinatra::Base
 
   ###########################################################################################
   
-   #find near by sites
-  # get "/#{API_VER}/addtarget/findSite/:query/?" do
-  #   query = params[:query]
-  #   begin
-  #     queries = Google::GooglePlaceRating.find(query: query)
-  #     rating_queries = queries.return_rating
+  # find near by sites
+  get "/#{API_VER}/addtarget/findSite/:query/?" do
+    query = params[:query]
+    begin
+      queries = Google::GooglePlaceRating.find(query: query)
+      rating_queries = queries.info
 
-  #     sites = {
-  #       sites: rating_queries.map do |q|
-  #         site[:rating] = q.rating
-  #         site[:lat] = q.lat
-  #         site[:lng] = q.lng
-  #         site[:placeid] = q.placeid
-  #         site[:types] = place.types
-  #         site[:address] = place.address
-  #         site[:placename] = place.placename
-  #         {site: site}
-  #       end
-  #     }
-  #     content_type 'application/json'
-  #     sites.to_json
-  #   rescue
-  #     halt 404, "Cannot get site data"
-  #   end
-  # end
+      puts rating_queries
+      # sites = {
+      #   sites: rating_queries.map do |q|
+      #     site[:rating] = q.rating
+      #     site[:lat] = q.lat
+      #     site[:lng] = q.lng
+      #     site[:placeid] = q.placeid
+      #     site[:types] = place.types
+      #     site[:address] = place.address
+      #     site[:placename] = place.placename
+      #     {site: site}
+      #   end
+      # }
+      # content_type 'application/json'
+      # sites.to_json
+    rescue
+      halt 404, "Cannot get site data"
+    end
+  end
 
   # #find near by resturants
   # get "/#{API_VER}/addtarget/findResturant/:query/?" do
