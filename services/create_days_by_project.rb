@@ -1,0 +1,78 @@
+# frozen_string_literal: true
+
+# Create new day
+class CreateDaysByProject
+  extend Dry::Monads::Either::Mixin
+  extend Dry::Container::Mixin
+
+  register :validate_request_json, lambda { |request_body|
+    begin
+      data = { project_id: request_body['project_id'],
+               dateStart: request_body['dateStart'],
+               dateEnd: request_body['dateEnd']
+             }
+      Right(data)
+    rescue
+      Left(Error.new(:bad_request, 'request data error'))
+    end
+  }
+
+  register :create_days, lambda { |data|
+    t = cal_days(data[:dateStart], data[:dateEnd])
+    d = data[:dateStart]
+    for i in 1..t 
+      day_info = { project_id: data[:project_id],
+                   nthday: i.to_s,
+                   date: d
+                 }
+      create_day(day_info)
+      d = next_date(d)
+    end
+  }
+
+  
+
+  def self.call(params)
+    Dry.Transaction(container: self) do
+      step :validate_request_json
+      step :create_days
+    end.call(params)
+  end
+
+  private_class_method
+
+  def self.cal_days(date1, date2)
+    m1 = date1.split('/')[0].to_i
+    d1 = date1.split('/')[1].to_i
+    m2 = date2.split('/')[0].to_i
+    d2 = date2.split('/')[1].to_i
+
+    if (m2 == m1) 
+      result = d2 - d1 + 1
+    else
+      result = (30 - d1 + 1) + d2 + (m2 - m1 - 1) * 30
+    end
+
+    return result
+  end
+
+  def self.next_date(date)
+    m = date.split('/')[0].to_i
+    d = date.split('/')[1].to_i
+
+    if(d == 30)
+      d = 1
+      m = m + 1
+    else
+      d = d + 1
+    end
+
+    return m.to_s + "/" + d.to_s
+  end
+
+  def self.create_day(day_info)
+    CreateNewDay.call(JSON.parse day_info.to_json)
+  end
+
+end
+

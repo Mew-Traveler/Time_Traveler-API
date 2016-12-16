@@ -39,6 +39,20 @@ class CreateNewProject
     
   }
 
+  register :create_days_by_project, lambda { |project|
+
+    info = {
+      project_id: project.id,
+      dateStart: project.dateStart,
+      dateEnd: project.dateEnd
+    }
+
+    CreateDaysByProject.call(JSON.parse info.to_json)
+
+    Right(project)
+    
+  }
+
   
 
   def self.call(params)
@@ -46,6 +60,7 @@ class CreateNewProject
       step :validate_request_json
       step :get_user_id
       step :create_project
+      step :create_days_by_project
     end.call(params)
   end
 end
