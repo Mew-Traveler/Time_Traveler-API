@@ -69,7 +69,7 @@ end
 namespace :test do
 
   desc 'run all process for testing'
-  task all: [:clear, :genUser, :genProject]
+  task all: [:clear, :genUser, :genProject, :updateDailyplan]
 
   task :clear do
     sh "ruby test/earse.rb"
@@ -81,5 +81,9 @@ namespace :test do
 
   task :genProject do
     sh "ruby test/gen_project.rb"
+  end
+
+  task :updateDailyplan do
+    sh "ruby test/test_update_day.rb"
   end
 end
