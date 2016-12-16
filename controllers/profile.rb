@@ -21,12 +21,20 @@ class TimeTravelerAPI < Sinatra::Base
   #   end
   # end
   get "/#{API_VER}/me/:userEmail?" do
-    puts "I am here"
 
     result = LogIn.call(params)
 
     if result.success?
-      GroupRepresenter.new(result.value).to_json
+      # projects = []
+      # result.value.each do |project|
+      #   puts result.value.length
+      #   projects.push(ProjectRepresenter.new(project).to_json)
+      # end
+      # content_type 'application/json'
+      # projects.to_json
+      puts result.value
+      content_type 'application/json'
+      result.value.to_json
     else
       ErrorRepresenter.new(result.value).to_status_response
     end
