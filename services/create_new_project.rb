@@ -6,6 +6,10 @@ class CreateNewProject
   extend Dry::Container::Mixin
 
   register :validate_request_json, lambda { |request_body|
+    puts request_body['userEmail']
+    puts request_body['projectName']
+    puts request_body['dateStart']
+    puts request_body['dateEnd']
     begin
       data = { userEmail: request_body['userEmail'],
                projectName: request_body['projectName'],

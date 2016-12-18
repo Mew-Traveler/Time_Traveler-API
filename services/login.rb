@@ -30,9 +30,7 @@ class LogIn
   	projects = {
       projects: Project.map do |project|
       	if project[:userId] == userId
-         #  puts "YOOOOOOOOOOOO"
-         #  puts project[:id]
-      	  # representation = ProjectRepresenter.new(Project.new)
+
           project = {
             id: project[:id].to_s,
             userId: project[:userId],
@@ -40,7 +38,6 @@ class LogIn
             dateStart: project[:dateStart],
             dateEnd: project[:dateEnd]
           }
-         #  projects_collection.push(representation.from_json(project.to_json))
         end
       end
     }

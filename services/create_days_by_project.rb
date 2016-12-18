@@ -28,6 +28,7 @@ class CreateDaysByProject
       create_day(day_info)
       d = next_date(d)
     end
+    Right(data)
   }
 
   
