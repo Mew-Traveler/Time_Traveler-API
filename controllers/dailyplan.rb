@@ -34,6 +34,7 @@ class TimeTravelerAPI < Sinatra::Base
       puts "results_atrac.success?"
       content_type 'application/json'
       # results_atrac.value.to_json
+      puts results_atrac.value
       AtraccionesRepresenter.new(results_atrac.value).to_json
 
       # AtraccionesRepresenter.new(Atracciones.new).from_json(results_atrac.value.to_json).to_json

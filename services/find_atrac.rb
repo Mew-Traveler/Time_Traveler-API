@@ -12,7 +12,7 @@ class FindAtrac
     atracs = atracs.attracs.map do |atrac|
       AtraccioneRepresenter.new(Atraccione.new).from_json(atrac.to_json.to_s)
     end
-
+    # puts atracs
     results = Atracciones.new(atracs)
     Right(results)
     # puts "api-dailyplan.rb//queries"
