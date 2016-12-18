@@ -5,7 +5,9 @@ class FindProjectInfo
   extend Dry::Monads::Either::Mixin
 
   def self.call(params)
-    projectinfo = Project.where(params).all
+    puts "---api---"
+    puts params
+    projectinfo = Project.where(id: params[:projectId])
     projectinfo = projectinfo.map do |projectInfo|
       name = projectInfo.projectName if projectInfo.projectName
       start = projectInfo.dateStart if projectInfo.dateStart

@@ -26,33 +26,69 @@ class TimeTravelerAPI < Sinatra::Base
   end
 
    #find near by sites
-  get "/#{API_VER}/dailyplan/findSite/:query/?" do
-    query = params[:query]
-    begin
-      queries = Google::GooglePlaceRating.find(query: query)
-      rating_queries = queries.return_rating
-
-      sites = {
-        sites: rating_queries.map do |q|
-          site[:rating] = q.rating
-          site[:lat] = q.lat
-          site[:lng] = q.lng
-          site[:placeid] = q.placeid
-          site[:types] = place.types
-          site[:address] = place.address
-          site[:placename] = place.placename
-          {site: site}
-        end
-      }
+  get "/#{API_VER}/dailyplan/findSite/:query?" do
+    puts "api-dailyplan.rb//findSite"
+    puts params
+    results_atrac = FindAtrac.call(params)
+    if results_atrac.success?
+      puts "results_atrac.success?"
       content_type 'application/json'
-      sites.to_json
-    rescue
-      halt 404, "Cannot get site data"
+      # results_atrac.value.to_json
+      AtraccionesRepresenter.new(results_atrac.value).to_json
+
+      # AtraccionesRepresenter.new(Atracciones.new).from_json(results_atrac.value.to_json).to_json
+    else
+      ErrorRepresenter.new(results_atrac.value).to_status_response
     end
+
+
+
+    # query = params[:query]
+    # begin
+    #   puts "api-dailyplan.rb//begin"
+    #   userId_result = FindUserId.call(params)
+    #
+    #   queries = Google::GooglePlaceRating.find(query:params[:query])
+    #   # data = http_result.body.to_s
+    #   if queries
+    #     puts "api-dailyplan.rb//queries"
+    #
+    #     Right(AtraccioneRepresenter.new(Atraccione.new).from_json(queries))
+    #   else
+    #     # message = ErrorFlattener.new(
+    #     #   ApiErrorRepresenter.new(ApiError.new).from_json(data)
+    #     # ).to_s
+    #     ErrorRepresenter.new(queries.value).to_status_response
+    #   end
+
+      # rating_queries = queries.return_rating
+      # puts "rating_queries"
+      # puts rating_queries
+      # sites = {
+      #   sites: rating_queries.map do |q|
+      #     site[:rating] = q.rating
+      #     site[:lat] = q.lat
+      #     site[:lng] = q.lng
+      #     site[:placeid] = q.placeid
+      #     site[:types] = place.types
+      #     site[:address] = place.address
+      #     site[:placename] = place.placename
+      #     {site: site}
+      #   end
+      # }
+      # puts "sites"
+      # puts sites
+
+      # content_type 'application/json'
+      # sites.to_json
+    # rescue
+    #   halt 404, "Cannot get site data"
+    # end
   end
 
   #find near by resturants
   get "/#{API_VER}/dailyplan/findResturant/:query/?" do
+    puts "  get /{API_VER}/dailyplan/findResturant/:query/?"
     query = params[:query]
     begin
       queries = Google::GooglePlaceRating.find(query: query)

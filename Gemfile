@@ -11,7 +11,9 @@ gem 'multi_json'
 gem 'dry-monads'
 gem 'dry-container'
 gem 'dry-transaction'
-gem 'Time_Traveler', '0.1.72'
+# gem 'Time_Traveler', '0.1.72'
+gem 'VIAJERO', '0.1.73'
+
 gem 'sequel'
 gem 'rake'
 

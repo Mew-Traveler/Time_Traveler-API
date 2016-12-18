@@ -5,9 +5,15 @@ class TimeTravelerAPI < Sinatra::Base
   # find project information by projectid
   get "/#{API_VER}/myproject/:projectId?" do
         # projectId = params[:projectId]
+    puts "---ltinerary.rb---"
+
     results = FindProjectInfo.call(params)
+    puts "---ltinerary.rb---"
+    puts results
 
     if results.success?
+      puts "---ltinerary.rb---"
+      puts results
       content_type 'application/json'
       results.value.to_json
     else
