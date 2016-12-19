@@ -23,24 +23,24 @@ class LogIn
   	puts @userEmail
     userInfo = User.find(userEmail: @userEmail)
     userId = userInfo.id.to_s
+    puts userId
     #why can't not just use Project.find?
-    # ps = Project.find(userId: userId)
-    # puts ps.length
-    projects_collection = []
+    ps = Project.where(Sequel.like(:userId, userId))
+    temp = ps.all
   	projects = {
-      projects: Project.map do |project|
-      	if project[:userId] == userId
-
+      projects: temp.map do |ele|
+       	# if project[:userId] == userId
           project = {
-            id: project[:id].to_s,
-            userId: project[:userId],
-            projectName: project[:projectName],
-            dateStart: project[:dateStart],
-            dateEnd: project[:dateEnd]
+            id: ele[:id].to_s,
+            userId: ele[:userId],
+            projectName: ele[:projectName],
+            dateStart: ele[:dateStart],
+            dateEnd: ele[:dateEnd]
           }
-        end
+        # end
       end
     }
+
     # wtlin0711@gmail.com
     # content_type 'application/json'
     Right(projects)	
