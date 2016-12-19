@@ -12,4 +12,12 @@ class TimeTravelerAPI < Sinatra::Base
     #   ErrorRepresenter.new(result.value).to_status_response
     # end
   end
+
+  # get project information
+  get "/#{API_VER}/project/:userEmail/:project_id/:nthday?" do
+  	result = GetDailyplan.call(params)
+
+  	content_type 'application/json'
+    result.value
+  end
 end
