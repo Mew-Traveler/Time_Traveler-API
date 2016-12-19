@@ -25,13 +25,6 @@ class TimeTravelerAPI < Sinatra::Base
     result = LogIn.call(params)
 
     if result.success?
-      # projects = []
-      # result.value.each do |project|
-      #   puts result.value.length
-      #   projects.push(ProjectRepresenter.new(project).to_json)
-      # end
-      # content_type 'application/json'
-      # projects.to_json
       puts result.value
       content_type 'application/json'
       result.value.to_json
@@ -41,29 +34,40 @@ class TimeTravelerAPI < Sinatra::Base
   end
 
   # create new user
-  post "/#{API_VER}/me/?" do
-   begin
-     body_params = JSON.parse request.body.read
-     print body_params['userEmail']
-     newuserEmail = body_params['userEmail']
+  post "/#{API_VER}/createUser/?" do
+    body_params = JSON.parse request.body.read
 
-     if User.find(userEmail: newuserEmail)
-       halt 422, "User (userEmail: #{userEmail})already exists"
-     end
+    result = CreateNewUser.call(body_params)
 
-   rescue
-     content_type 'text/plain'
-     halt 422, "User (userEmail: #{newuserEmail})already exists"
-   end
+    if result.success?
+      content_type 'application/json'
+      result.value.to_json
+    else
+      ErrorRepresenter.new(result.value).to_status_response
+    end
 
-   begin
-     newuser = User.create(userEmail: newuserEmail)
+   # begin
+   #   body_params = JSON.parse request.body.read
+   #   print body_params['userEmail']
+   #   newuserEmail = body_params['userEmail']
 
-     content_type 'application/json'
-     { userEmail: newuserEmail}.to_json
-   rescue
-     content_type 'text/plain'
-     halt 500, "Cannot create user (id: #{newuserEmail})"
-   end
+   #   if User.find(userEmail: newuserEmail)
+   #     halt 422, "User (userEmail: #{userEmail})already exists"
+   #   end
+
+   # rescue
+   #   content_type 'text/plain'
+   #   halt 422, "User (userEmail: #{newuserEmail})already exists"
+   # end
+
+   # begin
+   #   newuser = User.create(userEmail: newuserEmail)
+
+   #   content_type 'application/json'
+   #   { userEmail: newuserEmail}.to_json
+   # rescue
+   #   content_type 'text/plain'
+   #   halt 500, "Cannot create user (id: #{newuserEmail})"
+   # end
   end
 end
