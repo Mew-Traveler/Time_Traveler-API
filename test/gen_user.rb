@@ -3,7 +3,7 @@ require_relative 'test_helper'
 
 describe 'Create test users' do
   it 'HAPPY: should create wtlin0711@gmail.com user' do
-    post "/api/v0.1/me",
+    post "/api/v0.1/createUser",
     {"userEmail": "wtlin0711@gmail.com"}.to_json,
     'CONTENT_TYPE' => 'application/json'
 
