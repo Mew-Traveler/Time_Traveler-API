@@ -69,7 +69,7 @@ end
 namespace :test do
 
   desc 'run all process for testing'
-  task all: [:clear, :genUser, :genProject, :updateDailyplan]
+  task all: [:clear, :genUser, :genProject, :updateDailyplan, :getDailyplan]
   task spec: [:genUser, :genProject, :updateDailyplan]
 
   task :clear do
@@ -89,7 +89,7 @@ namespace :test do
   end
 
   task :getDailyplan do
-    sh "test/test_getdailyplan.rb"
+    sh "ruby test/test_getdailyplan.rb"
   end
 end
 
