@@ -87,5 +87,9 @@ namespace :test do
   task :updateDailyplan do
     sh "ruby test/test_update_day.rb"
   end
+
+  task :getDailyplan do
+    sh "test/test_getdailyplan.rb"
+  end
 end
 
