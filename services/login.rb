@@ -35,7 +35,8 @@ class LogIn
             userId: ele[:userId],
             projectName: ele[:projectName],
             dateStart: ele[:dateStart],
-            dateEnd: ele[:dateEnd]
+            dateEnd: ele[:dateEnd],
+            day: cal_days(ele[:dateStart], ele[:dateEnd])
           }
         # end
       end
@@ -45,4 +46,20 @@ class LogIn
     # content_type 'application/json'
     Right(projects)	
   }
+
+  private_class_method
+  def self.cal_days(date1, date2)
+    m1 = date1.split('/')[0].to_i
+    d1 = date1.split('/')[1].to_i
+    m2 = date2.split('/')[0].to_i
+    d2 = date2.split('/')[1].to_i
+
+    if (m2 == m1) 
+      result = d2 - d1 + 1
+    else
+      result = (30 - d1 + 1) + d2 + (m2 - m1 - 1) * 30
+    end
+
+    return result
+  end
 end
