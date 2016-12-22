@@ -9,8 +9,11 @@ class TimeTravelerAPI < Sinatra::Base
 
   # Update dailyplan
   post "/#{API_VER}/day/update/?" do
-  	result = UpdateDailyPlan.call(JSON.parse request.body.read)
+  	result = UpdateDailyPlan.call(request.body.read)
   end
 
   # Create a new row in the house table and update dailyplan
+  post "/#{API_VER}/day/newroom/?" do
+
+  end
 end
