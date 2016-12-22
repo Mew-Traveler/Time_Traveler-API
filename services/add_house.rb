@@ -32,6 +32,7 @@ class CreateHouse
              bed:  data[:bed],
              roomRank: data[:roomRank]
            )
+  
     Right(room)
   }
 end

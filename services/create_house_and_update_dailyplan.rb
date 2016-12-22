@@ -20,7 +20,8 @@ class CreateHouseAndUpdateDay
     begin
       house_data = data[:roomInfo].to_json
       house = CreateHouse.call(house_data)
-      data[:house_id] = house.id
+      data[:house_id] = house.value.roomId
+
       Right(data)
     rescue
       Left(Error.new(:bad_request, 'house request data error'))

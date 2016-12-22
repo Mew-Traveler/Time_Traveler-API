@@ -7,6 +7,7 @@ describe 'Delete all database' do
       DB[:projects].delete
       DB[:dailyplans].delete
       DB[:users].delete
+      DB[:houses].delete
     end
 
     it 'HAPPY: database should be empty' do
