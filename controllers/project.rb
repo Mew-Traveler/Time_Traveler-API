@@ -5,7 +5,9 @@ class TimeTravelerAPI < Sinatra::Base
   # create new project
   post "/#{API_VER}/project/create/?" do
     result = CreateNewProject.call(JSON.parse request.body.read)
-
+    
+    content_type 'application/json'
+    result.value
     # if result.success?
     #   PageRepresenter.new(result.value).to_json
     # else
