@@ -54,10 +54,14 @@ class CreateNewProject
     CreateDaysByProject.call(JSON.parse info.to_json)
 
     result = {
-      project_id: project.id,
-      dateStart: project.dateStart,
-      dateEnd: project.dateEnd,
-      day: cal_days(project.dateStart, project.dateEnd)
+      projects: [{
+        id: project.id,
+        userId: project.userId,
+        projectName: project.projectName,
+        dateStart: project.dateStart,
+        dateEnd: project.dateEnd,
+        day: cal_days(project.dateStart, project.dateEnd)
+      }]
     }.to_json
 
     Right(result)
