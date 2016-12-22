@@ -27,7 +27,7 @@ class CreateHouseAndUpdateDay
     end
   }
 
-  register :update_dailyplan, lamba { |data|
+  register :update_dailyplan, lambda { |data|
     day_info = { "project_id": data[:dailyplanInfo]['project_id'],
                  "nthday": data[:dailyplanInfo]['nthday'],
                  "roomId": data[:house_id],
