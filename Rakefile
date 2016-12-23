@@ -69,7 +69,9 @@ end
 namespace :test do
 
   desc 'run all process for testing'
-  task all: [:clear, :genUser, :genProject, :updateDailyplan, :getDailyplan, :addChoosenHouse]
+  task all: [:clear, :genUser, :genProject, 
+             :updateDailyplan, :getDailyplan, 
+             :addChoosenHouse, :getDayInfo]
   task spec: [:genUser, :genProject, :updateDailyplan]
 
   task :clear do
@@ -94,6 +96,10 @@ namespace :test do
 
   task :addChoosenHouse do
     sh "ruby test/test_addhouse_updateday.rb"
+  end
+
+  task :getDayInfo do
+    sh "ruby test/test_get_day_info.rb"
   end
 end
 
