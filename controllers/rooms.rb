@@ -158,5 +158,11 @@ class TimeTravelerAPI < Sinatra::Base
     end
   end
 
+  get "/#{API_VER}/house/:roomId/?" do
+    result = GetHouseByRoomId.call(params)
+    content_type 'application/json'
+    result.value
+  end
+
 
 end

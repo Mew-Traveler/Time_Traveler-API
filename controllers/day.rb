@@ -16,4 +16,11 @@ class TimeTravelerAPI < Sinatra::Base
   post "/#{API_VER}/day/newroom/?" do
     result = CreateHouseAndUpdateDay.call(JSON.parse request.body.read)
   end
+
+  get "/#{API_VER}/day/:userEmail/:project_id/:nthday?" do
+    result = GetDailyplanAndHouse.call(params)
+
+    content_type 'application/json'
+    result.value
+  end
 end

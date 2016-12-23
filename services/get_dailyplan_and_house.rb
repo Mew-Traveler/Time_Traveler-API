@@ -1,14 +1,15 @@
 # frozen_string_literal: true
 
-# Get dailyplan
-class GetDailyplan
+# Get house by room id
+class GetDailyplanAndHouse
   extend Dry::Monads::Either::Mixin
   extend Dry::Container::Mixin
 
   def self.call(params)
     Dry.Transaction(container: self) do
       step :validate_request_json
-      step :get_dailyplan_by_project_id
+      step :get_dailyplan
+      step :get_house
       step :formate_the_data
     end.call(params)
   end
@@ -25,30 +26,35 @@ class GetDailyplan
     end
   }
 
-  register :get_dailyplan_by_project_id, lambda { |data|
+  register :get_dailyplan, lambda { |data|
     begin
-      dailyplan = Dailyplan.find( project_id: data[:project_id], 
-                                  nthday: data[:nthday] )
-      Right(dailyplan)
+      dailyplan_info = GetDailyplan.call(JSON.parse data.to_json)
+      Right(dailyplan_info)
+    rescue
+      Left(Error.new(:not_found, 'could not find the dailyplan'))
+    end
+  }
+
+  register :get_house, lambda { |data|
+    begin
+      d = JSON.parse data.value
+      house = GetHouseByRoomId.call(d)
+      house_info = JSON.parse house.value
+
+      result = {
+        dailyplan_info: d,
+        house_info: house_info
+      }
+
+      Right(result)
     rescue
       Left(Error.new(:not_found, 'could not find the dailyplan'))
     end
   }
 
   register :formate_the_data, lambda { |data|
-    result = {
-      project_id: data.project_id,
-      roomId: data.roomId,
-      nthday: data.nthday,
-      date: data.date,
-      timeStart: data.timeStart,
-      timeEnd: data.timeEnd,
-      locateStart: data.locateStart,
-      locateEnd: data.locateEnd,
-      timeRemain: data.timeRemain
-    }.to_json
-
-    Right(result)
+    Right(data.to_json)
   }
 
 end
+
