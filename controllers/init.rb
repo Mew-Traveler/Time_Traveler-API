@@ -2,6 +2,7 @@
 require 'sinatra'
 require 'econfig'
 require 'Time_Traveler'
+require 'shoryuken'
 
 require_relative 'base'
 

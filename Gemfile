@@ -14,6 +14,8 @@ gem 'multi_json'
 gem 'dry-monads'
 gem 'dry-container'
 gem 'dry-transaction'
+gem 'shoryuken'
+gem 'aws-sdk','~> 2'
 
 group :development, :test do
   gem 'sqlite3'

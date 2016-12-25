@@ -1,11 +1,15 @@
 # frozen_string_literal: true
 
 # TimeTravelerAPI web service
-class TimeTravelerAPI < Sinatra::Base   
+class TimeTravelerAPI < Sinatra::Base
   # get the data from airbnb api with the location
   get "/#{API_VER}/rent/:location/?" do
     location = params[:location]
     begin
+      # res = TravelWorker.perform_async("taipei",quere:'soaq')
+      res = Shoryuken::Client.queues('soaq').send_message(location)
+      puts "----------WORKER: #{res}----------"
+
       rent = Airbnb::RentInfo.find(location: location)
 
       # Get each room's info
@@ -59,25 +63,25 @@ class TimeTravelerAPI < Sinatra::Base
   post "/#{API_VER}/house1/generate/test/?" do
     begin
       House.create(
-        roomId: "1234", 
-        roomName: "This is room name test", 
-        roomPrice: "test price", 
-        address: "test address", 
-        airbnb_link: "test link", 
-        roomImg: "test roomImg", 
-        bed: "3", 
+        roomId: "1234",
+        roomName: "This is room name test",
+        roomPrice: "test price",
+        address: "test address",
+        airbnb_link: "test link",
+        roomImg: "test roomImg",
+        bed: "3",
         roomRank: "5"
         )
 
       content_type 'application/json'
       {
-        roomId: "1234", 
-        roomName: "This is room name test", 
-        roomPrice: "test price", 
-        address: "test address", 
-        airbnb_link: "test link", 
-        roomImg: "test roomImg", 
-        bed: "3", 
+        roomId: "1234",
+        roomName: "This is room name test",
+        roomPrice: "test price",
+        address: "test address",
+        airbnb_link: "test link",
+        roomImg: "test roomImg",
+        bed: "3",
         roomRank: "5"
       }.to_json
 
@@ -133,7 +137,7 @@ class TimeTravelerAPI < Sinatra::Base
 
     rescue
       content_type 'text/plain'
-      halt 500, "Cannot create house (roomId: #{new_roomId})"    
+      halt 500, "Cannot create house (roomId: #{new_roomId})"
     end
   end
 
@@ -154,7 +158,7 @@ class TimeTravelerAPI < Sinatra::Base
       content_type 'application/json'
       result.value.to_json
     else
-      ErrorRepresenter.new(result.value).to_status_response  
+      ErrorRepresenter.new(result.value).to_status_response
     end
   end
 
