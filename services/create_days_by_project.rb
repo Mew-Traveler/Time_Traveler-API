@@ -20,7 +20,7 @@ class CreateDaysByProject
   register :create_days, lambda { |data|
     t = cal_days(data[:dateStart], data[:dateEnd])
     d = data[:dateStart]
-    for i in 1..t 
+    for i in 1..t
       day_info = { project_id: data[:project_id],
                    nthday: i.to_s,
                    date: d
@@ -31,7 +31,7 @@ class CreateDaysByProject
     Right(data)
   }
 
-  
+
 
   def self.call(params)
     Dry.Transaction(container: self) do
@@ -48,7 +48,7 @@ class CreateDaysByProject
     m2 = date2.split('/')[0].to_i
     d2 = date2.split('/')[1].to_i
 
-    if (m2 == m1) 
+    if (m2 == m1)
       result = d2 - d1 + 1
     else
       result = (30 - d1 + 1) + d2 + (m2 - m1 - 1) * 30
@@ -76,4 +76,3 @@ class CreateDaysByProject
   end
 
 end
-

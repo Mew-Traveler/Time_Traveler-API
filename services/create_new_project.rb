@@ -34,13 +34,15 @@ class CreateNewProject
 
   register :create_project, lambda { |data|
 
-    project = Project.create( userId: data[:userId],
-                    projectName: data[:projectName],
-                    dateStart: data[:dateStart],
-                    dateEnd: data[:dateEnd],
-                    groupId: nil )
+    project = Project.create(
+      userId: data[:userId],
+      projectName: data[:projectName],
+      dateStart: data[:dateStart],
+      dateEnd: data[:dateEnd],
+      groupId: nil
+      )
     Right(project)
-    
+
   }
 
   register :create_days_by_project, lambda { |project|
@@ -65,10 +67,10 @@ class CreateNewProject
     }.to_json
 
     Right(result)
-    
+
   }
 
-  
+
 
   def self.call(params)
     Dry.Transaction(container: self) do
@@ -87,7 +89,7 @@ class CreateNewProject
     m2 = date2.split('/')[0].to_i
     d2 = date2.split('/')[1].to_i
 
-    if (m2 == m1) 
+    if (m2 == m1)
       result = d2 - d1 + 1
     else
       result = (30 - d1 + 1) + d2 + (m2 - m1 - 1) * 30
@@ -96,4 +98,3 @@ class CreateNewProject
     return result
   end
 end
-
