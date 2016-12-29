@@ -21,14 +21,14 @@ class CreateNewDay
 
     day = Dailyplan.create( 
                   project_id: data[:project_id],
-                  roomId: nil,
+                  roomId: "empty",
                   nthday: data[:nthday],
                   date: data[:date],
-                  timeStart: nil,
-                  timeEnd: nil,
-                  locateStart: nil,
-                  locateEnd: nil,
-                  timeRemain: nil
+                  timeStart: "empty",
+                  timeEnd: "empty",
+                  locateStart: "empty",
+                  locateEnd: "empty",
+                  timeRemain: "empty"
                 )
     Right(day)
     
