@@ -20,10 +20,7 @@ class LogIn
   }
 
   register :get_all_projects, lambda { |input|
-  	puts @userEmail
-    userInfo = User.find(userEmail: @userEmail)
-    userId = userInfo.id.to_s
-    puts userId
+    userId = input.id.to_s
     #why can't not just use Project.find?
     ps = Project.where(Sequel.like(:userId, userId))
     temp = ps.all
@@ -44,7 +41,7 @@ class LogIn
 
     # wtlin0711@gmail.com
     # content_type 'application/json'
-    Right(projects)	
+    Right(projects)
   }
 
   private_class_method
@@ -54,7 +51,7 @@ class LogIn
     m2 = date2.split('/')[0].to_i
     d2 = date2.split('/')[1].to_i
 
-    if (m2 == m1) 
+    if (m2 == m1)
       result = d2 - d1 + 1
     else
       result = (30 - d1 + 1) + d2 + (m2 - m1 - 1) * 30
