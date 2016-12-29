@@ -42,10 +42,10 @@ class GetDailyplanAndHouse
       house_info = JSON.parse house.value
 
       result = {
-        dailyplan_info: d,
-        house_info: house_info
+        "dailyplan_info" => d,
+        "house_info" => house_info
       }
-
+      puts "YOOOOOOOOOOOOOOO"
       Right(result)
     rescue
       Left(Error.new(:not_found, 'could not find the dailyplan'))
