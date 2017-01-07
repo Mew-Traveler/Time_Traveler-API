@@ -12,7 +12,7 @@ class TimeTravelerAPI < Sinatra::Base
     project_id = params[:project_id]
     dailyplans_id = params[:dailyplans_id]
 
-    loads = Target.find(project_id: project_id, dailyplans_id: dailyplans_id)
+    loads = TargetModal.find(project_id: project_id, dailyplans_id: dailyplans_id)
     sites = {
       sites: rating_queries.map do |q|
         site[:rating] = q.rating
@@ -105,6 +105,8 @@ class TimeTravelerAPI < Sinatra::Base
 
   #find the two sites desinations -> done
   get "/#{API_VER}/addtarget/countDistance/:origins/:destinations/?" do
+    puts "  get /#{API_VER}/addtarget/countDistance/:origins/:destinations/? do"
+    puts params
     origins = params[:origins]
     destinations = params[:destinations]
     params[:mode] = "driving"
@@ -205,7 +207,7 @@ class TimeTravelerAPI < Sinatra::Base
     end
 
     begin
-      newSite = Target.create(dailyplans_id: newSite_dailyplans_id, project_day: newSite_project_day, idx: newSite_idx, type: newSite_type, start_time: newSite_start_time, end_time: newSite_end_time)
+      newSite = TargetModal.create(dailyplans_id: newSite_dailyplans_id, project_day: newSite_project_day, idx: newSite_idx, type: newSite_type, start_time: newSite_start_time, end_time: newSite_end_time)
       content_type 'application/json'
       newSite.to_json
     rescue

@@ -13,10 +13,12 @@ class CountDistance
   end
 
   register :validate_request_json, lambda { |request_body|
+    puts "validate_request_json, lambda"
+    puts request_body
 
     result = Google::TrafficInfo.find(
-      origins: request_body[:origins], 
-      destinations: request_body[:destinations], 
+      origins: request_body[:origins],
+      destinations: request_body[:destinations],
       mode: request_body[:mode])
 
     value = {
@@ -25,6 +27,8 @@ class CountDistance
     }.to_json
 
     if value
+      puts "*********"
+      puts value
   	  Right(value)
   	else
   	  Left(Error.new(:bad_request, 'Wrong input data for counting distance'))

@@ -50,6 +50,16 @@ class TimeTravelerAPI < Sinatra::Base
     end
   end
 
+  post "/#{API_VER}/dailyplan" do
+    body_params = JSON.parse request.body.read
+    content_type 'application/json'
+    target_result = CreateNewTarget.call(body_params)
+    if target_result.success?
+      status 200
+    else
+      status 500
+    end
+  end
   #input new daily settings
   post "/#{API_VER}/myproject/dailyplan" do
     body_params = JSON.parse request.body.read

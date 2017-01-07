@@ -3,7 +3,7 @@ require 'sequel'
 
 Sequel.migration do
   change do
-    create_table(:targets) do
+    create_table(:target_modals) do
       primary_key :id
       foreign_key :project_id
       foreign_key :dailyplans_id
