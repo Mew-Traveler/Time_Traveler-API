@@ -21,14 +21,23 @@ class CreateHouseAndUpdateDay
       house_data = data[:roomInfo].to_json
       house = CreateHouse.call(house_data)
       data[:house_id] = house.value.roomId
-
+      puts "sure???"
       Right(data)
     rescue
+      puts "fuck, die here"
       Left(Error.new(:bad_request, 'house request data error'))
     end
   }
 
   register :update_dailyplan, lambda { |data|
+    puts data[:dailyplanInfo]['project_id']
+    puts data[:dailyplanInfo]['nthday']
+    puts data[:dailyplanInfo]['date']
+    puts data[:dailyplanInfo]['timeStart']
+    puts data[:dailyplanInfo]['timeEnd']
+    puts data[:dailyplanInfo]['locateStart']
+    puts data[:dailyplanInfo]['locateEnd']
+    puts "before post"
     day_info = { "project_id": data[:dailyplanInfo]['project_id'],
                  "nthday": data[:dailyplanInfo]['nthday'],
                  "roomId": data[:house_id],

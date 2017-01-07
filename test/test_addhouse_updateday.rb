@@ -14,14 +14,14 @@ describe 'Test create house and update choosen dailyplan' do
                        "locateStart": "updated locateStart",
                        "locateEnd": "updated locateEnd",
                        "timeRemain": "after add house"},
-     "roomInfo": {"id": "test_id",
-                  "name": "test_name",
-                  "price": "test_price",
-                  "address": "test_address",
-                  "airbnb_link": "test_airbnb_link",
-                  "roomImg": "test_roomImg",
-                  "bed": "test_bed",
-                  "roomRank": "test_roomRank"} 
+     "roomInfo": {"id": "empty",
+                  "name": "empty",
+                  "price": "empty",
+                  "address": "empty",
+                  "airbnb_link": "empty",
+                  "roomImg": "empty",
+                  "bed": "empty",
+                  "roomRank": "empty"} 
     }.to_json,
     'CONTENT_TYPE' => 'application/json'
 

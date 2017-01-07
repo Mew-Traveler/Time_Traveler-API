@@ -37,7 +37,10 @@ class GetDailyplan
     end
   }
 
+
   register :formate_the_data, lambda { |data|
+
+    puts data
     result = {
       project_id: data.project_id,
       roomId: data.roomId,

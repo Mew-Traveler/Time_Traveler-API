@@ -18,9 +18,7 @@ class TimeTravelerAPI < Sinatra::Base
 
   # get project information
   get "/#{API_VER}/project/:userEmail/:project_id/:nthday?" do
-    puts "****************"
-    puts params
-  	result = GetDailyplan.call(params)
+  	result = GetDailyplanAndHouse.call(params)
 
   	content_type 'application/json'
     result.value
