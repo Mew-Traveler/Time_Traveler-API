@@ -1,7 +1,9 @@
+
+#encoding: utf-8
 # frozen_string_literal: true
 
 # TimeTravelerAPI web service
-class TimeTravelerAPI < Sinatra::Base 
+class TimeTravelerAPI < Sinatra::Base
 
 
 
@@ -28,7 +30,7 @@ class TimeTravelerAPI < Sinatra::Base
   end
 
   ###########################################################################################
-  
+
   # find near by sites
   get "/#{API_VER}/addtarget/findSite/:query/?" do
     query = params[:query]
@@ -131,10 +133,10 @@ class TimeTravelerAPI < Sinatra::Base
   #   destinationPlace = params[:destinationPlace]
   #   outboundPartialDate = params[:outboundPartialDate]
 
-  #   result = Skyscanner::FlightInfo.find(market: market, currency: currency, locale: locale, 
-  #     originPlace: originPlace, destinationPlace: destinationPlace, 
+  #   result = Skyscanner::FlightInfo.find(market: market, currency: currency, locale: locale,
+  #     originPlace: originPlace, destinationPlace: destinationPlace,
   #     outboundPartialDate: outboundPartialDate)
-    
+
   #   begin
   #   infos = result.flightInfo
   #   infos.map do |info|
@@ -181,7 +183,7 @@ class TimeTravelerAPI < Sinatra::Base
       end
       flights.to_json
     else
-      ErrorRepresenter.new(result.value).to_status_response  
+      ErrorRepresenter.new(result.value).to_status_response
     end
   end
 

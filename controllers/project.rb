@@ -4,7 +4,7 @@
 class TimeTravelerAPI < Sinatra::Base
   # create new project
   post "/#{API_VER}/project/create/?" do
-    
+
     result = CreateNewProject.call(JSON.parse request.body.read)
 
     content_type 'application/json'
@@ -18,6 +18,8 @@ class TimeTravelerAPI < Sinatra::Base
 
   # get project information
   get "/#{API_VER}/project/:userEmail/:project_id/:nthday?" do
+    puts "****************"
+    puts params
   	result = GetDailyplan.call(params)
 
   	content_type 'application/json'

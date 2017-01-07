@@ -27,7 +27,9 @@ class GetDailyplan
 
   register :get_dailyplan_by_project_id, lambda { |data|
     begin
-      dailyplan = Dailyplan.find( project_id: data[:project_id], 
+      puts "DATA------"
+      puts data
+      dailyplan = Dailyplan.find( project_id: data[:project_id],
                                   nthday: data[:nthday] )
       Right(dailyplan)
     rescue

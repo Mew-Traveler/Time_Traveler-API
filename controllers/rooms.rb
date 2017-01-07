@@ -7,8 +7,6 @@ class TimeTravelerAPI < Sinatra::Base
     location = params[:location]
     begin
       # res = TravelWorker.perform_async("taipei",quere:'soaq')
-      res = Shoryuken::Client.queues('soaq').send_message(location)
-      puts "----------WORKER: #{res}----------"
 
       rent = Airbnb::RentInfo.find(location: location)
 
@@ -152,6 +150,10 @@ class TimeTravelerAPI < Sinatra::Base
   end
 
   get "/#{API_VER}/getHouses/:location/?" do
+    location = params[:location]
+    res = Shoryuken::Client.queues('soaq').send_message(location)
+    puts "----------WORKER: #{res}----------"
+
     result = GetHouses.call(params)
 
     if result.success?

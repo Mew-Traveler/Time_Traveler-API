@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 require 'sinatra'
 require 'econfig'
-require 'Time_Traveler'
+require 'VIAJERO'
 require 'shoryuken'
 
 require_relative 'base'

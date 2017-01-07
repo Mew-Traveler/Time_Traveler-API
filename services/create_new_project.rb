@@ -2,6 +2,8 @@
 
 # Create new project
 class CreateNewProject
+  require 'date'
+
   extend Dry::Monads::Either::Mixin
   extend Dry::Container::Mixin
 
@@ -54,7 +56,7 @@ class CreateNewProject
     }
 
     CreateDaysByProject.call(JSON.parse info.to_json)
-
+    day = (Date.parse(project.dateEnd)- Date.parse(project.dateStart)).to_i
     result = {
       projects: [{
         id: project.id,
@@ -62,7 +64,8 @@ class CreateNewProject
         projectName: project.projectName,
         dateStart: project.dateStart,
         dateEnd: project.dateEnd,
-        day: cal_days(project.dateStart, project.dateEnd)
+        day: day
+        #day: cal_days(project.dateStart, project.dateEnd)
       }]
     }.to_json
 

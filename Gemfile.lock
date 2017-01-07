@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    Time_Traveler (0.1.72)
+    VIAJERO (0.1.73)
       http (~> 2.0)
     addressable (2.5.0)
       public_suffix (~> 2.0, >= 2.0.2)
@@ -148,7 +148,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  Time_Traveler (= 0.1.72)
+  VIAJERO (= 0.1.73)
   aws-sdk (~> 2)
   dry-container
   dry-monads

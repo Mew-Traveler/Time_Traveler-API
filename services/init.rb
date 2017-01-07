@@ -2,7 +2,7 @@
 require 'dry-monads'
 require 'dry-container'
 require 'dry-transaction'
-require 'Time_Traveler'
+require 'VIAJERO'
 
 Dir.glob("#{File.dirname(__FILE__)}/*.rb").each do |file|
   require file
