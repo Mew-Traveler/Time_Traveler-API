@@ -23,4 +23,12 @@ class TimeTravelerAPI < Sinatra::Base
   	content_type 'application/json'
     result.value
   end
+
+  #get project info
+  get "/#{API_VER}/project/:project_id?" do
+  	result = GetProjectInfo.call(params)
+
+  	content_type 'application/json'
+    result.value
+  end
 end

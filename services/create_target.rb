@@ -13,12 +13,15 @@ class CreateNewTarget
     puts request_body['rating']
     puts request_body['address']
     puts request_body['site_name']
+    puts request_body['nthday']
+
     begin
       data = {
                type: request_body['type'],
                rating: request_body['rating'],
                address: request_body['address'],
-               site_name: request_body['site_name']
+               site_name: request_body['site_name'],
+               nthday: request_body['nthday']
              }
       Right(data)
     rescue
@@ -36,7 +39,8 @@ class CreateNewTarget
       type: data[:type],
       rating: data[:rating],
       address: data[:address],
-      site_name: data[:site_name]
+      site_name: data[:site_name],
+      nthday: data[:nthday]
       )
     Right(target)
     rescue

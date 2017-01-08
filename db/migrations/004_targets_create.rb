@@ -15,6 +15,7 @@ Sequel.migration do
       String :address
       String :start_time
       String :end_time
+      String :nthday
     end
   end
 end
