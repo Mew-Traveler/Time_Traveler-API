@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    VIAJERO (0.1.73)
+    VIAJERO (0.1.74)
       http (~> 2.0)
     addressable (2.5.0)
       public_suffix (~> 2.0, >= 2.0.2)
@@ -148,7 +148,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  VIAJERO (= 0.1.73)
+  VIAJERO (= 0.1.74)
   aws-sdk (~> 2)
   dry-container
   dry-monads
