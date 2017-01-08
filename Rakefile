@@ -71,7 +71,8 @@ namespace :test do
   desc 'run all process for testing'
   task all: [:clear, :genUser, :genProject, 
              :updateDailyplan, :getDailyplan, 
-             :addChoosenHouse, :getDayInfo]
+             :addChoosenHouse, :getDayInfo,
+             :clear_last]
   task spec: [:genUser, :genProject, :updateDailyplan]
 
   task :clear do
@@ -100,6 +101,10 @@ namespace :test do
 
   task :getDayInfo do
     sh "ruby test/test_get_day_info.rb"
+  end
+
+  task :clear_last do
+    sh "ruby test/earse.rb"
   end
 end
 
