@@ -7,7 +7,7 @@ gem 'puma'
 gem 'json'
 gem 'econfig'
 # gem 'Time_Traveler', '0.1.72'
-gem 'VIAJERO', '0.1.73'
+gem 'VIAJERO', '0.1.74'
 
 gem 'sequel'
 gem 'rake'
