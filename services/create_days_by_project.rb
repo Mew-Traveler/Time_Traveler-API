@@ -2,6 +2,8 @@
 
 # Create new day
 class CreateDaysByProject
+  require 'date'
+
   extend Dry::Monads::Either::Mixin
   extend Dry::Container::Mixin
 
@@ -18,15 +20,22 @@ class CreateDaysByProject
   }
 
   register :create_days, lambda { |data|
-    t = cal_days(data[:dateStart], data[:dateEnd])
+    # t = cal_days(data[:dateStart], data[:dateEnd])
+    t = (Date.parse(data[:dateEnd])- Date.parse(data[:dateStart])).to_i
+
     d = data[:dateStart]
     for i in 1..t
       day_info = { project_id: data[:project_id],
                    nthday: i.to_s,
                    date: d
                  }
+      d = (Date.parse(d)+1).to_s
+      puts "dddddd"
+      puts d
       create_day(day_info)
-      d = next_date(d)
+      # d = next_date(d)
+      # d = date_of_next(Date.parse(data[:dateStart]))
+      # d = Date.parse(d).next_day(1)
     end
     Right(data)
   }
@@ -69,6 +78,18 @@ class CreateDaysByProject
     end
 
     return m.to_s + "/" + d.to_s
+  end
+
+  def self.date_of_next(day)
+    d = Date.parse(day).to_i
+
+
+    # delta = date > Date.today ? 0 : 7
+    # d = Date.strptime(day, '%Y%Y%Y%Y-%M%M-%D%D %H%H:%m%m')
+    # d = Date.parse(day)
+    #
+    # w = d.wday                       #=> 6
+
   end
 
   def self.create_day(day_info)
