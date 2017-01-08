@@ -14,8 +14,8 @@ class TimeTravelerAPI < Sinatra::Base
 
   get "/#{API_VER}/getHouses/:location/?" do
     location = params[:location]
-    res = Shoryuken::Client.queues('soaq').send_message(location)
-    puts "----------WORKER: #{res}----------"
+    # res = Shoryuken::Client.queues('soaq').send_message(location)
+    # puts "----------WORKER: #{res}----------"
 
     result = GetHouses.call(params)
 

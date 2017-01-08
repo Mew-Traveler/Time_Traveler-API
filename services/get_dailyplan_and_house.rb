@@ -36,25 +36,22 @@ class GetDailyplanAndHouse
   }
 
   register :get_house, lambda { |data|
-    begin
-      d = JSON.parse data.value
-      house = GetHouseByRoomId.call(d)
-      house_info = JSON.parse house.value
-
-      result = {
-        "dailyplan_info" => d,
-        "house_info" => house_info
-      }
-      puts "YOOOOOOOOOOOOOOO"
-      Right(result)
-    rescue
-      Left(Error.new(:not_found, 'could not find the dailyplan'))
-    end
-  }
-
+      begin
+        d = JSON.parse data.value
+        result = { "dailyplan_info" => d }
+        house = GetHouseByRoomId.call(d)
+        if house.success?
+          result["house_info"] = JSON.parse house.value
+        end
+        puts "YOOOOOOOOOOOOOOO"
+        Right(result)
+      rescue
+        Left(Error.new(:not_found, 'could not find the dailyplan'))
+      end
+    }
+    
   register :formate_the_data, lambda { |data|
     Right(data.to_json)
   }
 
 end
-
