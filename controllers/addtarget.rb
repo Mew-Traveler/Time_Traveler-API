@@ -8,25 +8,35 @@ class TimeTravelerAPI < Sinatra::Base
 
 
   #load the daily plan stored in db
-  get "/#{API_VER}/addtarget/load/:project_id/:dailyplans_id/?" do
+  get "/#{API_VER}/addtarget/load/:project_id/:nthday/?" do
     project_id = params[:project_id]
-    dailyplans_id = params[:dailyplans_id]
+    nthday = params[:nthday]
 
-    loads = TargetModal.find(project_id: project_id, dailyplans_id: dailyplans_id)
-    sites = {
-      sites: rating_queries.map do |q|
-        site[:rating] = q.rating
-        site[:type] = q.type
-        site[:rating] = q.rating
-        site[:site_name] = q.site_name
-        site[:address] = q.address
-        site[:start_time] = q.start_time
-        site[:end_time] = q.end_time
-        {site: site}
+    begin
+      if TargetModal.find(project_id: project_id, nthday: nthday)
+        puts "hihihihiih"
+        content_type 'application/json'
+        get_targets = TargetModal.find(project_id: project_id, nthday: nthday)
       end
-    }
-    content_type 'application/json'
-    sites.to_json
+    rescue
+      content_type 'text/plain'
+      halt 404, "Failed data"
+    end
+
+    # sites = {
+    #   sites: rating_queries.map do |q|
+    #     site[:rating] = q.rating
+    #     site[:type] = q.type
+    #     site[:rating] = q.rating
+    #     site[:site_name] = q.site_name
+    #     site[:address] = q.address
+    #     site[:start_time] = q.start_time
+    #     site[:end_time] = q.end_time
+    #     {site: site}
+    #   end
+    #}
+    # content_type 'application/json'
+    # sites.to_json
   end
 
   ###########################################################################################
